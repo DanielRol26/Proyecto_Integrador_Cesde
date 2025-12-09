@@ -1,6 +1,5 @@
-# Archipyélago - Gestor de Biblioteca
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +10,11 @@
     <!--  HEADER  -->
 
     <header>
-        <h1>Archipyélago | gestor de biblioteca</h1>
+        <img src="assets/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="register.html">Registrarse</a></li>
+                <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
                 <li><a href="password.html">Recuperar Contraseña</a></li>
             </ul>
         </nav>
@@ -26,7 +24,7 @@
     <main>
         <section id="hero">
             <h2>Bienvenido a Archipyélago</h2>
-            <p>Accede al más eficiente gestor de biblioteca y administra tus libros fácilmente.</p>
+            <p>Navega ideas, conquista horizontes.</p>
             <form action="Iniciar sesión" method="post">
                 <input type="text" placeholder="Usuario o Email">
                 <input type="password" placeholder="Contraseña">
@@ -38,18 +36,67 @@
 
         <section id="heroMultimedia">
             <figure>
-                
-
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0guW2g8UT6Q?si=lrj2cYgsUAVv3Xx8&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </figure>
 
+            <figure>
+                <audio src="assets/audioEntrada.mp3" type="audio/mpeg" controls></audio>
+            </figure>
+        </section>
 
+        <section>
+            <h2>Servicios</h2>
+            <ul>
+                <div><a href="catalogo.html">Catálogo digital</a></div>
+                <div><a href="prestamos.html">Préstamos, devoluciones y renovaciones</a></div>
+                <div><a href="novedades.html">Novedades</a></div>
+            </ul>
+        </section>
+
+        <section class="agendaCultural">
+            <h2>Agenda Cultural</h2>
+            <div class="contenedor">
+                <button class="contenedor-btn">&#10094;</button>
+                <div class="contenedor-tracker"></div>
+
+                <!-- Tarjetas de eventos -->
+                <div class="tarjeta"><a href="evento1.html">
+                    <img src="assets/evento1.jpg" alt="Evento 1" width="550" height="250">
+                    <h3>Conferencia Textos apócrifos</h3>
+                    <p>Fecha: 15 de marzo de 2025</p>
+                    <p>Descripción: Una charla con autores locales.</p>
+                    </a></div>
+                
+                <div class="tarjeta"><a href="evento2.html">
+                    <img src="assets/evento2.jpg" alt="Evento 2" width="550" height="250">
+                    <h3>Taller de Escritura Creativa</h3>
+                    <p>Fecha: 22 de marzo de 2025</p>
+                    <p>Descripción: Mejora tus habilidades de escritura.</p>
+                </a></div>
+
+                <div>
+                    <div class="tarjeta"><a href="evento3.html" >
+                        <img src="assets/evento3.jpg" alt="Evento 3" width="550" height="250">
+                        <h3>Exposición de Arte Local</h3>
+                        <p>Fecha: 30 de marzo de 2025</p>
+                        <p>Descripción: Obras de artistas emergentes.</p>
+                    </a></div>
+                </div>
+
+                <button class="carousel-btn next">&#10095;</button>
+
+            </div>
 
         </section>
+
     </main>
 
 
     <footer>
         <p>© 2025 Archipyélago. Todos los derechos reservados.</p>
+        <p><a href="privacidad.html">Política de privacidad</a></p>
+        <p><a href="terminos.html">Términos de servicio</a></p>
+        <p>Contáctenos</p>
     </footer>
 </body>
 </html>
