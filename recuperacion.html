@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recuperar contraseña</title>
     <link rel="icon" href="imagenes/logo_pestaña.png" />
-    <title>Registrado</title>
 </head>
 
 <body>
@@ -19,11 +19,33 @@
             </ul>
         </nav>
     </header>
-    <hr>
+
     <main>
-        <p>Te has registrado correctamente ahora inicia sesión con el correo y contraseña ingresados</p>
+        <section>
+            <h2 id="recovery-title">Recuperar contraseña</h2>
+            <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+
+            <form action="#" method="post" autocomplete="on">
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input placeholder="ingrese su correo" type="email" id="email" name="email" required
+                        aria-required="true" />
+                </div>
+                <br />
+
+                <div>
+                    <button type="submit">Enviar enlace de recuperación</button>
+                    <button type="button" onclick="window.location.href='inicion_sesion.html'">Volver al inicio de
+                        sesión</button>
+                </div>
+            </form>
+
+            <br>
+            <p style="font-size: 14px;">¿Recordaste tu contraseña? <a href="inicio_sesion.html">Inicia sesión aquí</a>
+            </p>
+        </section>
     </main>
-    <hr>
+
     <footer>
         <div>
             <h3>¿Necesitas ayudas? Contactanos</h3>

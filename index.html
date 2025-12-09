@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo_pestaña.png" />
     <title>Archipyélago</title>
 </head>
+
 <body>
 
     <!--  HEADER  -->
 
     <header>
-        <img src="assets/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
+        <img src="imagenes/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
-                <li><a href="password.html">Recuperar Contraseña</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
             </ul>
         </nav>
     </header>
@@ -25,22 +28,19 @@
         <section id="hero">
             <h2>Bienvenido a Archipyélago</h2>
             <p>Navega ideas, conquista horizontes.</p>
-            <form action="Iniciar sesión" method="post">
-                <input type="text" placeholder="Usuario o Email">
-                <input type="password" placeholder="Contraseña">
-                <button type="submit">Iniciar sesión</button>
-            </form>
-            <p>¿Olvidaste tu contraseña? <a href="password.html">Recupérala aquí</a></p>
-            <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
         </section>
 
         <section id="heroMultimedia">
             <figure>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0guW2g8UT6Q?si=lrj2cYgsUAVv3Xx8&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0guW2g8UT6Q?si=lrj2cYgsUAVv3Xx8&amp;controls=0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </figure>
 
             <figure>
-                <audio src="assets/audioEntrada.mp3" type="audio/mpeg" controls></audio>
+                <audio src="audios/audioEntrada.mp3" type="audio/mpeg" controls></audio>
             </figure>
         </section>
 
@@ -52,6 +52,35 @@
                 <div><a href="novedades.html">Novedades</a></div>
             </ul>
         </section>
+        <section>
+            <h3>Libros disponibles</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Disponible</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cien años de soledad</td>
+                        <td>Gabriel García Márquez</td>
+                        <td>Sí</td>
+                    </tr>
+                    <tr>
+                        <td>Don Quijote</td>
+                        <td>Miguel de Cervantes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>Sí</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <section class="agendaCultural">
             <h2>Agenda Cultural</h2>
@@ -61,26 +90,26 @@
 
                 <!-- Tarjetas de eventos -->
                 <div class="tarjeta"><a href="evento1.html">
-                    <img src="assets/evento1.jpg" alt="Evento 1" width="550" height="250">
-                    <h3>Conferencia Textos apócrifos</h3>
-                    <p>Fecha: 15 de marzo de 2025</p>
-                    <p>Descripción: Una charla con autores locales.</p>
+                        <img src="imagenes/evento1.jpg" alt="Evento 1" width="550" height="250">
+                        <h3>Conferencia Textos apócrifos</h3>
+                        <p>Fecha: 15 de marzo de 2025</p>
+                        <p>Descripción: Una charla con autores locales.</p>
                     </a></div>
-                
+
                 <div class="tarjeta"><a href="evento2.html">
-                    <img src="assets/evento2.jpg" alt="Evento 2" width="550" height="250">
-                    <h3>Taller de Escritura Creativa</h3>
-                    <p>Fecha: 22 de marzo de 2025</p>
-                    <p>Descripción: Mejora tus habilidades de escritura.</p>
-                </a></div>
+                        <img src="imagenes/evento2.jpg" alt="Evento 2" width="550" height="250">
+                        <h3>Taller de Escritura Creativa</h3>
+                        <p>Fecha: 22 de marzo de 2025</p>
+                        <p>Descripción: Mejora tus habilidades de escritura.</p>
+                    </a></div>
 
                 <div>
-                    <div class="tarjeta"><a href="evento3.html" >
-                        <img src="assets/evento3.jpg" alt="Evento 3" width="550" height="250">
-                        <h3>Exposición de Arte Local</h3>
-                        <p>Fecha: 30 de marzo de 2025</p>
-                        <p>Descripción: Obras de artistas emergentes.</p>
-                    </a></div>
+                    <div class="tarjeta"><a href="evento3.html">
+                            <img src="imagenes/evento3.jpg" alt="Evento 3" width="550" height="250">
+                            <h3>Exposición de Arte Local</h3>
+                            <p>Fecha: 30 de marzo de 2025</p>
+                            <p>Descripción: Obras de artistas emergentes.</p>
+                        </a></div>
                 </div>
 
                 <button class="carousel-btn next">&#10095;</button>
@@ -93,10 +122,27 @@
 
 
     <footer>
-        <p>© 2025 Archipyélago. Todos los derechos reservados.</p>
-        <p><a href="privacidad.html">Política de privacidad</a></p>
-        <p><a href="terminos.html">Términos de servicio</a></p>
-        <p>Contáctenos</p>
+        <div>
+            <h3>¿Necesitas ayudas? Contactanos</h3>
+            <h3>Lineas de Atención</h3>
+            <ul>
+                <li>+57 3197561958</li>
+                <li>+57 3122358703</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Redes Sociales</h3>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
+                <img src="imagenes/gmail.png" alt="gmail" width="60" height="60"></a>
+            <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
+                <img src="imagenes/youtube.png" alt="Ir a canal de youtube" width="60" height="60"></a>
+            <a href="https://wa.me/3197561958" target="_blank">
+                <img src="imagenes/whatsapp.png" alt="ir a Whatsapp" width="60" height="60"></a>
+            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"> <img src="imagenes/facebook.png"
+                    alt="Ir a perfil de facebook" width="60" height="60"></a>
+        </div>
+        <p><strong>© Copyright 2025 Archipyelago.</strong> Todos los derechos reservados</p>
     </footer>
 </body>
+
 </html>
