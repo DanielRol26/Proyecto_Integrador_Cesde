@@ -202,3 +202,36 @@ label {
     transform: translateY(-5px);
     box-shadow: 0 5px 5px rgba(0,0,0, 0.3);
 }
+
+header {
+    background-color: var(--color-text);
+}
+.logo {
+    width: 30px;
+    height: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.lista-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-yellow);
+    padding: 12px 20px;
+    display: block;
+}
+
+a:hover {
+    background: var(--color-yellow);
+}
+
