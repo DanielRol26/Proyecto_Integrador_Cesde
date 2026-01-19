@@ -4,21 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="icon" href="imagenes/logo_pestaña.png" />
+=======
+    <link rel="stylesheet" href="styleregistro.css">
+>>>>>>> registro
     <title>Registro</title>
 </head>
 
 <body>
-    <header>
-        <img src="imagenes/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
-        <nav>
-            <ul>
+    <header class="header-principal">
+    <div class="container">
+        <div class="header-content">
+            <img src="imagenes/logo2archi.png" alt="Logo Archipyélago" class="logo-imagen">
+            <nav class="navegacion-principal">
+                <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
+                <li><a href="inicio_sesion.html" class="active">Iniciar Sesión</a></li>
                 <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
+    </div>
     </header>
+
     <hr>
     <main>
         <section>
@@ -54,198 +63,182 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </figure>
+        <h1>Crea tu cuenta</h1>
+        <section class="registro-formulario">
             <h2>Ingresa tus datos</h2>
-            <p>Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
+            <p class="p-inicial">Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
             </p>
             <form action="registroexitoso.html" method="get">
-                <div>
-                    <label for="nombre">Primer nombre *</label>
-                    <br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                </div>
-                <br>
-                <div>
-                    <label for="nombre2">Segundo nombre</label>
-                    <br>
-                    <input type="text" id="nombre2" name="nombre2" placeholder="Ej: Felipe">
-                </div>
-                <br>
-                <div>
-                    <label for="apellido">Primer apellido *</label>
-                    <br>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Cardenas" required>
-                </div>
-                <br>
-                <div>
-                    <label for="apellido2">Segundo apellido</label>
-                    <br>
-                    <input type="text" id="apellido2" name="apellido2" placeholder="Ej: Rodríguez">
-                </div>
-                <br>
-                <div>
-                    <label for="tipo.documento">Tipo de documento *</label>
-                    <br>
-                    <select name="tipo.documento" id="tipo.documento" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="ti">Tarjeta de identidad</option>
-                        <option value="cc">Cédula de Ciudadanía</option>
-                        <option value="ce">Cédula de Extranjería</option>
-                        <option value="ppt">Permiso de Protección Temporal</option>
-                        <option value="nit">NIT</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for="ndocumento">Número de documento *</label>
-                    <br>
-                    <input type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
-                </div>
-                <br>
-                <div>
-                    <label for="edad">Edad *</label>
-                    <br>
-                    <input type="number" id="edad" name="edad" placeholder="0" required>
-                </div>
-                <br>
-                <fieldset>
-                    <legend>Sexo *</legend>
+            <div class="datos-personales">
+                <h3>Datos Personales</h3>
+                <label for="nombre">Primer nombre: *</label>
+                <input class = "entradas" type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
+                <label for="nombre2">Segundo nombre:</label>
+                <input class = "entradas" type="text" id="nombre2" name="nombre2" placeholder="Ej: Felipe">
+                <label for="apellido">Primer apellido: *</label>
+                <input class = "entradas" type="text" id="apellido" name="apellido" placeholder="Ej: Cardenas" required>
+                <label for="apellido2">Segundo apellido: </label>
+                <input class = "entradas" type="text" id="apellido2" name="apellido2" placeholder="Ej: Rodríguez">
+                <label for="tipo-documento">Tipo de documento *</label>
+                <select name="tipo-documento" id="tipo-documento" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="ti">Tarjeta de identidad</option>
+                    <option value="cc">Cédula de Ciudadanía</option>
+                    <option value="ce">Cédula de Extranjería</option>
+                    <option value="ppt">Permiso de Protección Temporal</option>
+                    <option value="nit">NIT</option>
+                </select>
+                <label for="ndocumento">Número de documento : *</label>
+                <input class = "entradas" type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
+                <label for="edad">Edad *</label>
+                <input class = "entradas" type="number" id="edad" name="edad" placeholder="0" required>
+            <fieldset>
+                <legend>Sexo *</legend>
+                <div class="radio-sexo">
                     <div>
-                        <input type="radio" name="sexo" value="M" required>
-                        <label for="">Masculino</label>
-                        <input type="radio" name="sexo" value="F">
-                        <label for="">Femenino</label>
+                        <input  id="sxm" type="radio"  name="sexo" value="M" required>
+                        <label for="sxm" id="sxm-label">Masculino</label>
                     </div>
-                </fieldset>
-                <br>
-                <div>
-                    <label for="fecha.nacimiento">Fecha de nacimiento *</label>
-
-                    <br>
-                    <input type="date" id="fecha.nacimiento" name="fecha.nacimiento" required>
-                </div>
-                <br>
-                <div>
-                    <label for="movil">Celular de contacto *</label>
-                    <br>
-                    <input type="number" id="movil" name="celular" placeholder="0" required>
-                </div>
-                <br>
-                <div>
-                    <label for="pais">Pais de residencia *</label>
-                    <br>
-                    <input type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
-                </div>
-                <br>
-                <div>
-                    <label for="departamento">Departamento de residencia *</label>
-                    <br>
-                    <input type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
-                </div>
-                <br>
-                <div>
-                    <label for="ciudad">Ciudad de residencia *</label>
-                    <br>
-                    <input type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
-                </div>
-                <br>
-                <div>
-                    <label for="direccion">Dirección de residencia *</label>
-                    <br>
-                    <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5"
-                        required>
-                </div>
-                <br>
-                <div>
-                    <label for="email">Correo electrónico *</label>
-                    <br>
-                    <input type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
-                </div>
-                <br>
-                <div>
-                    <label for="password">Contraseña *</label>
-                    <br>
-                    <input type="password" id="password" name="contraseña" placeholder="**********" required>
-                </div>
-                <br>
-                <fieldset>
-                    <legend>Intereses</legend>
                     <div>
-                        <input type="checkbox" name="interes" id="interes" value="aventura">
+                        <input id="sxf" type="radio" name="sexo" value="F">
+                        <label for="sxf" id="sxf-label">Femenino</label>
+                    </div>
+                </div>
+            </fieldset>
+                <label for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                <input class = "entradas" type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+            <div class="informacion-con-res">
+                <h3>Información de contacto y residencia</h3>
+                <label for="movil">Celular de contacto: *</label>
+                <input class = "entradas" type="number" id="movil" name="celular" placeholder="0" required>
+                <label for="pais">Pais de residencia: *</label>
+                <input class = "entradas" type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
+                <label for="departamento">Departamento de residencia: *</label>
+                <input class = "entradas" type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
+                <label for="ciudad">Ciudad de residencia: *</label>
+                <input class = "entradas" type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
+                <div>
+                <label for="direccion">Dirección de residencia: *</label>
+                <input class = "entradas" type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5" required>
+                <label for="email">Correo electrónico: *</label>
+                <input class = "entradas" type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
+            </div>
+
+            <div class="seguridad-cuenta">
+                <h3>Seguridad de Cuenta</h3>
+                <label for="password">Contraseña: *</label>
+                <input class="entradas" type="password" id="password" name="password" required>
+                <label for="password2">Repetir contraseña: *</label>
+                <input class="entradas" type="password" id="repetirpassword" name="repetirpassword" required>
+            </div>
+            <h3>Intereses</h3>
+            <fieldset class="intereses">
+                <legend><p>Seleccione una o varias opciones</p></legend>
+                <div class="div-checkbox">
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes" value="aventura">
                         <label for="interes">Aventura</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes2" value="ficcion">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes2" value="ficcion">
                         <label for="interes2">Ciencia Ficción</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes3" value="comedia">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes3" value="comedia">
                         <label for="interes3">Comedia</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes4" value="documentales">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes4" value="documentales">
                         <label for="interes4">Documentales</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes5" value="drama">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes5" value="drama">
                         <label for="interes5">Drama</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes6" value="fantasia">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes6" value="fantasia">
                         <label for="interes6">Fantasía</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes7" value="infantil">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes7" value="infantil">
                         <label for="interes7">Infantil</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes8" value="misterio">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes8" value="misterio">
                         <label for="interes8">Misterio</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes9" value="romance">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes9" value="romance">
                         <label for="interes9">Romance</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes10" value="suspenso">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes10" value="suspenso">
                         <label for="interes10">Suspenso</label>
-                        <br>
-                        <input type="checkbox" name="interes" id="interes11" value="terror">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="interes" id="interes11" value="terror">
                         <label for="interes11">Terror</label>
-                        <br>
-                        <input type="checkbox" name="Otros" id="interes12" value="otros">
+                    </div>
+                    <div>
+                        <input class = "checkbox" type="checkbox" name="Otros" id="interes12" value="otros">
                         <label for="interes12">Ninguno de los listados</label>
                     </div>
-                </fieldset>
-                <br>
-                <div>
-                    <label for="foto">Foto de perfil *</label>
-                    <br>
-                    <input type="file" id="foto" name="foto" accept=".jpg" required>
                 </div>
-                <br>
+            </fieldset>
+            <h3>Perfil</h3>
+            <div>
+                <label for="foto">Foto de perfil *</label>
+                <input class = "entradas" type="file" id="foto" name="foto" accept=".jpg" required>
+            </div>
+            <div class="div-botones">
                 <div>
-                    <label for="enviar"></label>
-                    <input type="submit" id="enviar" value="Registrarse">
-                    <label for="limpiar"></label>
-                    <input type="reset" id="limpiar" value="Limpiar">
+                <label for="enviar"></label>
+                <input class = "btn registrarse" type="submit"  id="enviar" value="Registrarse">
                 </div>
+                <div>
+                <label for="limpiar"></label>
+                <input class = "btn limpiar" type="reset" id="limpiar" value="Limpiar">
+                </div>
+            </div>
             </form>
         </section>
     </main>
     <hr>
-    <footer>
-        <div>
-            <h3>¿Necesitas ayudas? Contactanos</h3>
-            <h3>Lineas de Atención</h3>
-            <ul>
+    <footer id="contacto" class="pie-pagina">
+    <div class="container">
+        <div class="contenido-footer">
+            <div class="columna-footer">
+            <h3>¿Necesitas ayuda? Contáctanos</h3>
+            <h4>Líneas de Atención</h4>
+            <ul class="lista-contacto">
                 <li>+57 3197561958</li>
                 <li>+57 3122358703</li>
             </ul>
         </div>
-        <div>
+
+        <div class="columna-footer">
             <h3>Redes Sociales</h3>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
-                <img src="imagenes/gmail.png" alt="gmail" width="60" height="60"></a>
-            <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
-                <img src="imagenes/youtube.png" alt="Ir a canal de youtube" width="60" height="60"></a>
-            <a href="https://wa.me/3197561958" target="_blank">
-                <img src="imagenes/whatsapp.png" alt="ir a Whatsapp" width="60" height="60"></a>
-            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"> <img src="imagenes/facebook.png"
-                    alt="Ir a perfil de facebook" width="60" height="60"></a>
+            <div class="redes-sociales">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
+                <img src="logo_amarillo/email.png" alt="Gmail" width="60" height="60">
+                </a>
+                <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
+                <img src="logo_amarillo/youtube.png" alt="Ir a canal de YouTube" width="60" height="60">
+                </a>
+                <a href="https://wa.me/3197561958" target="_blank">
+                <img src="logo_amarillo/whatsapp.png" alt="Ir a WhatsApp" width="60" height="60">
+                </a>
+                <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank">
+                <img src="logo_amarillo/facebook.png" alt="Ir a perfil de Facebook" width="60" height="60">
+                </a>
+            </div>
         </div>
-        <p><strong>© Copyright 2025 Archipyelago.</strong> Todos los derechos reservados</p>
-    </footer>
+    </div>
+    <div class="copyright">
+        <p><strong>© Copyright 2025 Archipyélago.</strong> Todos los derechos reservados</p>
+    </div>
+    </div>
+</footer>
 </body>
 
 </html>
