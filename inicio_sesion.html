@@ -5,140 +5,144 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="imagenes/logo_pestaña.png" />
+  <link rel="stylesheet" href="estilos.css" />
   <title>Inicio de sesión</title>
 </head>
 
 <body>
-  <!-- Cabezera-->
-  <header>
-    <img src="imagenes/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
-        <li><a href="contactenos.html">Contáctenos</a></li>
-      </ul>
-    </nav>
+  <!-- HEADER - Modelo de Caja Sección 1 -->
+  <header class="header-principal">
+    <div class="container">
+      <div class="header-content">
+        <img src="imagenes/logo2archi.png" alt="Logo Archipyélago" class="logo-imagen">
+        <nav class="navegacion-principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio_sesion.html" class="active">Iniciar Sesión</a></li>
+            <li><a href="contactenos.html">Contáctenos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
-  <!-- Inicio de secion -->
-  <main>
-    <section>
-      <h2 style="color: #122c51" id="login-title">Accede a tu cuenta</h2>
 
-      <form action="#" method="post" autocomplete="on">
-        <div>
-          <label for="username">Usuario:</label>
-          <input placeholder="ingrese su correo" type="text" id="username" name="username" required
-            aria-required="true" />
-        </div>
-        <br />
+  <!-- MAIN - Contenido principal -->
+  <main class="contenido-principal">
+    <div class="container">
+      <!-- SECCIÓN DE LOGIN - Modelo de Caja Sección 2 -->
+      <section id="formulario" class="seccion-login">
+        <div class="tarjeta-login">
+          <div class="login-encabezado">
+            <h2 id="login-title">Accede a tu cuenta</h2>
+            <p class="subtitulo">Ingresa tus credenciales para continuar</p>
+          </div>
 
-        <div>
-          <label for="password">Contraseña:</label>
-          <input placeholder="ingrese su contraseña" type="password" id="password" name="password" required
-            aria-required="true" />
+          <form action="#" method="post" autocomplete="on" class="formulario-login">
+            <!-- Campo Usuario -->
+            <div class="grupo-formulario">
+              <label for="username">Usuario:</label>
+              <input 
+                placeholder="ingrese su correo" 
+                type="email" 
+                id="username" 
+                name="username" 
+                required
+                aria-required="true" 
+              />
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="grupo-formulario">
+              <label for="password">Contraseña:</label>
+              <div class="input-password">
+                <input 
+                  placeholder="ingrese su contraseña" 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  required
+                  aria-required="true" 
+                />
+              </div>
+            </div>
+
+            <!-- Enlaces de recuperación y registro -->
+            <div class="enlaces-formulario">
+              <a href="recuperacion.html" class="enlace-recuperacion">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="enlace-registro">
+              <p>¿No tienes una cuenta? <a href="registro.html">Regístrate Aquí</a></p>
+            </div>
+
+            <!-- PREFERENCIAS - Modelo de Caja Sección 3 -->
+            <div id="preferencias" class="seccion-preferencias">
+              <h3>Preferencias de usuario:</h3>
+              
+              <div class="grupo-checkbox">
+                <input type="checkbox" id="recordar" name="recordar" />
+                <label for="recordar">Recordar mi sesión</label>
+              </div>
+
+              <div class="grupo-checkbox">
+                <input type="checkbox" id="notificaciones" name="notificaciones" />
+                <label for="notificaciones">Recibir notificaciones</label>
+              </div>
+
+              <div class="grupo-checkbox">
+                <input type="checkbox" id="terminos" name="terminos" required />
+                <label for="terminos">Acepto los términos y condiciones *</label>
+              </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="grupo-botones">
+              <button type="submit" class="btn btn-primario">Iniciar sesión</button>
+              <button type="reset" class="btn btn-secundario">Limpiar formulario</button>
+            </div>
+          </form>
         </div>
-        <br />
-        <a style="color: #5b88b2" href="recuperacion.html">¿Olvidaste tu contraseña?</a>
-        <br />
-        <div>
-          <p>
-            ¿No tienes una cuenta?<a style="color: #5b88b2; display: inline;" href="registro.html"> Registrate Aquí</a>
-          </p>
-        </div>
-        <br />
-        <!-- Inicio de secion -->
-        <!-- Preferencias del usuario-->
-        <div>
-          <h3 style="color: #122c51">Preferencias de usuario:</h3>
-          <input type="checkbox" id="recordar" name="recordar" />
-          <label for="recordar">Recordar mi sesión</label>
-          <br />
-          <input type="checkbox" id="notificaciones" name="notificaciones" />
-          <label for="notificaciones">Recibir notificaciones</label>
-          <br />
-          <input type="checkbox" id="terminos" name="terminos" required />
-          <label for="terminos">Acepto los términos y condiciones</label>
-        </div>
-        <br />
-        <!-- Preferencias del usuario-->
-        <!-- Botones -->
-        <div>
-          <button type="submit">Iniciar sesión</button>
-          <button type="reset">Limpiar formulario</button>
-        </div>
-      </form>
-      <!-- Botones -->
-      <!-- Tabla con los libros disponibles -->
-      <h3 style="color: #122c51">Libros disponibles</h3>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th>Autor</th>
-            <th>Disponible</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cien años de soledad</td>
-            <td>Gabriel García Márquez</td>
-            <td>Sí</td>
-          </tr>
-          <tr>
-            <td>Don Quijote</td>
-            <td>Miguel de Cervantes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>1984</td>
-            <td>George Orwell</td>
-            <td>Sí</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Tabla con los libros disponibles -->
-    </section>
-    <!-- Multimedia -->
-    <div>
-      <h3 style="color: #122c51">Música de fondo</h3>
-      <audio src="audios/Sondio Loquendo Theme Song.mp3" controls>
-        Tu navegador no soporta el elemento de audio.
-      </audio>
+      </section>
     </div>
-    <br />
-    <div>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/0guW2g8UT6Q"
-        title="Descubre Archipyélago: Tu Biblioteca en Dónde Prestar Libros es Super Fácil" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <!-- Multimedia -->
   </main>
-  <!-- pie de página-->
-  <footer>
-    <div>
-      <h3>¿Necesitas ayudas? Contactanos</h3>
-      <h3>Lineas de Atención</h3>
-      <ul>
-        <li>+57 3197561958</li>
-        <li>+57 3122358703</li>
-      </ul>
+
+  <!-- FOOTER - Modelo de Caja Sección 4 -->
+  <footer id="contacto" class="pie-pagina">
+    <div class="container">
+      <div class="contenido-footer">
+        <div class="columna-footer">
+          <h3>¿Necesitas ayuda? Contáctanos</h3>
+          <h4>Líneas de Atención</h4>
+          <ul class="lista-contacto">
+            <li>+57 3197561958</li>
+            <li>+57 3122358703</li>
+          </ul>
+        </div>
+
+        <div class="columna-footer">
+          <h3>Redes Sociales</h3>
+          <div class="redes-sociales">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
+              <img src="logo_amarillo/email.png" alt="Gmail" width="60" height="60">
+            </a>
+            <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
+              <img src="logo_amarillo/youtube.png" alt="Ir a canal de YouTube" width="60" height="60">
+            </a>
+            <a href="https://wa.me/3197561958" target="_blank">
+              <img src="logo_amarillo/whatsapp.png" alt="Ir a WhatsApp" width="60" height="60">
+            </a>
+            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank">
+              <img src="logo_amarillo/facebook.png" alt="Ir a perfil de Facebook" width="60" height="60">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p><strong>© Copyright 2025 Archipyélago.</strong> Todos los derechos reservados</p>
+      </div>
     </div>
-    <div>
-      <h3>Redes Sociales</h3>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
-        <img src="imagenes/gmail.png" alt="gmail" width="60" height="60"></a>
-      <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
-        <img src="imagenes/youtube.png" alt="Ir a canal de youtube" width="60" height="60"></a>
-      <a href="https://wa.me/3197561958" target="_blank">
-        <img src="imagenes/whatsapp.png" alt="ir a Whatsapp" width="60" height="60"></a>
-      <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"> <img src="imagenes/facebook.png"
-          alt="Ir a perfil de facebook" width="60" height="60"></a>
-    </div>
-    <p><strong>© Copyright 2025 Archipyelago.</strong> Todos los derechos reservados</p>
   </footer>
-  <!-- pie de página-->
 </body>
 
 </html>

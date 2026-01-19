@@ -1,0 +1,321 @@
+/* Resetear márgenes y configurar caja */
+* {                    /* Selecciona TODOS los elementos*/
+  margin: 0;             /* Elimina espacios por defecto del navegador*/
+  padding: 0;
+  box-sizing: border-box;   /* Hace que el ancho/alto incluya padding y border*/
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f1e8;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header-principal {
+  background-color: #122c51;    /* Color azul oscuro de fondo */
+  padding: 20px 0;                /* 20px arriba y abajo, 0 a los lados */
+  border-bottom: 5px solid #f4d03f; /* Línea amarilla de 5px abajo */
+  margin-bottom: 0;               /* Sin espacio debajo */
+}
+
+.header-content {
+  display: flex;                 /* Activa flexbox */
+  justify-content: space-between;  /* Logo a la izquierda, menú a la derecha */
+  align-items: center;        /* Centra verticalmente */
+}
+
+.logo-imagen {
+  max-width: 350px;           /* Máximo 350px de ancho */
+  height: auto;              /* Altura automática para mantener proporción */
+  padding: 5px;               /* Espacio interno de 5px */
+  border-radius: 8px;          /* Bordes redondeados */
+  
+}
+
+/* Navegación */
+.navegacion-principal ul {    
+  list-style: none;             /* Quita los puntos de la lista */
+  display: flex;           /* Pone los items en fila */
+  gap: 15px;               /* 15px de espacio entre cada item */
+  
+}
+
+.navegacion-principal a {
+  color: white;            /* Texto blanco */
+  text-decoration: none;      /* Quita el subrayado */
+  padding: 10px 20px;    /* 10px arriba/abajo, 20px izq/der */
+  border-radius: 6px;         /* Bordes redondeados */
+}
+
+.navegacion-principal a:hover {
+  background-color: #5b88b2;  /* Al pasar el mouse, fondo azul claro */
+}
+
+/*Formulario de inicio de sesion*/
+.contenido-principal {
+  padding: 40px 0;       /* 40px arriba y abajo para separar del header/footer */
+}
+
+.seccion-login {
+  max-width: 500px;    /* Máximo 500px de ancho */
+  margin: 0 auto;     /* Centra horizontalmente */
+}
+
+.tarjeta-login {
+  background-color: white;    /* Fondo blanco */
+  padding: 40px;                 /* 40px de espacio interno en todos lados */
+  margin: 20px auto;            /* 20px arriba/abajo, centrado horizontal */
+  border: 2px solid #ddd;       /* Borde gris de 2px */
+  border-radius: 15px;          /* Esquinas muy redondeadas */
+}
+
+.login-encabezado {
+  text-align: center;           /* Texto centrado */
+  margin-bottom: 30px;          //* 30px de espacio abajo */
+  padding-bottom: 15px;         /* 15px dentro abajo */
+  border-bottom: 3px solid #f4d03f;  /* Línea amarilla de 3px */
+}
+
+.login-encabezado h2 {
+  color: #122c51;          /* Color azul oscuro */
+  font-size: 28px;            /* Tamaño de letra grande */
+  margin-bottom: 8px;        /* 8px abajo */
+}
+
+.subtitulo {
+  color: #666;            /* Gris oscuro */
+  font-size: 15px;          /* Letra más pequeña */
+
+}
+
+/* Campos del formulario */
+.grupo-formulario {
+  margin-bottom: 20px;          /* 20px entre cada campo */
+}
+
+.grupo-formulario label {
+  display: block;              /* Ocupa toda la línea */
+  color: #122c51;             /* Azul oscuro */
+  font-weight: bold;           /* Letra en negrita */
+  margin-bottom: 8px;          /* 8px entre label e input */
+}
+
+.grupo-formulario input {
+  width: 100%;                   /* Ocupa todo el ancho disponible */
+  padding: 12px;                 /* 12px de espacio interno */
+  border: 2px solid #ddd;      /* Borde gris de 2px */
+  border-radius: 8px;            /* Esquinas redondeadas */
+  font-size: 16px;              /* Tamaño de letra */
+}
+
+.grupo-formulario input:focus {
+  border-color: #f4d03f;        /* Borde amarillo al hacer clic */
+  outline: none;                /* Quita el borde azul por defecto */
+}
+
+/* Contraseña con icono */
+
+
+/* Enlaces */
+.enlaces-formulario {
+  text-align: right;           /* Texto alineado a la derecha */
+  margin: 15px 0;               /* 15px arriba y abajo */
+}
+
+.enlace-recuperacion {
+  color: #5b88b2;          /* Azul claro */
+  text-decoration: none;      /* Sin subrayado */
+}
+
+.enlace-recuperacion:hover {
+  text-decoration: underline;  /* Al pasar mouse, subrayado */
+}
+
+.enlace-registro {
+  text-align: center;        /* Centra el texto horizontalmente */
+  margin: 20px 0;           /* 20px arriba y abajo, 0 a los lados */
+}
+
+.enlace-registro a { 
+  color: #5b88b2;        /* Color azul claro para el enlace */
+  text-decoration: none;  /* Quita el subrayado del enlace */
+  font-weight: bold;      /* Pone el texto en negrita */
+}
+
+/* PREFERENCIAS */
+.seccion-preferencias {
+  background-color: #f8f9fa;   /* Fondo gris muy claro */
+  padding: 25px;                /* 25px de espacio interno */
+  margin: 25px 0;               /* 25px arriba y abajo */
+  border: 2px solid #ddd;       /* Borde gris */
+  border-left: 5px solid #5b88b2; /* Borde izquierdo azul */
+  border-radius: 10px;           /* Esquinas redondeadas */
+}
+
+.seccion-preferencias h3 {
+  color: #122c51;
+  font-size: 18px;
+  margin-bottom: 15px;          /* Separación abajo */
+  padding-bottom: 10px;         /* Espaciado interno */
+  border-bottom: 2px solid #ddd; /* Línea separadora */
+}
+
+.grupo-checkbox {
+  display: flex;                   /* Flexbox para alinear */
+  align-items: center;           /* Centra verticalmente checkbox y texto */
+  gap: 10px;                     /* 10px entre checkbox y label */
+  margin-bottom: 12px;          /* 12px entre cada opción */
+}
+
+.grupo-checkbox input {
+  width: 18px;          /* Ancho del checkbox */
+  height: 18px;       /* Alto del checkbox */
+}
+
+/* Botones */
+.grupo-botones {
+  display: flex;      /* Pone botones en fila */
+  gap: 15px;          /* 15px entre botones */
+  margin-top: 25px;    /* 25px arriba */
+}
+
+.btn {
+  flex: 1;               /* Ambos botones ocupan mismo espacio */
+  padding: 12px;                 /* 12px interno */
+  border: none;         /* Sin borde */
+  border-radius: 8px;   /* Esquinas redondeadas */
+  font-size: 16px;      /* Tamaño de letra */
+  font-weight: bold;    /* Negrita */
+  cursor: pointer;    /* Manita al pasar mouse */
+}
+
+.btn-primario {
+  background-color: #f4d03f;  /* Fondo amarillo */
+  color: #122c51;             /* Texto azul oscuro */
+}
+
+.btn-primario:hover {
+  background-color: #e5c12f;   /* Amarillo más oscuro al pasar mouse */
+}
+
+.btn-secundario {
+  background-color: #ddd;      /* Fondo gris */
+  color: #122c51;        /* Texto azul oscuro */      
+} 
+
+.btn-secundario:hover {
+  background-color: #ccc;   /* Gris más oscuro al pasar mouse */
+}
+
+/* FOOTER */
+.pie-pagina { 
+  background-color: #122c51;    /* Fondo azul oscuro */
+  color: white;                 /* Texto blanco */
+  padding: 40px 0 20px;          /* 40px arriba, 20px abajo */
+  margin-top: 50px;              /* 50px separación del contenido */
+  border-top: 5px solid #f4d03f; /* Línea amarilla arriba */
+}
+
+.contenido-footer {
+  display: flex;                  /* Flexbox */
+  justify-content: space-around;  /* Distribuye columnas con espacio */
+  gap: 40px;                       /* 40px entre columnas */
+  margin-bottom: 30px;         /* 30px abajo */
+}
+
+.columna-footer h3 {
+  color: #f4d03f;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.columna-footer h4 {
+  margin: 15px 0 10px;  /* 15px arriba, 0 a los lados, 10px abajo */
+
+}
+
+.lista-contacto {
+  list-style: none;   /* Quita los puntos de la lista */
+}
+
+.lista-contacto li {
+  padding: 8px 0;      /* 8px arriba y abajo */
+  padding-left: 25px;  /* 25px a la izquierda (para hacer espacio al ícono) */
+  position: relative;   /* Permite posicionar el ícono */
+}
+
+.lista-contacto li::before {
+  content: "📞";        /* Agrega el emoji de teléfono ANTES del texto */
+  position: absolute;     /* Posición absoluta */
+  left: 0;              /* Pega el emoji al borde izquierdo */
+}
+
+/* Redes sociales */
+.redes-sociales {
+  display: flex;            /* Íconos en fila */
+  gap: 15px;           /* 15px entre íconos */
+  margin-top: 15px;       /* 15px arriba */
+}
+
+.redes-sociales a {
+  padding: 5px;           /* 5px interno */
+  border: 2px solid transparent;   /* Borde transparente (invisible) */
+  border-radius: 10px;      /* Esquinas redondeadas */
+}
+
+.redes-sociales a:hover {
+  border-color: #f4d03f;  /* Al pasar mouse, borde amarillo visible */
+}
+
+.copyright {
+  text-align: center;       /* Texto centrado */
+  padding-top: 20px;       /* 20px arriba */
+  margin-top: 20px;         /* 20px arriba */
+  border-top: 2px solid rgba(255, 255, 255, 0.3);    /* Línea blanca semi-transparente */
+  color: #f4d03f;     /* Texto amarillo */
+}
+
+/* RESPONSIVE */
+    
+@media (max-width: 768px) {      /* Si la pantalla es menor a 768px */
+  .header-content {
+    flex-direction: column;   /* Logo y menú en columna (uno sobre otro) */
+    text-align: center;      /* Centrado */
+  }
+
+  .logo-imagen {
+    max-width: 280px;    /* En móviles, el logo se hace más pequeño (280px en vez de 350px) */
+  }
+
+  .navegacion-principal ul {
+    flex-direction: column;     /* Menú en columna */
+  }
+
+  .tarjeta-login {
+    padding: 25px;    /* En móviles, menos padding (25px en vez de 40px) */
+    margin: 15px;     /* Márgenes más pequeños (15px en vez de 20px) */
+  }
+
+  .grupo-botones {
+    flex-direction: column;  /* Botones en columna */
+  }
+
+  .contenido-footer { 
+    flex-direction: column;  /* Columnas del footer una sobre otra */
+    text-align: center;       /* Centrado */
+  }
+
+  .redes-sociales {
+    justify-content: center;   /* Centra los íconos de redes sociales en móviles */
+  }
+}

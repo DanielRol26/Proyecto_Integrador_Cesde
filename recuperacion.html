@@ -2,72 +2,110 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Recuperar contraseña</title>
-    <link rel="icon" href="imagenes/logo_pestaña.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="imagenes/logo_pestaña.png" />
+  <link rel="stylesheet" href="estilos.css" />
+  <title>Recuperar contraseña</title>
 </head>
 
 <body>
-    <header>
-        <img src="imagenes/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
+  <!-- HEADER -->
+  <header class="header-principal">
+    <div class="container">
+      <div class="header-content">
+        <img src="imagenes/logo2archi.png" alt="Logo Archipyélago" class="logo-imagen">
+        <nav class="navegacion-principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
+            <li><a href="contactenos.html">Contáctenos</a></li>
+          </ul>
         </nav>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <section>
+  <!-- MAIN - Contenido principal -->
+  <main class="contenido-principal">
+    <div class="container">
+      <!-- SECCIÓN DE RECUPERACIÓN -->
+      <section class="seccion-login">
+        <div class="tarjeta-login">
+          <div class="login-encabezado">
             <h2 id="recovery-title">Recuperar contraseña</h2>
-            <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+            <p class="subtitulo">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+          </div>
 
-            <form action="#" method="post" autocomplete="on">
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input placeholder="ingrese su correo" type="email" id="email" name="email" required
-                        aria-required="true" />
-                </div>
-                <br />
+          <form action="#" method="post" autocomplete="on" class="formulario-login">
+            <!-- Campo Email -->
+            <div class="grupo-formulario">
+              <label for="email">Correo electrónico:</label>
+              <input 
+                placeholder="ingrese su correo" 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                aria-required="true" 
+              />
+            </div>
 
-                <div>
-                    <button type="submit">Enviar enlace de recuperación</button>
-                    <button type="button" onclick="window.location.href='inicion_sesion.html'">Volver al inicio de
-                        sesión</button>
-                </div>
-            </form>
+            <!-- Botones -->
+            <div class="grupo-botones">
+              <button type="submit" class="btn btn-primario">Enviar enlace de recuperación</button>
+              <button type="button" class="btn btn-secundario" onclick="window.location.href='inicio_sesion.html'">
+                Volver al inicio de sesión
+              </button>
+            </div>
 
-            <br>
-            <p style="font-size: 14px;">¿Recordaste tu contraseña? <a href="inicio_sesion.html">Inicia sesión aquí</a>
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <div>
-            <h3>¿Necesitas ayudas? Contactanos</h3>
-            <h3>Lineas de Atención</h3>
-            <ul>
-                <li>+57 3197561958</li>
-                <li>+57 3122358703</li>
-            </ul>
+            <!-- Enlace adicional -->
+            <div class="enlace-registro">
+              <p>¿Recordaste tu contraseña? <a href="inicio_sesion.html">Inicia sesión aquí</a></p>
+            </div>
+          </form>
         </div>
-        <div>
-            <h3>Redes Sociales</h3>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie-pagina">
+    <div class="container">
+      <div class="contenido-footer">
+        <div class="columna-footer">
+          <h3>¿Necesitas ayuda? Contáctanos</h3>
+          <h4>Líneas de Atención</h4>
+          <ul class="lista-contacto">
+            <li>+57 3197561958</li>
+            <li>+57 3122358703</li>
+          </ul>
+        </div>
+
+        <div class="columna-footer">
+          <h3>Redes Sociales</h3>
+          <div class="redes-sociales">
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
-                <img src="imagenes/gmail.png" alt="gmail" width="60" height="60"></a>
+              <img src="logo_amarillo/email.png" alt="Gmail" width="60" height="60">
+            </a>
             <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
-                <img src="imagenes/youtube.png" alt="Ir a canal de youtube" width="60" height="60"></a>
+              <img src="logo_amarillo/youtube.png" alt="Ir a canal de YouTube" width="60" height="60">
+            </a>
             <a href="https://wa.me/3197561958" target="_blank">
-                <img src="imagenes/whatsapp.png" alt="ir a Whatsapp" width="60" height="60"></a>
-            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"> <img src="imagenes/facebook.png"
-                    alt="Ir a perfil de facebook" width="60" height="60"></a>
+              <img src="logo_amarillo/whatsapp.png" alt="Ir a WhatsApp" width="60" height="60">
+            </a>
+            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank">
+              <img src="logo_amarillo/facebook.png" alt="Ir a perfil de Facebook" width="60" height="60">
+            </a>
+          </div>
         </div>
-        <p><strong>© Copyright 2025 Archipyelago.</strong> Todos los derechos reservados</p>
-    </footer>
+      </div>
+
+      <div class="copyright">
+        <p><strong>© Copyright 2025 Archipyélago.</strong> Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
