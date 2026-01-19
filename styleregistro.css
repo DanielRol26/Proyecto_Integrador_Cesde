@@ -4,15 +4,16 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #fbf9e4;
-    line-height: 1.3;
-    color: var(--color-text);
-}
-
 :root {
     --color-border: #ccc;
-    --color-text: #122c4f;
+    --color-text: #2263a0;
+    --color-yellow: #fcdb08;
+    --color-fondo: #fbf9e4;
+}
+
+body {
+    background: var(--color-fondo);
+    line-height: 1.3;
 }
 
 .registro-formulario {
@@ -20,11 +21,22 @@ body {
     background-color: white;
     padding: 30px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     border: 2px solid var(--color-border);
     border-radius: 15px;
     font-family: 'calibri';
     color: var(--color-text);
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    margin: 10px 13%;
+    padding: 40px;
+    padding-top: 0;
+    color: var(--color-text);
+    border-radius: 10px;
+    background: linear-gradient(to bottom , var(--color-fondo), #ffffff), var(--color-fondo);
 }
 
 .registro-formulario h2 {
@@ -32,7 +44,7 @@ body {
     padding: 1px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     color: var(--color-text);
 }
 
@@ -98,18 +110,26 @@ label {
 }
 
 .p-inicial {
-    height: 40px;
     text-align: center;
     font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-bottom: 70px;
+    color: grey;
+    border-bottom: 5px solid var(--color-yellow);
+    padding-bottom: 15px;
 }
 
 .radio-sexo {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content:space-around;
-    margin: 5px;
-    padding: 5px;
+}
+
+.radio-sexo div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .datos-personales fieldset {
@@ -121,6 +141,8 @@ label {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 600;
+    text-align: left;
 }
 
 .intereses {
@@ -133,6 +155,7 @@ label {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    font-weight: 600;
 }
 
 #tipo-documento {
@@ -141,4 +164,41 @@ label {
     height: 35px;
     border: 2px solid var(--color-border);
     border-radius: 5px;
+}
+#sxm-label,
+#sxf-label {
+    font-weight: normal;
+}
+
+.div-botones {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 40px auto;
+}
+
+
+.btn {
+    cursor: pointer;
+    color: var(--color-yellow);
+    background-color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 17px;
+    width: 140px;
+    height: 45px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.8s ease;
+    
+}
+
+.registrarse:hover,
+.limpiar:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-text);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.3);
 }

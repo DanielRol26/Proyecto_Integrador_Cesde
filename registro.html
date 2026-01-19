@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Crea tu cuenta</h1>
+        
         <nav>
             <ul>
                 <li>Inicio</li>
@@ -19,6 +19,7 @@
     </header>
     <hr>
     <main>
+        <h1>Crea tu cuenta</h1>
         <section class="registro-formulario">
             <h2>Ingresa tus datos</h2>
             <p class="p-inicial">Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
@@ -52,17 +53,16 @@
                 <div class="radio-sexo">
                     <div>
                         <input  id="sxm" type="radio"  name="sexo" value="M" required>
-                        <label for="sxm">Masculino</label>
+                        <label for="sxm" id="sxm-label">Masculino</label>
                     </div>
                     <div>
                         <input id="sxf" type="radio" name="sexo" value="F">
-                        <label for="sxf">Femenino</label>
+                        <label for="sxf" id="sxf-label">Femenino</label>
                     </div>
                 </div>
             </fieldset>
-                <label for="fecha.nacimiento">Fecha de nacimiento: *</label>
-                <input class = "entradas" type="date" id="fecha.nacimiento" name="fecha.nacimiento" required>
-            </div>
+                <label for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                <input class = "entradas" type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
             <div class="informacion-con-res">
                 <h3>Información de contacto y residencia</h3>
                 <label for="movil">Celular de contacto: *</label>
@@ -146,11 +146,15 @@
                 <label for="foto">Foto de perfil *</label>
                 <input class = "entradas" type="file" id="foto" name="foto" accept=".jpg" required>
             </div>
-            <div>
+            <div class="div-botones">
+                <div>
                 <label for="enviar"></label>
-                <input class = "entradas" type="submit"  id="enviar" value="Registrarse">
+                <input class = "btn registrarse" type="submit"  id="enviar" value="Registrarse">
+                </div>
+                <div>
                 <label for="limpiar"></label>
-                <input class = "entradas" type="reset" id="limpiar" value="Limpiar">
+                <input class = "btn limpiar" type="reset" id="limpiar" value="Limpiar">
+                </div>
             </div>
             </form>
         </section>
