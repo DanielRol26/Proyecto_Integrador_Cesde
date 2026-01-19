@@ -21,30 +21,21 @@
     <main>
         <section class="registro-formulario">
             <h2>Ingresa tus datos</h2>
-            <p>Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
+            <p class="p-inicial">Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
             </p>
             <form action="registroexitoso.html" method="get">
-            <div class="dato-1">
+            <div class="datos-personales">
                 <h3>Datos Personales</h3>
-                <label for="nombre">Primer nombre *</label>
-                <br>
+                <label for="nombre">Primer nombre: *</label>
                 <input class = "entradas" type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                <br>
-                <label for="nombre2">Segundo nombre</label>
-                <br>
+                <label for="nombre2">Segundo nombre:</label>
                 <input class = "entradas" type="text" id="nombre2" name="nombre2" placeholder="Ej: Felipe">
-                <br>
-                <label for="apellido">Primer apellido *</label>
-                <br>
+                <label for="apellido">Primer apellido: *</label>
                 <input class = "entradas" type="text" id="apellido" name="apellido" placeholder="Ej: Cardenas" required>
-                <br>
-                <label for="apellido2">Segundo apellido</label>
-                <br>
+                <label for="apellido2">Segundo apellido: </label>
                 <input class = "entradas" type="text" id="apellido2" name="apellido2" placeholder="Ej: Rodríguez">
-                <br>
-                <label for="tipo.documento">Tipo de documento *</label>
-                <br>
-                <select name="tipo.documento" id="tipo.documento" required>
+                <label for="tipo-documento">Tipo de documento *</label>
+                <select name="tipo-documento" id="tipo-documento" required>
                     <option value="">Seleccione una opción</option>
                     <option value="ti">Tarjeta de identidad</option>
                     <option value="cc">Cédula de Ciudadanía</option>
@@ -52,74 +43,53 @@
                     <option value="ppt">Permiso de Protección Temporal</option>
                     <option value="nit">NIT</option>
                 </select>
-                <br>
-                <br>
-                <label for="ndocumento">Número de documento *</label>
-                <br>
+                <label for="ndocumento">Número de documento : *</label>
                 <input class = "entradas" type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
-                <br>
                 <label for="edad">Edad *</label>
-                <br>
                 <input class = "entradas" type="number" id="edad" name="edad" placeholder="0" required>
-                <br>
             <fieldset>
                 <legend>Sexo *</legend>
-                <div>
-                    <input class = "entradas" type="radio"  name="sexo" value="M" required>
-                    <label for="">Masculino</label>
-                    <input class = "entradas" type="radio" name="sexo" value="F">
-                    <label for="">Femenino</label>
+                <div class="radio-sexo">
+                    <div>
+                        <input  id="sxm" type="radio"  name="sexo" value="M" required>
+                        <label for="sxm">Masculino</label>
+                    </div>
+                    <div>
+                        <input id="sxf" type="radio" name="sexo" value="F">
+                        <label for="sxf">Femenino</label>
+                    </div>
                 </div>
             </fieldset>
-            <br>
-                <label for="fecha.nacimiento">Fecha de nacimiento *</label>
-                <br>
+                <label for="fecha.nacimiento">Fecha de nacimiento: *</label>
                 <input class = "entradas" type="date" id="fecha.nacimiento" name="fecha.nacimiento" required>
             </div>
-            <br>
-            <div>
+            <div class="informacion-con-res">
                 <h3>Información de contacto y residencia</h3>
-                <label for="movil">Celular de contacto *</label>
-                <br>
+                <label for="movil">Celular de contacto: *</label>
                 <input class = "entradas" type="number" id="movil" name="celular" placeholder="0" required>
-                <br>
-                <label for="pais">Pais de residencia *</label>
-                <br>
+                <label for="pais">Pais de residencia: *</label>
                 <input class = "entradas" type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
-                <br>
-                <label for="departamento">Departamento de residencia *</label>
-                <br>
+                <label for="departamento">Departamento de residencia: *</label>
                 <input class = "entradas" type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
-                <br>
-                <label for="ciudad">Ciudad de residencia *</label>
-                <br>
+                <label for="ciudad">Ciudad de residencia: *</label>
                 <input class = "entradas" type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
-                <br>
                 <div>
-                <label for="direccion">Dirección de residencia *</label>
-                <br>
+                <label for="direccion">Dirección de residencia: *</label>
                 <input class = "entradas" type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5" required>
-                <br>
-                <label for="email">Correo electrónico *</label>
-                <br>
+                <label for="email">Correo electrónico: *</label>
                 <input class = "entradas" type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
-                <br>
             </div>
-            <br>
-            <div>
-                <h3>Seguridad de Seguridad</h3>
-                <label for="password">Contraseña *</label>
-                <br>
+
+            <div class="seguridad-cuenta">
+                <h3>Seguridad de Cuenta</h3>
+                <label for="password">Contraseña: *</label>
                 <input class="entradas" type="password" id="password" name="password" required>
-                <br>
-                <label for="password2">Repetir contraseña *</label>
-                <br>
+                <label for="password2">Repetir contraseña: *</label>
                 <input class="entradas" type="password" id="repetirpassword" name="repetirpassword" required>
-                <br>
             </div>
-            <br>
-            <fieldset>
-                <legend><h3>Intereses</h3></legend>
+            <h3>Intereses</h3>
+            <fieldset class="intereses">
+                <legend><p>Seleccione una o varias opciones</p></legend>
                 <div class="div-checkbox">
                     <div>
                         <input class = "checkbox" type="checkbox" name="interes" id="interes" value="aventura">
@@ -171,13 +141,11 @@
                     </div>
                 </div>
             </fieldset>
-            <br>
+            <h3>Perfil</h3>
             <div>
                 <label for="foto">Foto de perfil *</label>
-                <br>
                 <input class = "entradas" type="file" id="foto" name="foto" accept=".jpg" required>
             </div>
-            <br>
             <div>
                 <label for="enviar"></label>
                 <input class = "entradas" type="submit"  id="enviar" value="Registrarse">

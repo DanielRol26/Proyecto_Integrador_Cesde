@@ -7,7 +7,12 @@
 body {
     background: #fbf9e4;
     line-height: 1.3;
-    color: black;
+    color: var(--color-text);
+}
+
+:root {
+    --color-border: #ccc;
+    --color-text: #122c4f;
 }
 
 .registro-formulario {
@@ -16,10 +21,10 @@ body {
     padding: 30px;
     margin: auto;
     margin-top: 100px;
-    border: 2px solid rgba(128, 128, 128, 0.116);
+    border: 2px solid var(--color-border);
     border-radius: 15px;
     font-family: 'calibri';
-    color: black;
+    color: var(--color-text);
 }
 
 .registro-formulario h2 {
@@ -28,57 +33,112 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 35px;
-    color: black;
+    color: var(--color-text);
 }
 
 .registro-formulario h3 {
     font-size: 25px;
-    text-align:left;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: black;
+    text-align:center;
+    margin: 20px;
+    padding: 10px;
+    color: var(--color-text);
 }
 
 .entradas {
-    width: 100%;
+    width: 70%;
     background: white;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 1rem;
-    border: 2px solid black;
+    border: 2px solid var(--color-border);
     font-size: 16px;
 }
 
-.checkbox {
-    margin: 25px;
-    background: #3498db;
-    color: white;
-    padding: 20px;
+.radio-sexo input,
+label {
+    cursor: pointer;
+}
+
+.datos-personales,
+.informacion-con-res,
+.seguridad-cuenta,
+.intereses {
     text-align: center;
 }
 
-.div-checkbox {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.datos-personales label,
+.informacion-con-res label,
+.seguridad-cuenta label {
+    display: block;
+    width: 70%;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-weight: 600;
 }
 
-.registro-formulario p {
+.div-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    column-gap:20%;
+    justify-content: center;
+}
+
+.div-checkbox div { 
+    display: flex; 
+    align-items: center;
+    gap: 7px;
+    width: 30%;
+}
+
+.div-checkbox label { 
+    text-align: left;
+    display: block;
+    font-weight: normal;
+}
+
+.p-inicial {
     height: 40px;
     text-align: center;
     font-size: 18px;
     margin-bottom: 70px;
 }
 
-.registro-formulario select {
-    width:70%;
-    height: 35px;
-    border: 2px solid black;
-    border-radius: 5px;
+.radio-sexo {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin: 5px;
+    padding: 5px;
 }
 
-#interes12 {
-    grid-column: 2 / 3;
-    text-align: center;
-    justify-self: center;
+.datos-personales fieldset {
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intereses {
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: 50px 20px 20px 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#tipo-documento {
+    margin-bottom: 16px;
+    width:70%;
+    height: 35px;
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
 }
