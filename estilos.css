@@ -79,7 +79,7 @@ body {
 
 .login-encabezado {
   text-align: center;           /* Texto centrado */
-  margin-bottom: 30px;          //* 30px de espacio abajo */
+  margin-bottom: 30px;          /* 30px de espacio abajo */
   padding-bottom: 15px;         /* 15px dentro abajo */
   border-bottom: 3px solid #f4d03f;  /* Línea amarilla de 3px */
 }
