@@ -235,8 +235,10 @@ p, span, li, a {
   margin: 0;
 }
 
-.lista-contacto li {
-  margin-bottom: 8px;
+.lista-contacto li::before {
+    content: "📞";
+    position: absolute;
+    left: 0;
 }
 
 .redes-sociales {
