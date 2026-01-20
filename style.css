@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #FBF9E4;
+  color: #122C4F;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #F0D637;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+p, span, li, a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-principal {
+  background-color: #122C4F;
+  border-bottom: 4px solid #F0D637;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo-imagen {
+  height: 45px;
+}
+
+.navegacion-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navegacion-principal a {
+  color: #FBF9E4;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.navegacion-principal a:hover {
+  background-color: #5B88B2;
+}
+
+.navegacion-principal .activo {
+  background-color: #F0D637;
+  color: #122C4F;
+}
+
+.hero-wrapper {
+  position: relative;
+  margin: 70px 40px;
+}
+
+.folder {
+  position: absolute;
+  width: 100%;
+  max-width: 920px;
+  height: 260px;
+  border-radius: 10px;
+}
+
+.folder .tab {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  height: 40px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.folder.dark {
+  background-color: #122C4F;
+  top: 35px;
+  left: 35px;
+}
+
+.folder.dark .tab {
+  background-color: #122C4F;
+  color: #FBF9E4;
+}
+
+.folder.light {
+  background-color: #5B88B2;
+  top: 15px;
+  left: 15px;
+}
+
+.folder.light .tab {
+  background-color: #5B88B2;
+  color: #FBF9E4;
+}
+
+.hero {
+  position: relative;
+  background-color: #122C4F;
+  color: #FBF9E4;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 920px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  margin-top: 0;
+}
+
+.hero p {
+  max-width: 520px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.buttons a {
+  display: inline-block;
+  padding: 10px 22px;
+  margin-right: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #F0D637;
+  color: #122C4F;
+}
+
+.btn-secondary {
+  border: 2px solid #FBF9E4;
+  color: #FBF9E4;
+}
+
+.cards {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.card {
+  background-color: #1a3b63;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  font-size: 14px;
+  color: #FBF9E4;
+}
+
+.card-soft {
+  background-color: #244c78;
+}
+
+.card-fisico {
+  background-color: #244c78;
+}
+
+.video-card {
+  background-color: transparent;
+  padding: 0;
+  width: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pie-pagina {
+  background-color: #122C4F;
+  color: #FBF9E4;
+  margin-top: 60px;
+  border-top: 4px solid #F0D637;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+}
+
+.columna-footer h3 {
+  color: #F0D637;
+  margin-bottom: 15px;
+}
+
+.lista-contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-contacto li {
+  margin-bottom: 8px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociales img {
+  width: 40px;
+  height: 40px;
+}
+
+.redes-sociales a {
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.redes-sociales a:hover {
+  background-color: #5B88B2;
+}
+
+.copyright {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #F0D637;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 900px) {
+
+  .hero-wrapper {
+    margin: 40px 20px;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card,
+  .video-card {
+    width: 100%;
+  }
+
+  .video-container {
+    width: 100%;
+  }
+
+}

@@ -3,146 +3,119 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/logo_pestaña.png" />
     <title>Archipyélago</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!--  HEADER  -->
+    <header class="header-principal">
+        <div class="container header-content">
+            <img src="imagenes/logo2archi.png" alt="Logo Archipyélago" class="logo-imagen">
 
-    <header>
-        <img src="imagenes/logoarchi.jpeg" alt="Logo Archipyélago" width="550" height="250">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="inicio_sesion.html">Iniciar Sesión</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-            </ul>
-        </nav>
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="inicio_sesion.html" class="activo">Iniciar sesión</a></li>
+                    <li><a href="contactenos.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!--  MAIN  -->
-    <main>
-        <section id="hero">
-            <h2>Bienvenido a Archipyélago</h2>
-            <p>Navega ideas, conquista horizontes.</p>
-        </section>
+    <div class="hero-wrapper">
 
-        <section id="heroMultimedia">
-            <figure>
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/0guW2g8UT6Q?si=lrj2cYgsUAVv3Xx8&amp;controls=0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </figure>
+        <div class="folder dark">
+            <div class="tab">Archivo general</div>
+        </div>
 
-            <figure>
-                <audio src="audios/audioEntrada.mp3" type="audio/mpeg" controls></audio>
-            </figure>
-        </section>
+        <div class="folder light">
+            <div class="tab">Catálogo digital</div>
+        </div>
 
-        <section>
-            <h2>Servicios</h2>
-            <ul>
-                <div><a href="catalogo.html">Catálogo digital</a></div>
-                <div><a href="prestamos.html">Préstamos, devoluciones y renovaciones</a></div>
-                <div><a href="novedades.html">Novedades</a></div>
-            </ul>
-        </section>
-        <section>
-            <h3>Libros disponibles</h3>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Autor</th>
-                        <th>Disponible</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cien años de soledad</td>
-                        <td>Gabriel García Márquez</td>
-                        <td>Sí</td>
-                    </tr>
-                    <tr>
-                        <td>Don Quijote</td>
-                        <td>Miguel de Cervantes</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>1984</td>
-                        <td>George Orwell</td>
-                        <td>Sí</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <section class="hero">
+            <h1>Archipyélago</h1>
+            <h2>Navega ideas, conquista horizontes</h2>
+            <p>   
+                Archivos físicos y digitales organizados como carpetas reales, tu archivo, pero sin estrés
+            </p>
 
-        <section class="agendaCultural">
-            <h2>Agenda Cultural</h2>
-            <div class="contenedor">
-                <button class="contenedor-btn">&#10094;</button>
-                <div class="contenedor-tracker"></div>
+            <div class="buttons">
+                <a href="#" class="btn-primary">Iniciar sesión</a>
+                <a href="#" class="btn-secondary">Registrarse</a>
+            </div>
 
-                <!-- Tarjetas de eventos -->
-                <div class="tarjeta"><a href="evento1.html">
-                        <img src="imagenes/evento1.jpg" alt="Evento 1" width="550" height="250">
-                        <h3>Conferencia Textos apócrifos</h3>
-                        <p>Fecha: 15 de marzo de 2025</p>
-                        <p>Descripción: Una charla con autores locales.</p>
-                    </a></div>
+            <div class="cards">
 
-                <div class="tarjeta"><a href="evento2.html">
-                        <img src="imagenes/evento2.jpg" alt="Evento 2" width="550" height="250">
-                        <h3>Taller de Escritura Creativa</h3>
-                        <p>Fecha: 22 de marzo de 2025</p>
-                        <p>Descripción: Mejora tus habilidades de escritura.</p>
-                    </a></div>
-
-                <div>
-                    <div class="tarjeta"><a href="evento3.html">
-                            <img src="imagenes/evento3.jpg" alt="Evento 3" width="550" height="250">
-                            <h3>Exposición de Arte Local</h3>
-                            <p>Fecha: 30 de marzo de 2025</p>
-                            <p>Descripción: Obras de artistas emergentes.</p>
-                        </a></div>
+                <div class="card">
+                    <h3>Digital</h3>
+                    Respaldo y control de archivos electrónicos.
                 </div>
 
-                <button class="carousel-btn next">&#10095;</button>
+                <div class="card card-soft">
+                    <h3>Físico</h3>
+                    Organización de inventarios físicos.
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/BTcwUU0Dw9U" title="Video Archipyélago"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
 
             </div>
 
         </section>
 
-    </main>
+    </div>
 
+    <footer class="pie-pagina" id="contacto">
+        <div class="container footer-content">
 
-    <footer>
-        <div>
-            <h3>¿Necesitas ayudas? Contactanos</h3>
-            <h3>Lineas de Atención</h3>
-            <ul>
-                <li>+57 3197561958</li>
-                <li>+57 3122358703</li>
-            </ul>
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p>Líneas de atención</p>
+                <ul class="lista-contacto">
+                    <li>+57 319 756 1958</li>
+                    <li>+57 312 235 8703</li>
+                </ul>
+            </div>
+
+            <div class="columna-footer">
+                <h3>Redes</h3>
+                <div class="redes-sociales">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com"
+                        target="_blank">
+                        <img src="logo_amarillo/email.png" alt="Gmail">
+                    </a>
+                    <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
+                        <img src="logo_amarillo/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://wa.me/3197561958" target="_blank">
+                        <img src="logo_amarillo/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank">
+                        <img src="logo_amarillo/facebook.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div>
-            <h3>Redes Sociales</h3>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
-                <img src="imagenes/gmail.png" alt="gmail" width="60" height="60"></a>
-            <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
-                <img src="imagenes/youtube.png" alt="Ir a canal de youtube" width="60" height="60"></a>
-            <a href="https://wa.me/3197561958" target="_blank">
-                <img src="imagenes/whatsapp.png" alt="ir a Whatsapp" width="60" height="60"></a>
-            <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"> <img src="imagenes/facebook.png"
-                    alt="Ir a perfil de facebook" width="60" height="60"></a>
+
+        <div class="copyright">
+            © 2025 Archipyélago · Todos los derechos reservados
         </div>
-        <p><strong>© Copyright 2025 Archipyelago.</strong> Todos los derechos reservados</p>
     </footer>
+
 </body>
 
 </html>
