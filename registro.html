@@ -33,35 +33,35 @@
     <main>
         <section>
             <h1
-                class="text-[100px] text-center my-[10px] mx-[13%] p-[40px] pt-0 text-[var(--color-text)] rounded-[10px] bg-[linear-gradient(to_bottom,var(--color-fondo),#ffffff,var(--color-fondo))]">
+                class="text-[100px] text-center my-[10px] mx-[13%] p-[40px] pt-0 text-[var(--color-text)] rounded-[10px] bg-[linear-gradient(to_bottom,var(--color-fondo),#ffffff,var(--color-fondo))] font-black">
                 Crea tu cuenta</h1>
             <section
-                class="w-[55%] max-w-[700px] bg-white p-[30px] m-auto mt-[10px] border-[2px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)]">
-                <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)]">Ingresa tus datos
+                class="w-[50%] max-w-[700px] bg-white p-[30px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]" >
+                <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">Ingresa tus datos
                 </h2>
                 <p
-                    class="p-inicial text-center text-[18px] ml-[40px] mr-[40px] mb-[10px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px]">
+                    class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
                     Para completar el registro correctamente, por favor asegurese de que ningun campo
                     con el (*) quede vacío
                 </p>
                 <form action="registroexitoso.html" method="get">
                     <fieldset
-                        class="text-center border-[2px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold "
+                        class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold "
                         id="siguiente1">
                         <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)]">Datos
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">Datos
                                 Personales</h3>
                         </legend>
 
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="nombre">Nombre Completo : *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="tipo-documento">Tipo de documento *</label>
                         <select
-                            class="mb-[16px] w-[70%] h-[35px] border-[2px] border-[var(--color-border)] rounded-[5px]"
+                            class="mb-[16px] w-[70%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
                             name="tipo-documento" id="tipo-documento" required>
                             <option value="">Seleccione una opción</option>
                             <option value="ti">Tarjeta de identidad</option>
@@ -73,121 +73,123 @@
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="ndocumento">Número de documento : *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
                         <fieldset
-                            class="border-[2px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
+                            class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
                             <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *</legend>
                             <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
                                 <div class="flex items-center gap-[8px] w-[123px]">
                                     <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M" required>
                                     <label
-                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-normal cursor-pointer"
+                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
                                         for="sxm" id="sxm-label">Masculino</label>
                                 </div>
                                 <div class="flex items-center gap-[8px] w-[123px]">
                                     <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
                                     <label
-                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-normal cursor-pointer"
+                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
                                         for="sxf" id="sxf-label">Femenino</label>
                                 </div>
                                 <div class="flex items-center gap-[8px]">
                                     <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N" required>
                                     <label
-                                        class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-normal cursor-pointer"
+                                        class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
                                         for="N" id="n-label">Prefiero no decir</label>
                                 </div>
                             </div>
                         </fieldset>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="fecha-nacimiento">Fecha de nacimiento: *</label>
-                        <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
-                            type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                        <div>
+                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                            <input
+                                class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                                type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                        </div>
                         <div class="flex justify-center gap-[15px] mt-[20px]">
                             <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
                             <button type="button" onclick="nextsiguiente(1)"
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
                                 >
                             </button>
                         </div>
                     </fieldset>
 
                     <fieldset
-                        class="hidden text-center border-[2px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold"
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold"
                         id="siguiente2">
                         <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)]">Información
-                                de residencia</h3>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">Información
+                                de Residencia</h3>
                         </legend>
 
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold" for="pais">Pais
                             de residencia: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="departamento">Departamento / Estado: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="ciudad">Ciudad: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
                         <div>
                             <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                                 for="direccion">Dirección: *</label>
                             <input
-                                class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                                class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                                 type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5"
                                 required>
                         </div>
                         <div class="flex justify-center gap-[15px] mt-[20px]">
                             <button
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 type="button" onclick="atrassiguiente(2) ">&lt</button>
                             <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
                             <button
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 type="button" onclick="nextsiguiente(2)">
                                 >
                             </button>
                         </div>
                     </fieldset>
                     <fieldset id="siguiente3"
-                        class="hidden text-center border-[2px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold">
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold">
                         <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)]">Información
-                                de contacto</h3>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">Información
+                                de Contacto</h3>
                         </legend>
 
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="movil">Celular de contacto: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                             type="number" id="movil" name="celular" placeholder="3001234567" required>
                         <div>
                             <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                                 for="email">Correo electrónico: *</label>
                             <input
-                                class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
+                                class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px]"
                                 type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
                         </div>
                         <div class="flex justify-center gap-[15px] mt-[20px]">
                             <button
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 type="button" onclick="atrassiguiente(3) ">&lt</button>
                             <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
                             <button
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 type="button" onclick="nextsiguiente(3)">
                                 >
                             </button>
@@ -195,53 +197,54 @@
                     </fieldset>
 
                     <fieldset id="siguiente4"
-                        class="hidden text-center border-[2px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold">
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold">
                         <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)]">Seguridad de
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">Seguridad de
                                 Cuenta</h3>
                         </legend>
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="password">Contraseña: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
-                            type="password" id="password" name="password" required>
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
                         <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                             for="password2">Repetir contraseña: *</label>
                         <input
-                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[2px] border-[var(--color-border)] text-[16px]"
-                            type="password" id="repetirpassword" name="repetirpassword" required>
-                        <div class="div-checkbox flex flex-col gap-[12px] w-[70%] mx-auto">
+                            class="w-[70%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="password" id="repetirpassword" name="repetirpassword" placeholder="Repita la contraseña" required>
+                        <div class="div-checkbox flex flex-col gap-[12px] w-[70%] mx-auto border-[1px] border-[var(--color-border)] p-[10px] rounded-[10px] border-l-[5px] border-l-[var(--color-border)] bg-[var(--color-fondo2)]">
+                            <h4 class="font-bold text[30px] border-b-[3px] border-b-[var(--color-border)] pb-[10px]">Condiciones y preferencias:</h4>
                             <div class="flex items-center gap-[10px] w-auto">
-                                <input class="checkbox" type="checkbox" name="interes" id="interes" value="aventura"
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes" id="interes" value="aventura"
                                     required>
-                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal"
+                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
                                     for="interes">Acepto los Términos y Condiciones y la Política de Privacidad
                                     *</label>
                             </div>
                             <div class="flex items-center gap-[10px] w-auto">
-                                <input class="checkbox" type="checkbox" name="interes" id="interes3" value="comedia">
-                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal"
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes" id="interes3" value="comedia">
+                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
                                     for="interes3">Deseo recibir promociones y ofertas por correo
                                     electrónico</label>
                             </div>
                             <div class="flex items-center gap-[10px] w-auto">
-                                <input class="checkbox" type="checkbox" name="interes" id="interes5" value="drama">
-                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal"
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes" id="interes5" value="drama">
+                                <label class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
                                     for="interes5">Deseo recibir información por WhatsApp</label>
                             </div>
                         </div>
                         <div class="flex justify-center gap-[15px] mt-[20px]">
                             <button
-                                class="text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 type="button" onclick="atrassiguiente(4) ">&lt</button>
                             <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)]"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                 onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
                             <div>
                                 <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
                                     for="enviar"></label>
                                 <input
-                                    class="btn registrarse cursor-pointer text-[var(--color-yellow)] bg-[var(--color-text)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-yellow)] hover:text-[var(--color-text)] hover:translate-y-[-5px] hover: shadow-[0_5px_5px_rgba(0,0,0, 0.3)]"
+                                    class="btn registrarse cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover: shadow-[0_5px_5px_rgba(0,0,0, 0.3)] hover:font-bold"
                                     type="submit" id="enviar" value="Registrarse">
                             </div>
                         </div>
@@ -250,7 +253,6 @@
                 </form>
             </section>
     </main>
-    <hr>
     <footer id="contacto"
         class="pie-pagina bg-[#122c51] text-white pt-[40px] pr-[0] pb-[20px] mt-[50px] border-t-[5px] border-[var(--color-yellow)]">
         <div class="container">

@@ -5,10 +5,11 @@
 }
 
 :root {
-    --color-border: #ccc;
-    --color-text: #2263a0;
-    --color-yellow: #f4d03f;
-    --color-fondo: #fbf9e4;
+    --color-border: #a6cfd5;
+    --color-text: #26408b;
+    --color-yellow: #a6cfd5;
+    --color-fondo: #fff8f0;
+    --color-fondo2: #a6cfd50e;
 }
 
 /*header*/
