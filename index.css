@@ -1,0 +1,326 @@
+* {
+    margin: 0;              
+    padding: 0;             
+    box-sizing: border-box; /* Hace que el ancho/alto incluya padding y border (más fácil de calcular tamaños) */
+}
+
+/*body*/
+body {
+    font-family: Arial, sans-serif; /* Define Arial como fuente principal del sitio */
+    background-color: rgb(220, 238, 157); /* Color de fondo para toda la página */
+    min-height: 100vh;      /* Altura mínima de 100% (pantalla completa) */
+}
+
+/*letras del titulo*/
+.jtitulo-contactenos {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Tamaño fluido: mínimo 1rem, ideal 3% del ancho, máximo 1.5rem */
+    color: #ffffff;        
+    flex: 1;                /* Ocupa todo el espacio disponible en un contenedor flex */
+    text-align: center;     /* Centra el texto  */
+}
+
+.jmenu-navegacion {
+    display: flex;          /* Convierte en contenedor flexible (los elementos se ponen en línea) */
+    flex-wrap: wrap;        /* Los elementos bajan a la siguiente línea si no caben */
+    list-style: none;    
+    gap: 2rem;           
+    justify-content: center; /* Centra los elementos del menú */
+}
+
+.jmenu-navegacion a {
+    text-decoration: none;  
+    color: #fafafa;   
+    font-weight: 500;       /* Grosor de letra medio */
+    transition: color 0.3s; /* Animación suave de 0.3 segundos al cambiar de color */
+}
+
+.jmenu-navegacion a:hover {
+    color: #ccc914;         /* Color amarillo cuando pasas el mouse sobre el enlace */
+    text-decoration: underline; /* Subraya el texto al pasar el mouse */
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 800px;       
+    margin: 3rem auto;     
+    padding: 0 clamp(1rem, 5vw, 2rem); /* Padding lateral fluido: mínimo 1rem, ideal 5% del ancho, máximo 2rem */
+}
+
+.jseccion-hero {
+    text-align: center;     /* Centra todo el texto */
+    color: rgb(0, 0, 0);    /* Color de texto negro */
+    margin-bottom: 3rem;    /* Espacio de 3rem debajo de esta sección */
+}
+
+.jtitulo-principal {
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Tamaño fluido: mínimo 1.5rem, ideal 5% del ancho, máximo 2.5rem */
+    margin-bottom: 1rem;    /* Espacio de 1rem debajo del título */
+    text-shadow: 2px 2px 4px rgb(28, 31, 85, 0.3);
+}
+
+.jsubtitulo {
+    font-size: clamp(1.1rem, 3vw, 1.5rem); /* Tamaño fluido: mínimo 1.1rem, ideal 3% del ancho, máximo 1.5rem */
+    margin-bottom: 0.5rem;  /* Espacio de 0.5rem debajo */
+    font-weight: 300;       /* Letra delgada */
+}
+
+.jtexto-enlace {
+    font-size: clamp(0.85rem, 2vw, 0.9rem); /* Tamaño fluido: mínimo 0.85rem, ideal 2% del ancho, máximo 0.9rem */
+    opacity: 0.9;           
+}
+
+/* FORMULARIO */
+.jformulario-contacto {
+    background: white;      
+    padding: clamp(1rem, 4vw, 2rem); /* Padding fluido: mínimo 1rem, ideal 4% del ancho, máximo 2rem */
+    border-radius: 15px;    /* Bordes redondeados de 15px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra: 0 horizontal, 10px abajo, 30px difuminado, negro 20% transparente */
+    position: relative;
+}
+
+.jcampo-formulario {
+    margin-bottom: 1.5rem;  /* Espacio de 1.5rem debajo de cada campo */
+}
+
+.jcampo-formulario label {
+    display: block;         /* Hace que la etiqueta ocupe toda la línea */
+    margin-bottom: 0.5rem;  /* Espacio de 0.5rem debajo de la etiqueta */
+    font-weight: 600;      
+    color: #333;           
+}
+
+.jcampo-formulario input,
+.jcampo-formulario textarea {
+    width: 100%;            
+    padding: 0.75rem;       /* Espacio interno de 0.75rem */
+    border: 2px solid #e0e0e0; 
+    border-radius: 8px;     
+    font-size: 1rem;        
+    transition: border-color 0.3s; /* Animación suave del color del borde */
+}
+
+.jcampo-formulario input:focus,
+.jcampo-formulario textarea:focus {
+    outline: none;          /* Quita el contorno azul por defecto del navegador */
+    border-color: rgb(25, 55, 100); /* Cambia el borde a azul oscuro cuando está seleccionado */
+}
+
+.jcampo-checkbox {
+    display: flex;          /* Convierte en contenedor flexible */
+    flex-wrap: wrap;        /* Permite que los elementos bajen de línea si no caben */
+    align-items: center;   
+    gap: 0.5rem;            /* Espacio de 0.5rem entre checkbox y texto */
+    margin-bottom: 1.5rem;  
+    color: rgb(28, 31, 85); /* Color azul oscuro */
+}
+
+.jcampo-checkbox input {
+    width: auto;            /* Ancho automático (no ocupa todo el espacio como otros inputs) */
+}
+
+.jboton-enviar {
+    width: 100%;
+    padding: 1rem;          
+    background-color: rgba(252, 248, 0, 0.774); 
+    color: rgb(15, 8, 8);   
+    border: none;           
+    border-radius: 8px;     
+    font-size: 1.1rem;      /* Tamaño de letra ligeramente mayor */
+    font-weight: 600;       
+    cursor: pointer;        /* Cambia el cursor a manita al pasar sobre él */
+    transition: transform 0.2s; /* Animación suave de transformación */
+}
+
+.jboton-enviar:hover {      
+    transform: translateY(-2px); /* Mueve el botón 2px hacia arriba */
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); 
+}
+
+/* BOTÓN WHATSAPP */
+.jboton-whatsapp {
+    position: fixed;        
+    bottom: 30px;           
+    right: 30px;            
+    transition: transform 0.3s; /* Animación suave de transformación */
+    z-index: 1000;          /* Valor alto para que siempre esté visible sobre otros elementos */
+}
+
+.jboton-whatsapp:hover {
+    transform: scale(1.1);  /* Aumenta el tamaño 10% al pasar el mouse */
+}
+
+.jboton-whatsapp img {
+    max-width: 60px;        
+    height: auto;           /* Alto automático (mantiene proporción) */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;     
+    padding: 2rem;          
+    color: rgb(28, 31, 85); 
+    margin-top: 3rem;       /* Espacio de 3rem arriba */
+}
+
+.jlogo-footer {
+    width: 80px;         
+    height: 80px;           
+    margin-bottom: 1rem;    
+    border-radius: 50%;     /* Hace la imagen circular  */
+}
+
+footer p {
+    font-size: 0.9rem;      
+    opacity: 0.9;           
+}
+
+.jboton-youtube{ 
+    padding: 1rem;          
+    border-radius: 1rem; 
+    text-decoration: none;   
+}
+
+.jboton {
+    background-color: rgb(216, 240, 2); 
+    color: rgb(255, 255, 255); 
+    padding: 10px 20px;     
+    text-decoration: none;  
+    border-radius: 5px;     
+    display: inline-block;  /* Se comporta como bloque pero no ocupa toda la línea */
+    transition: background-color 0.3s; /* Animación suave del color de fondo al hacer hover */
+}
+
+.jboton:hover {
+    background-color: rgb(25, 55, 70); /* Cambia a azul oscuro al pasar el mouse */
+}
+
+.jlinea-amarilla {
+    background-color: yellow; 
+}
+
+.jfooter {
+    background-color: rgb(28, 31, 85); 
+    color: yellow;          
+}
+
+.jpie-pagina {
+    background-color: #122c51; 
+    color: white;           
+    padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 20px) 20px; /* Padding fluido: arriba (20-40px), lados (10-20px), abajo (20px fijo) */
+    margin-top: 50px;       
+    border-top: 5px solid #f4d03f; 
+}
+
+.jcontenido-footer {
+    display: flex;          /* Convierte en contenedor flexible */
+    flex-wrap: wrap;        /* Permite que las columnas bajen de línea si no caben */
+    justify-content: space-around; /* Distribuye el espacio uniformemente entre elementos */
+    gap: 40px;              
+    margin-bottom: 30px;    
+}
+
+.jcolumna-footer {
+    flex: 1 1 200px;        /* Crece 1, se encoge 1, base mínima de 200px hace que se adapte se adapta automáticamente */
+    min-width: 200px;       
+}
+
+.jcolumna-footer h3 {
+    color: #f4d03f;         
+    font-size: clamp(18px, 3vw, 20px); /* Tamaño fluido: mínimo 18px, ideal 3% del ancho, máximo 20px */
+    margin-bottom: 15px;    
+    padding-bottom: 10px;   
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Linea de abajo */
+}
+
+.jcolumna-footer h4 {
+    margin: 15px 0 10px;    /* Margen: 15px arriba, 0 lados, 10px abajo */
+}
+
+.jlista-contacto {
+    list-style: none;       
+}
+
+.jlista-contacto li {
+    padding: 8px 0;         
+    padding-left: 10px;     /* Espacio de 25px a la izquierda (para el emoji) */
+    position: relative;     /* Posicionamiento relativo (para el emoji ::before) */
+}
+
+.jlista-contacto li::before {
+    content: "📞";          
+    position: relative;     
+ left: 0.2rem;           /* Pegado al borde izquierdo */
+}
+
+/* Redes sociales */
+.jredes-sociales {
+    display: flex;          /* Convierte en contenedor flexible */
+    flex-wrap: wrap;        /* Permite que los iconos bajen de línea si no caben  */
+    gap: 15px;              
+    margin-top: 15px;      
+    justify-content: center; 
+}
+
+.jredes-sociales a {
+    padding: 5px;           
+    border: 2px solid transparent; 
+    border-radius: 10px;    
+    transition: border-color 0.3s; /* Animación suave del color del borde */
+}
+
+.jredes-sociales a:hover {
+    border-color: #f4d03f;  /* Borde amarillo al pasar el mouse */
+}
+
+.jcopyright {
+    text-align: center;     
+    padding-top: 20px;      
+    margin-top: 20px;       
+    border-top: 2px solid rgba(255, 255, 255, 0.3); /* Línea superior blanca semi-transparente */
+    color: #f4d03f;         
+}
+
+.jheader-principal {
+    background-color: #122c51; 
+    padding: 20px;          
+    border-bottom: 5px solid #f4d03f; 
+    margin-bottom: 0;       
+}
+
+.jheader-content {
+    display: flex;          /* Convierte en contenedor flexible */
+    flex-wrap: wrap;        /* Permite reorganizar elementos si no caben en una línea */
+    justify-content: space-between; /* Espacio máximo entre elementos */
+    align-items: center;    
+    gap: 20px;              /* Espacio de 20px entre logo y menú */
+}
+
+.jlogo-imagen {
+    max-width: min(350px, 90vw); /* Usa el menor valor entre 350px o 90% del ancho de la ventana - se adapta automáticamente */
+    width: 100%;            
+    height: auto;           
+    padding: 5px;           
+    border-radius: 8px;     
+}
+
+/* Navegación */
+.jnavegacion-principal ul {
+    list-style: none;       /* Sin viñetas */
+    display: flex;          /* Elementos en línea */
+    flex-wrap: wrap;        /* Permite que los enlaces bajen de línea si no caben */
+    gap: 15px;              
+    justify-content: center; /* Centra los enlaces cuando bajan de línea */
+}
+
+.jnavegacion-principal a {
+    color: white;           
+    text-decoration: none;  
+    padding: 10px 20px;     
+    border-radius: 6px;     
+    transition: background-color 0.3s; /* Animación suave del color de fondo */
+    white-space: nowrap;    /* Evita que el texto del enlace se parta en dos líneas */
+}
+
+.jnavegacion-principal a:hover {
+    background-color: #5b88b2; /* Fondo azul claro al pasar el mouse */
+}

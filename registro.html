@@ -6,208 +6,396 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagenes/logo_pestaña.png" />
     <link rel="stylesheet" href="styleregistro.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Registro</title>
 </head>
-<body>
-    <header class="header-principal">
-    <div class="container">
-        <div class="header-content">
-            <img src="imagenes/logo.png" alt="Logo Archipyélago" class="logo-imagen">
-            <nav class="navegacion-principal">
-                <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="inicio_sesion.html" class="active">Iniciar Sesión</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-                </ul>
+
+<body class="bg-[var(--color-fondo)] leading-[1.3] font-arial">
+    <header class="main-header mt-[10px] mx-[10px]">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon"> <img src="imagenes/azul1.png" alt="The RICHN'T Logo"> </div>
+                <div class="logo-icon"> <img src="imagenes/azul2.png" alt="logo"></div>
+            </div>
+            <nav class="hidden md:flex gap-8 text-[var(--color-text)]">
+                <a href="index.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Inicio
+                </a>
+                <a href="inicio_sesion.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Iniciar Sesión
+                </a>
+                <a href="contactenos.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Contáctenos
+                </a>
             </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Buscar">
+                </div>
+                <div class="logo">
+                    <div class="logo-icon"> <img src="imagenes/usuario.png" alt="The RICHN'T Logo"> </div>
+                    <div class="logo-icon"> <img src="imagenes/carro-de-la-compra.png" alt="logo"></div>
+                </div>
+            </div>
         </div>
-    </div>
     </header>
     <hr>
     <main>
         <section>
-            <figure class="video">
-                <iframe  width="560" height="315" src="https://www.youtube.com/embed/4E09E9OsIt0?si=oJvL0OLX9nvVRJnR" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </figure>
-        <h1>Crea tu cuenta</h1>
-        <section class="registro-formulario">
-            <h2>Ingresa tus datos</h2>
-            <p class="p-inicial">Para completar el registro correctamente, por favor asegurese de que ningun campo con el (*) quede vacío
-            </p>
-            <form action="registroexitoso.html" method="get">
-            <div class="datos-personales">
-                <h3>Datos Personales</h3>
-                <label for="nombre">Primer nombre: *</label>
-                <input class = "entradas" type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                <label for="nombre2">Segundo nombre:</label>
-                <input class = "entradas" type="text" id="nombre2" name="nombre2" placeholder="Ej: Felipe">
-                <label for="apellido">Primer apellido: *</label>
-                <input class = "entradas" type="text" id="apellido" name="apellido" placeholder="Ej: Cardenas" required>
-                <label for="apellido2">Segundo apellido: </label>
-                <input class = "entradas" type="text" id="apellido2" name="apellido2" placeholder="Ej: Rodríguez">
-                <label for="tipo-documento">Tipo de documento *</label>
-                <select name="tipo-documento" id="tipo-documento" required>
-                    <option value="">Seleccione una opción</option>
-                    <option value="ti">Tarjeta de identidad</option>
-                    <option value="cc">Cédula de Ciudadanía</option>
-                    <option value="ce">Cédula de Extranjería</option>
-                    <option value="ppt">Permiso de Protección Temporal</option>
-                    <option value="nit">NIT</option>
-                </select>
-                <label for="ndocumento">Número de documento : *</label>
-                <input class = "entradas" type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
-                <label for="edad">Edad *</label>
-                <input class = "entradas" type="number" id="edad" name="edad" placeholder="0" required>
-            <fieldset>
-                <legend>Sexo *</legend>
-                <div class="radio-sexo">
-                    <div>
-                        <input  id="sxm" type="radio"  name="sexo" value="M" required>
-                        <label for="sxm" id="sxm-label">Masculino</label>
-                    </div>
-                    <div>
-                        <input id="sxf" type="radio" name="sexo" value="F">
-                        <label for="sxf" id="sxf-label">Femenino</label>
-                    </div>
-                </div>
-            </fieldset>
-                <label for="fecha-nacimiento">Fecha de nacimiento: *</label>
-                <input class = "entradas" type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
-            <div class="informacion-con-res">
-                <h3>Información de contacto y residencia</h3>
-                <label for="movil">Celular de contacto: *</label>
-                <input class = "entradas" type="number" id="movil" name="celular" placeholder="0" required>
-                <label for="pais">Pais de residencia: *</label>
-                <input class = "entradas" type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
-                <label for="departamento">Departamento de residencia: *</label>
-                <input class = "entradas" type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
-                <label for="ciudad">Ciudad de residencia: *</label>
-                <input class = "entradas" type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
-                <div>
-                <label for="direccion">Dirección de residencia: *</label>
-                <input class = "entradas" type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5" required>
-                <label for="email">Correo electrónico: *</label>
-                <input class = "entradas" type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
-            </div>
+            <h1
+                class="text-[100px] max-lg:text-[70px] max-md:text-[50px] max-sm:text-[35px] text-center my-[10px] mx-[13%] max-sm:mx-[5%] p-[40px] max-sm:p-[20px] pt-0 text-[var(--color-text)] rounded-[10px] bg-[linear-gradient(to_bottom,var(--color-fondo),#ffffff,var(--color-fondo))] font-black">
+                Registrate</h1>
+            <section
+                class="w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
+                <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">Ingresa
+                    tus datos
+                </h2>
+                <p
+                    class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
+                    Para completar el registro correctamente, por favor asegurese de que ningun campo
+                    con el (*) quede vacío
+                </p>
+                <form action="registroexitoso.html" method="get">
+                    <fieldset
+                        class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
+                        id="siguiente1">
+                        <legend>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
+                                Datos
+                                Personales</h3>
+                        </legend>
 
-            <div class="seguridad-cuenta">
-                <h3>Seguridad de Cuenta</h3>
-                <label for="password">Contraseña: *</label>
-                <input class="entradas" type="password" id="password" name="password" required>
-                <label for="password2">Repetir contraseña: *</label>
-                <input class="entradas" type="password" id="repetirpassword" name="repetirpassword" required>
-            </div>
-            <h3>Intereses</h3>
-            <fieldset class="intereses">
-                <legend><p>Seleccione una o varias opciones</p></legend>
-                <div class="div-checkbox">
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes" value="aventura">
-                        <label for="interes">Aventura</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes2" value="ficcion">
-                        <label for="interes2">Ciencia Ficción</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes3" value="comedia">
-                        <label for="interes3">Comedia</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes4" value="documentales">
-                        <label for="interes4">Documentales</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes5" value="drama">
-                        <label for="interes5">Drama</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes6" value="fantasia">
-                        <label for="interes6">Fantasía</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes7" value="infantil">
-                        <label for="interes7">Infantil</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes8" value="misterio">
-                        <label for="interes8">Misterio</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes9" value="romance">
-                        <label for="interes9">Romance</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes10" value="suspenso">
-                        <label for="interes10">Suspenso</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="interes" id="interes11" value="terror">
-                        <label for="interes11">Terror</label>
-                    </div>
-                    <div>
-                        <input class = "checkbox" type="checkbox" name="Otros" id="interes12" value="otros">
-                        <label for="interes12">Ninguno de los listados</label>
-                    </div>
-                </div>
-            </fieldset>
-            <h3>Perfil</h3>
-            <div>
-                <label for="foto">Foto de perfil *</label>
-                <input class = "entradas" type="file" id="foto" name="foto" accept=".jpg" required>
-            </div>
-            <div class="div-botones">
-                <div>
-                <label for="enviar"></label>
-                <input class = "btn registrarse" type="submit"  id="enviar" value="Registrarse">
-                </div>
-                <div>
-                <label for="limpiar"></label>
-                <input class = "btn limpiar" type="reset" id="limpiar" value="Limpiar">
-                </div>
-            </div>
-            </form>
-        </section>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="nombre">Nombre Completo : *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="tipo-documento">Tipo de documento *</label>
+                        <select
+                            class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
+                            name="tipo-documento" id="tipo-documento" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="ti">Tarjeta de identidad</option>
+                            <option value="cc">Cédula de Ciudadanía</option>
+                            <option value="ce">Cédula de Extranjería</option>
+                            <option value="ppt">Permiso de Protección Temporal</option>
+                            <option value="nit">NIT</option>
+                        </select>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="ndocumento">Número de documento : *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
+                        <fieldset
+                            class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
+                            <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *</legend>
+                            <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
+                                <div class="flex items-center gap-[8px] w-[123px]">
+                                    <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M" required>
+                                    <label
+                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                        for="sxm" id="sxm-label">Masculino</label>
+                                </div>
+                                <div class="flex items-center gap-[8px] w-[123px]">
+                                    <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
+                                    <label
+                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                        for="sxf" id="sxf-label">Femenino</label>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N" required>
+                                    <label
+                                        class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
+                                        for="N" id="n-label">Prefiero no decir</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div>
+                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                            <input
+                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                                type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                        </div>
+                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
+                            <button type="button"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                            <button type="button" onclick="nextsiguiente(1)"
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
+                                >
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
+                        id="siguiente2">
+                        <legend>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
+                                Información
+                                de Residencia</h3>
+                        </legend>
+
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold" for="pais">Pais
+                            de residencia: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="departamento">Departamento / Estado: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="ciudad">Ciudad: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
+                        <div>
+                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                for="direccion">Dirección: *</label>
+                            <input
+                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                                type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5"
+                                required>
+                        </div>
+                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
+                            <button
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                type="button" onclick="atrassiguiente(2) ">&lt</button>
+                            <button type="button"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                            <button
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                type="button" onclick="nextsiguiente(2)">
+                                >
+                            </button>
+                        </div>
+                    </fieldset>
+                    <fieldset id="siguiente3"
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]">
+                        <legend>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
+                                Información
+                                de Contacto</h3>
+                        </legend>
+
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="movil">Celular de contacto: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="number" id="movil" name="celular" placeholder="3001234567" required>
+                        <div>
+                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                for="email">Correo electrónico: *</label>
+                            <input
+                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px]"
+                                type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
+                        </div>
+                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
+                            <button
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                type="button" onclick="atrassiguiente(3) ">&lt</button>
+                            <button type="button"
+                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                            <button
+                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                type="button" onclick="nextsiguiente(3)">
+                                >
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="siguiente4"
+                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]">
+                        <legend>
+                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
+                                Seguridad de
+                                Cuenta</h3>
+                        </legend>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="password">Contraseña: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="password2">Repetir contraseña: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="password" id="repetirpassword" name="repetirpassword"
+                            placeholder="Repita la contraseña" required>
+                        <div
+                            class="div-checkbox flex flex-col gap-[12px] w-[70%] mx-auto border-[1px] border-[var(--color-border)] p-[10px] rounded-[10px] border-l-[5px] border-l-[var(--color-border)] bg-[var(--color-fondo2)] max-md:w-[90%] max-sm:w-[100%]">
+                            <h4 class="font-bold text[30px] border-b-[3px] border-b-[var(--color-border)] pb-[10px]">
+                                Condiciones y preferencias:</h4>
+                            <div class="flex items-center gap-[10px] w-auto">
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
+                                    id="interes" value="aventura" required>
+                                <label
+                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
+                                    for="interes">Acepto los Términos y Condiciones y la Política de Privacidad
+                                    *</label>
+                            </div>
+                            <div class="flex items-center gap-[10px] w-auto">
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
+                                    id="interes3" value="comedia">
+                                <label
+                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
+                                    for="interes3">Deseo recibir promociones y ofertas por correo
+                                    electrónico</label>
+                            </div>
+                            <div class="flex items-center gap-[10px] w-auto">
+                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
+                                    id="interes5" value="drama">
+                                <label
+                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
+                                    for="interes5">Deseo recibir información por WhatsApp</label>
+                            </div>
+                        </div>
+                        <div class="flex justify-center gap-[12px] mt-[20px] flex-wrap">
+                            <div class="flex gap-[12px] w-full sm:w-auto flex-wrap sm:flex-nowrap justify-center">
+                                <button
+                                    class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                    type="button" onclick="atrassiguiente(4)">&lt</button>
+                                <button type="button"
+                                    class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                    onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                            </div>
+                            <div class="w-full sm:w-auto mt-2 sm:mt-0 flex justify-center">
+                                <input
+                                    class="btn registrarse cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-full sm:w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                                    type="submit" id="enviar" value="Registrarse">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
     </main>
-    <hr>
-    <footer id="contacto" class="pie-pagina">
-    <div class="container">
-        <div class="contenido-footer">
-            <div class="columna-footer">
-            <h3>¿Necesitas ayuda? Contáctanos</h3>
-            <h4>Líneas de Atención</h4>
-            <ul class="lista-contacto">
-                <li>+57 3197561958</li>
-                <li>+57 3122358703</li>
-            </ul>
-        </div>
+    <footer id="contacto"
+        class="mt-12 bg-[var(--color-fondo2)] border-t border-white/10 text-white border-t-[3px] border-t-[var(--color-border)] ">
+        <div class="max-w-[1200px] mx-auto px-6 py-16 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="font-bold text-xl mb-6 text-[var(--color-text)]">
+                        ¿Necesitas ayuda?
+                    </h3>
 
-        <div class="columna-footer">
-            <h3>Redes Sociales</h3>
-            <div class="redes-sociales">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com" target="_blank">
-                <img src="imagenes/email.png" alt="Gmail" width="60" height="60">
-                </a>
-                <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank">
-                <img src="imagenes/youtube.png" alt="Ir a canal de YouTube" width="60" height="60">
-                </a>
-                <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank">
-                <img src="imagenes/facebook.png" alt="Ir a perfil de Facebook" width="60" height="60">
-                </a>
-                <a class="icon-whatsapp" href="https://wa.me/3197561958" target="_blank">
-                <img src="imagenes/whatsapp.png" alt="Ir a WhatsApp" width="60" height="60">
-                </a>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <p class="text-[var(--color-text)]">+57 319 756 1958</p>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <p class="text-[var(--color-text)]">+57 312 235 8703</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-6 text-[var(--color-text)]">
+                        Redes Sociales
+                    </h3>
+
+                    <div class="flex gap-4">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com"
+                            target="_blank"
+                            class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all">
+                            <img src="imagenes/gmail.png" alt="Gmail" class="w-10 h-10" />
+                        </a>
+
+                        <a href="https://www.youtube.com/@BiblioArchipyelago" target="_blank"
+                            class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all">
+                            <img src="imagenes/youtube.png" alt="YouTube" class="w-10 h-10" />
+                        </a>
+
+                        <a href="https://wa.me/3197561958" target="_blank"
+                            class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all">
+                            <img src="imagenes/whatsapp.png" alt="WhatsApp" class="w-10 h-10" />
+                        </a>
+
+                        <a href="https://www.facebook.com/share/17poDYmHLW/" target="_blank"
+                            class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all">
+                            <img src="imagenes/facebook.png" alt="Facebook" class="w-10 h-10" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-6 text-[var(--color-text)]">Archipyélago</h3>
+                    <p class="text-[var(--color-text)] max-w-sm">
+                        Un espacio dedicado al conocimiento, la lectura y la construcción
+                        colectiva del aprendizaje.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-sm text-slate-400">
+                <p class="text-[var(--color-text)]">
+                    © 2026
+                    <span class="text-[var(--color-text)] font-semibold">The Richn't</span>.
+                    Todos los derechos reservados.
+                </p>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p><strong>© Copyright 2025 Archipyélago.</strong> Todos los derechos reservados</p>
-    </div>
-    </div>
-</footer>
+    </footer>
+    <script>
+        let altualsiguiente = 1;
+        function mostrarsiguiente(siguiente) {
+            for (let i = 1; i <= 4; i++) {
+                let f = document.getElementById('siguiente' + i);
+                f.classList.toggle('hidden', i !== siguiente);
+            }
+            altualsiguiente = siguiente;
+        }
+
+        function nextsiguiente(siguiente) {
+            let f = document.getElementById('siguiente' + siguiente);
+            let inputs = f.querySelectorAll('input, select');
+            for (let i = 0; i < inputs.length; i++) {
+                if (!inputs[i].checkValidity()) {
+                    inputs[i].reportValidity();
+                    inputs[i].focus();
+                    return;
+                }
+            }
+            mostrarsiguiente(siguiente + 1);
+        }
+
+        function atrassiguiente(siguiente) {
+            mostrarsiguiente(siguiente - 1);
+        }
+
+        function resetsiguiente(siguiente) {
+            let f = document.getElementById('siguiente' + siguiente);
+            let inputs = f.querySelectorAll('input, select');
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].type === 'checkbox' || inputs[i].type === 'radio') {
+                    inputs[i].checked = false;
+                } else if (inputs[i].type !== 'submit') {
+                    inputs[i].value = '';
+                }
+            }
+        }
+        const btn = document.getElementById("menuHamburguesa")
+        const menu = document.getElementById("menuCelular")
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("scale-0")
+        })
+    </script>
 </body>
 
 </html>
