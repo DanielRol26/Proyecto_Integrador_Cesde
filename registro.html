@@ -10,44 +10,74 @@
     <title>Registro</title>
 </head>
 
-<body class="bg-[var(--color-fondo)] leading-[1.3] font-arial">
+<body class="bg-[var(--color-fondo)] leading-[1.3] font-[fuente1]">
     <header
-        class="border-2 border-[var(--color-text)] rounded-[50px] px-8 py-3 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[20px]">
-        <div class="flex justify-between items-center">
+    class="border-2 border-[var(--color-text)] rounded-[50px] px-4 sm:px-6 md:px-8 py-3 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[10px] sm:mx-[15px] md:mx-[20px]">
+    <div class="flex justify-between items-center gap-2 sm:gap-4">
 
-            <div class="flex items-center gap-2">
-                <img src="imagenes/azul1.png" alt="Logo 1" class="h-7 w-auto object-contain">
-                <img src="imagenes/azul2.png" alt="Logo 2" class="h-7 w-auto object-contain">
-            </div>
-
-            <nav class="hidden md:flex gap-6 text-archi-blue font-semibold">
-                <a href="index.html"
-                    class=" text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
-                <a href="inicio_sesion.html"
-                    class=" text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Iniciar
-                    Sesión</a>
-                <a href="contactenos.html"
-                    class=" text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Contáctenos</a>
-                <a href="productos.html"
-                    class=" text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Productos</a>
-            </nav>
-
-            <div class="flex items-center gap-5">
-                <div
-                    class="flex items-center border border-[var(--color-text)] rounded-full px-4 py-1 bg-denim-white/50 backdrop-blur-md">
-                    <span class="text-xs">🔍</span>
-                    <input type="text" placeholder="Buscar"
-                        class="bg-transparent border-none outline-none ml-2 text-sm text-archi-blue w-24 lg:w-40">
-                </div>
-
-                <div class="flex gap-3">
-                    <img src="imagenes/usuario.png" alt="User" class="h-6 w-6 cursor-pointer">
-                    <img src="imagenes/carro-de-la-compra.png" alt="Cart" class="h-6 w-6 cursor-pointer">
-                </div>
-            </div>
-
+        <div class="flex items-center gap-2 flex-shrink-0">
+            <img src="imagenes/azul1.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+            <img src="imagenes/azul2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
         </div>
-    </header>
+
+        <!-- Menú desktop -->
+        <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
+            <a href="index.html"
+                class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Inicio</a>
+            <a href="inicio_sesion.html"
+                class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Iniciar
+                Sesión</a>
+            <a href="contactenos.html"
+                class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Contáctenos</a>
+            <a href="productos.html"
+                class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Productos</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3 md:gap-5 flex-shrink-0">
+            <!-- Barra de búsqueda -->
+            <div
+                class="hidden md:flex items-center border border-[var(--color-text)] rounded-full px-3 md:px-4 py-1 bg-denim-white/50 backdrop-blur-md">
+                <span class="text-xs">🔍</span>
+                <input type="text" placeholder="Buscar"
+                    class="bg-transparent border-none outline-none ml-2 text-sm text-[var(--color-text)] w-16 lg:w-24 xl:w-40">
+            </div>
+
+            <!-- Iconos -->
+            <div class="flex gap-2 sm:gap-3">
+                <img src="imagenes/usuario.png" alt="User" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
+                <img src="imagenes/carro-de-la-compra.png" alt="Cart" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
+            </div>
+
+            <!-- Menú hamburguesa para móviles -->
+            <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
+                <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 font-semibold">
+        <a href="index.html"
+            class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
+        <a href="inicio_sesion.html"
+            class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Iniciar
+            Sesión</a>
+        <a href="contactenos.html"
+            class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Contáctenos</a>
+        <a href="productos.html"
+            class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Productos</a>
+    </nav>
+</header>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+}
+</script>
     <hr>
     <main>
         <section>
@@ -55,7 +85,7 @@
                 class="text-[100px] max-lg:text-[70px] max-md:text-[50px] max-sm:text-[35px] text-center my-[10px] mx-[13%] max-sm:mx-[5%] p-[40px] max-sm:p-[20px] pt-0 text-[var(--color-text)] rounded-[10px] bg-[linear-gradient(to_bottom,var(--color-fondo),#ffffff,var(--color-fondo))] font-black">
                 Registrate</h1>
             <section
-                class="w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
+                class="mb-[100px] w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
                 <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">Ingresa
                     tus datos
                 </h2>
