@@ -3,83 +3,135 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Archipyélago</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The RICHN'T - Denim Store</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imagenes/logo_pestaña.png" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'archi-cyan': '#a6cfd5',
+                        'archi-blue': '#26408b',
+                        'denim-white': '#fff8f0',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
 
-    <header class="header-principal">
-        <div class="container header-content">
-            <img src="imagenes/logo2archi.png" alt="Logo Archipyélago" class="logo-imagen">
+    <header
+        class="border-2 border-archi-blue rounded-[50px] px-8 py-3 bg-denim-white/80 backdrop-blur-md mb-5 sticky top-5 z-50">
+        <div class="flex justify-between items-center">
 
-            <nav class="navegacion-principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="inicio_sesion.html" class="activo">Iniciar sesión</a></li>
-                    <li><a href="contactenos.html">Contáctanos</a></li>
-                </ul>
+            <div class="flex items-center gap-2">
+                <img src="logos/azul1.png" alt="Logo 1" class="h-7 w-auto object-contain">
+                <img src="logos/azul2.png" alt="Logo 2" class="h-7 w-auto object-contain">
+            </div>
+
+            <nav class="hidden md:flex gap-6 text-archi-blue font-semibold">
+                <a href="index.html"
+                    class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all">Inicio</a>
+                <a href="inicio_sesion.html"
+                    class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all">Iniciar
+                    Sesión</a>
+                <a href="contactenos.html"
+                    class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all">Contáctenos</a>
             </nav>
+
+            <div class="flex items-center gap-5">
+                <div
+                    class="flex items-center border border-archi-blue rounded-full px-4 py-1 bg-denim-white/50 backdrop-blur-md">
+                    <span class="text-xs">🔍</span>
+                    <input type="text" placeholder="Buscar"
+                        class="bg-transparent border-none outline-none ml-2 text-sm text-archi-blue w-24 lg:w-40">
+                </div>
+
+                <div class="flex gap-3">
+                    <img src="banners/usuario.png" alt="User" class="h-6 w-6 cursor-pointer">
+                    <img src="banners/carro-de-la-compra.png" alt="Cart" class="h-6 w-6 cursor-pointer">
+                </div>
+            </div>
+
         </div>
     </header>
 
-    <div class="hero-wrapper">
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1400px] mx-auto">
 
-        <div class="folder dark">
-            <div class="tab">Archivo general</div>
-        </div>
-
-        <div class="folder light">
-            <div class="tab">Catálogo digital</div>
-        </div>
-
-        <section class="hero">
-            <h1>Archipyélago</h1>
-            <h2>Navega ideas, conquista horizontes</h2>
-            <p>
-                Archivos físicos y digitales organizados como carpetas reales,
-            </p>
-            <p>
-                tu archivo, pero sin estrés
-            </p>
-
-            <div class="buttons">
-                <a href="#" class="btn-primary">Iniciar sesión</a>
-                <a href="#" class="btn-secondary">Registrarse</a>
+        <div class="card card-large relative rounded-[30px] overflow-hidden bg-black h-[400px]">
+            <div class="video-background absolute inset-0">
+                <video autoplay muted loop class="w-full h-full object-cover">
+                    <source src="/videos/video1.mov" type="video/mp4">
+                </video>
             </div>
 
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Digital</h3>
-                    Respaldo y control de archivos electrónicos.
-                </div>
-
-                <div class="card card-soft">
-                    <h3>Físico</h3>
-                    Organización de inventarios físicos.
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/BTcwUU0Dw9U" title="Video Archipyélago"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
+            <div class="image-layer absolute inset-0 transition-transform duration-700">
+                <img src="/tarjetas/imagen9.jpg" alt="Denim 1" class="w-full h-full object-cover">
             </div>
 
-        </section>
+            <div class="card-info-fixed">
+                <h2 class="text-archi-cyan text-4xl md:text-5xl drop-shadow-lg">
+                    INICIA SESIÓN O REGÍSTRATE & RECIBE 10% OFF
+                </h2>
+            </div>
+        </div>
 
-    </div>
+        <div class="card card-tall relative rounded-[30px] overflow-hidden bg-black h-[715px]">
+            <div class="video-background absolute inset-0 z-0">
+                <video autoplay muted loop class="w-full h-full object-cover">
+                    <source src="/videos/video4.mov" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="image-layer absolute inset-0 transition-transform duration-700">
+                <img src="/tarjetas/Image.png" alt="Denim 2" class="w-full h-full object-cover">
+            </div>
+
+            <div class="card-info-fix2">
+                <h2 class="text-archi-cyan text-5xl drop-shadow-lg">NEW ARRIVALS</h2>
+            </div>
+        </div>
+
+        <div class="card relative rounded-[30px] overflow-hidden bg-black h-[300px]">
+            <div class="video-background absolute inset-0 z-0">
+                <video autoplay muted loop class="w-full h-full object-cover">
+                    <source src="/videos/video6.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="image-layer absolute inset-0 transition-transform duration-700">
+                <img src="/tarjetas/imagen7.png" alt="Denim 3" class="w-full h-full object-cover">
+            </div>
+
+            <div class="card-info-fix3">
+                <h2 class="text-archi-blue text-4xl">RAGE RECORDS</h2>
+            </div>
+        </div>
+
+        <div class="card relative rounded-[30px] overflow-hidden bg-black h-[300px]">
+            <div class="video-background absolute inset-0 z-0">
+                <video autoplay muted loop class="w-full h-full object-cover">
+                    <source src="/videos/video5.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="image-layer absolute inset-0 transition-transform duration-700">
+                <img src="/tarjetas/imagen8.jpg" alt="Denim 4" class="w-full h-full object-cover">
+            </div>
+
+            <div class="card-info-fix3">
+                <h2 class="text-archi-blue text-4xl">DENIM DROPS</h2>
+            </div>
+        </div>
+
+    </main>
 
     <footer class="pie-pagina" id="contacto">
         <div class="container footer-content">
