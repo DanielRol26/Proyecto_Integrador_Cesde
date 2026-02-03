@@ -12,108 +12,78 @@
     --color-fondo2: #a6cfd50e;
 }
 
-/*header*/
-
-
-/* Navegación */
-
-/*body*/
-
-
-/*footer*/
-
-
-
-
-
-/*CSS Registro exitoso*/
-
-.main-exitoso {
-    padding: 100px;
-    margin: 100px;
-    text-align: center;
-}
-.pregistro-exitoso {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+@font-face {
+    font-family: "fuente1";
+    src: url(tipografías/gloucester-mt-extra-condensed.ttf) format("truetype");
+    font-weight: normal;
 }
 
-/*media queries*/
+.main-header {
+    border: 2px solid var(--color-text);
+    border-radius: 50px;
+    padding: 10px 30px;
+    background: #fff8f0;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
 
-@media (max-width: 768px) {
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-    .datos-personales label,
-    .informacion-con-res label,
-    .seguridad-cuenta label {
-        width: 100%;
-        margin: 0 0 5px 0;
-    }
-    .header-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .logo-imagen {
-        max-width: 200px;
-    }
-    .navegacion-principal ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    iframe {
-        width: 100%;
-        height: auto;
-    }
-    h1 {
-        font-size: 40px;
-        margin: 10px;
-        padding: 20px;
-    }
-    .registro-formulario {
-        width: 95%;
-        padding: 20px;
-    }
-    .entradas,
-    #tipo-documento {
-        width: 100%;
-    }
-    .div-checkbox div {
-        width: 100%;
-    }
-    .div-botones {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    .contenido-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    .redes-sociales {
-        justify-content: center;
-        margin-left: 0;
-    }
-    .radio-sexo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .div-checkbox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;   /* centra la lista como bloque */
-        gap: 12px;
-    }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .div-checkbox div {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* texto alineado a la izquierda */
-        width: 100%;
-        max-width: 280px;      /* ancho controlado */
-    }
 
-    .div-checkbox label {
-        text-align: left;
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    height: 100%;         
+    width: 100%;           
+}
+
+.logo-icon img {
+    height: 28px;         
+    width: auto;           
+    object-fit: contain;
+}
+
+.nav-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.search-bar {
+    background: var(--color-fondo);
+    border-radius: 20px;
+    border: 1px solid var(--color-text);
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    margin-left: 8px;
+    outline: none;
 }
