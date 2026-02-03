@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-950 text-gray-800">
+   <header class="main-header mt-[10px] mx-[10px]">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon"> <img src="azul1.png" alt="The RICHN'T Logo"> </div>
+                <div class="logo-icon"> <img src="azul2.png" alt="logo"></div>
+            </div>
+            <nav class="hidden md:flex gap-8 text-[var(--color-text)]">
+                <a href="index.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Inicio
+                </a>
+                <a href="inicio_sesion.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Iniciar Sesión
+                </a>
+                <a href="contactenos.html"
+                    class="px-4 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded whitespace-nowrap font-semibold transition-colors">
+                    Contáctenos
+                </a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Buscar">
+                </div>
+                <div class="logo">
+                <div class="logo-icon"> <img src="usuario.png" alt="The RICHN'T Logo"> </div>
+                <div class="logo-icon"> <img src="carro-de-la-compra.png" alt="logo"></div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+
+<div class="bg-gray-100 text-blue-950 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-blue-950 text-4xl font-extrabold">¿Cómo podemos ayudarte?</h1>
+        <p class="mt-4 text-xl text-blue-950">Nuestro equipo está disponible 24/7.</p>
+    </div>
+</div>
+
+<div class="bg-blue-950 max-w-7xl mx-auto px-4 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-xl shadow p-6 flex space-x-4">
+            <i class="fa-solid fa-phone text-blue-900 text-2xl"></i>
+            <div>
+                <h3 class="font-semibold">Llámanos</h3>
+                <p>+57 3113644700</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-6 flex space-x-4">
+            <i class="fa-solid fa-envelope text-blue-950 text-2xl"></i>
+            <div>
+                <h3 class="font-semibold">Email</h3>
+                <p>soporte@archipyelago.com</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-6 flex space-x-4">
+            <i class="fa-solid fa-location-dot text-blue-950 text-2xl"></i>
+            <div>
+                <h3 class="font-semibold">Dirección</h3>
+                <p>Cesde Pabellón del Agua, Medellín</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FORMULARIO -->
+<div class="max-w-2xl mx-auto mt-10 bg-white p-8 rounded-xl shadow">
+
+<form class="space-y-6">
+
+    <div>
+        <label for="Nombre" class="block mb-1">Nombre</label>
+        <input type="text" id="Nombre" placeholder="Nombre" required
+               class="w-full p-3 border border-gray-600 rounded">
+    </div>
+
+    <div>
+        <label for="email" class="block mb-1">Email</label>
+        <input type="email" id="email" placeholder="Correo electrónico" required
+               class="w-full p-3 border border-gray-600 rounded">
+    </div>
+
+    <div>
+        <label for="pedido" class="block mb-1">Número de pedido</label>
+        <input type="text" id="pedido" placeholder="Número de pedido"
+               class="w-full p-3  border border-gray-600 rounded">
+    </div>
+
+    <div>
+        <select class="w-full p-3 border border-gray-600 rounded">
+            <option>Consulta</option>
+            <option>Pedido</option>
+            <option>Devolución</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="mensaje" class="block mb-1">Dejanos Tu Mensaje</label>
+        <textarea id="mensaje" rows="4" placeholder="Deja tu mensaje" required
+                  class="w-full p-3 border border-gray-600 rounded"></textarea>
+    </div>
+
+    <label class="flex items-center space-x-2">
+        <input type="checkbox" required>
+        <span>Acepto la política de privacidad</span>
+    </label>
+
+    <button type="submit"
+        class="bg-blue-950 text-white py-3 rounded w-full hover:bg-indigo-700">
+        Enviar
+    </button>
+
+</form>
+</div>
+
+</body>
+<footer
+      id="contacto"
+      class="mt-12 bg-[#a6cfd50e] border-t border-white/10 text-white border-t-[3px] border-t-archi-cyan "
+    >
+      <div class="max-w-[1200px] mx-auto px-6 py-16 ">
+        <!-- Grid principal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <!-- Contacto -->
+          <div>
+            <h3 class="font-bold text-xl mb-6 text-archi-blue">
+              ¿Necesitas ayuda?
+            </h3>
+
+            <ul class="space-y-4 text-slate-300">
+              <li class="flex items-center gap-3">
+                <svg
+                  class="w-5 h-5 text-archi-blue"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  />
+                </svg>
+                <p class="text-archi-blue">+57 319 756 1958</p>
+              </li>
+
+              <li class="flex items-center gap-3">
+                <svg
+                  class="w-5 h-5 text-archi-blue"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  />
+                </svg>
+                <p class="text-archi-blue">+57 312 235 8703</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Redes -->
+          <div>
+            <h3 class="font-bold text-xl mb-6 text-archi-blue">
+              Redes Sociales
+            </h3>
+
+            <div class="flex gap-4">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=biblioteca.archipyelago@gmail.com"
+                target="_blank"
+                class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all"
+              >
+                <img src="gmail.png" alt="Gmail" class="w-10 h-10" />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@BiblioArchipyelago"
+                target="_blank"
+                class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all"
+              >
+                <img
+                  src="youtube (1).png"
+                  alt="YouTube"
+                  class="w-10 h-10"
+                />
+              </a>
+
+              <a
+                href="https://wa.me/3197561958"
+                target="_blank"
+                class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all"
+              >
+                <img
+                  src="whatsapp (1).png"
+                  alt="WhatsApp"
+                  class="w-10 h-10"
+                />
+              </a>
+
+              <a
+                href="https://www.facebook.com/share/17poDYmHLW/"
+                target="_blank"
+                class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center hover:bg-archi-cyan hover:scale-105 transition-all"
+              >
+                <img
+                  src="facebook (2).png"
+                  alt="Facebook"
+                  class="w-10 h-10"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Identidad -->
+          <div>
+            <h3 class="font-bold text-xl mb-6 text-archi-blue">Archipyélago</h3>
+            <p class="text-archi-blue max-w-sm">
+              Un espacio dedicado al conocimiento, la lectura y la construcción
+              colectiva del aprendizaje.
+            </p>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="mt-16 pt-8 border-t border-white/10 text-center text-sm text-slate-400"
+        >
+          <p class="text-archi-blue">
+            © 2026
+            <span class="text-archi-blue font-semibold">The Richn't</span>.
+            Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+</html>

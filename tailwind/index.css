@@ -1,0 +1,83 @@
+:root {
+    --color-border: #a6cfd5;
+    --color-text: #26408b;
+    --color-yellow: #a6cfd5;
+    --color-fondo: #fff8f0;
+    --color-fondo2: #a6cfd50e;
+}
+
+@font-face {
+    font-family: "fuente1";
+    src: url(tipografías/gloucester-mt-extra-condensed.ttf) format("truetype");
+    font-weight: normal;
+}
+
+.main-header {
+    border: 2px solid var(--color-text);
+    border-radius: 50px;
+    padding: 10px 30px;
+    background: #fff8f0;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    height: 100%;         
+    width: 100%;           
+}
+
+.logo-icon img {
+    height: 28px;         
+    width: auto;           
+    object-fit: contain;
+}
+
+.nav-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.search-bar {
+    background: var(--color-fondo);
+    border-radius: 20px;
+    border: 1px solid var(--color-text);
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    margin-left: 8px;
+    outline: none;
+}
