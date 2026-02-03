@@ -30,8 +30,6 @@
             <img src="imagenes/azul1.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
             <img src="imagenes/azul2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
         </div>
-        
-        <!-- Menú desktop -->
         <nav class="hidden lg:flex gap-4 xl:gap-6 text-archi-blue font-semibold flex-shrink-0">
             <a href="index.html"
                 class="px-3 py-1 hover:bg-archi-blue hover:text-archi-beige rounded transition-all whitespace-nowrap">Inicio</a>
@@ -45,21 +43,16 @@
         </nav>
 
         <div class="flex items-center gap-2 sm:gap-3 md:gap-5 flex-shrink-0">
-            <!-- Barra de búsqueda -->
             <div
                 class="hidden md:flex items-center border border-archi-blue rounded-full px-3 md:px-4 py-1 bg-denim-white/50 backdrop-blur-md">
                 <span class="text-xs">🔍</span>
                 <input type="text" placeholder="Buscar"
                     class="bg-transparent border-none outline-none ml-2 text-sm text-archi-blue w-16 lg:w-24 xl:w-40">
             </div>
-            
-            <!-- Iconos -->
             <div class="flex gap-2 sm:gap-3">
                 <img src="imagenes/usuario.png" alt="User" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
                 <img src="imagenes/carro-de-la-compra.png" alt="Cart" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
             </div>
-            
-            <!-- Menú hamburguesa para móviles -->
             <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
                 <span class="block w-6 h-0.5 bg-archi-blue"></span>
                 <span class="block w-6 h-0.5 bg-archi-blue"></span>
@@ -67,8 +60,6 @@
             </button>
         </div>
     </div>
-    
-    <!-- Menú móvil desplegable -->
     <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 text-archi-blue font-semibold">
         <a href="index.html"
             class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Inicio</a>
@@ -81,12 +72,8 @@
     </nav>
 </header>
 
-
-
-    <!-- MAIN - Contenido principal -->
     <main class="py-10">
       <div class="max-w-[1200px] mx-auto px-5">
-        <!-- SECCIÓN DE LOGIN -->
         <section id="formulario" class="max-w-[500px] mx-auto">
           <div
             class="bg-white p-10 my-5 mx-auto border-2 border-gray-300 rounded-2xl md:p-10 md:my-5"
@@ -101,7 +88,6 @@
             </div>
 
             <form action="#" method="post" autocomplete="on">
-              <!-- Campo Usuario -->
               <div class="mb-5">
                 <label
                   for="username"
@@ -118,8 +104,6 @@
                   class="w-full p-3 border-2 border-archi-cyan rounded-lg text-base focus:border-archi-light-cyan focus:outline-none"
                 />
               </div>
-
-              <!-- Campo Contraseña -->
               <div class="mb-5">
                 <label
                   for="password"
@@ -138,8 +122,6 @@
                   />
                 </div>
               </div>
-
-              <!-- Enlaces de recuperación y registro -->
               <div class="text-right my-4">
                 <a
                   href="recuperacion.html"
@@ -158,8 +140,6 @@
                   >
                 </p>
               </div>
-
-              <!-- PREFERENCIAS -->
               <div
                 id="preferencias"
                 class="bg-gray-50 p-6 my-6 border-2 border-archi-cyan border-l-[5px] border-l-archi-blue rounded-xl"
@@ -203,8 +183,6 @@
                   >
                 </div>
               </div>
-
-              <!-- Botones -->
               <div class="flex flex-col md:flex-row gap-4 mt-6">
                 <button
                   type="submit"
@@ -224,8 +202,6 @@
         </section>
       </div>
     </main>
-
-    <!-- FOOTER -->
     <footer class="mt-20 border-t-4 border-archi-blue bg-archi-blue/5 rounded-t-[50px] p-10 lg:p-20 text-archi-blue mx-[10px] font-[fuente1]">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1200px] mx-auto">
 

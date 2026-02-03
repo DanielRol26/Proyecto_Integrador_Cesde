@@ -20,7 +20,6 @@
             <img src="imagenes/azul2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
         </div>
 
-        <!-- Menú desktop -->
         <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
             <a href="index.html"
                 class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Inicio</a>
@@ -34,21 +33,16 @@
         </nav>
 
         <div class="flex items-center gap-2 sm:gap-3 md:gap-5 flex-shrink-0">
-            <!-- Barra de búsqueda -->
             <div
                 class="hidden md:flex items-center border border-[var(--color-text)] rounded-full px-3 md:px-4 py-1 bg-denim-white/50 backdrop-blur-md">
                 <span class="text-xs">🔍</span>
                 <input type="text" placeholder="Buscar"
                     class="bg-transparent border-none outline-none ml-2 text-sm text-[var(--color-text)] w-16 lg:w-24 xl:w-40">
             </div>
-
-            <!-- Iconos -->
             <div class="flex gap-2 sm:gap-3">
                 <img src="imagenes/usuario.png" alt="User" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
                 <img src="imagenes/carro-de-la-compra.png" alt="Cart" class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
             </div>
-
-            <!-- Menú hamburguesa para móviles -->
             <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
                 <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
                 <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
@@ -57,8 +51,6 @@
         </div>
 
     </div>
-
-    <!-- Menú móvil desplegable -->
     <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 font-semibold">
         <a href="index.html"
             class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
