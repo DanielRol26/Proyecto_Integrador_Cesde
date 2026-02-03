@@ -5,10 +5,10 @@
 }
 
 :root {
+    --color-fondo: #fff8f0;
     --color-border: #a6cfd5;
     --color-text: #26408b;
     --color-yellow: #a6cfd5;
-    --color-fondo: #fff8f0;
     --color-fondo2: #a6cfd50e;
 }
 

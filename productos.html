@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="imagenes/logo_pestaña.png" />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "archi-dark": "#0D0221",
+              "archi-blue": "#26408B",
+              "archi-cyan": "#A6CFD5",
+              "archi-light-cyan": "#C2E7D9",
+              "archi-beige": "#FFF8F0",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Productos - Archipiélago</title>
+  </head>
+
+  <body class="font-sans bg-archi-beige text-gray-800">
+    <!-- HEADER -->
+    <header
+        class="border-2 border-archi-blue rounded-[50px] px-8 py-3 bg-denim-white/80 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[20px]">
+        <div class="flex justify-between items-center">
+
+            <div class="flex items-center gap-2">
+                <img src="imagenes/azul1.png" alt="Logo 1" class="h-7 w-auto object-contain">
+                <img src="imagenes/azul2.png" alt="Logo 2" class="h-7 w-auto object-contain">
+            </div>
+
+            <nav class="hidden md:flex gap-6 text-archi-blue font-semibold">
+                <a href="index.html"
+                    class="px-3 py-1 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Inicio</a>
+                <a href="inicio_sesion.html"
+                    class="px-3 py-1 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Iniciar
+                    Sesión</a>
+                <a href="contactenos.html"
+                    class="px-3 py-1 hover:bg-archi-blue  hover:text-archi-beige rounded transition-all">Contáctenos</a>
+                <a href="productos.html"
+                    class="px-3 py-1 hover:bg-archi-blue  hover:text-archi-beige rounded transition-all">Productos</a>
+            </nav>
+
+            <div class="flex items-center gap-5">
+                <div
+                    class="flex items-center border border-archi-blue rounded-full px-4 py-1 bg-denim-white/50 backdrop-blur-md">
+                    <span class="text-xs">🔍</span>
+                    <input type="text" placeholder="Buscar"
+                        class="bg-transparent border-none outline-none ml-2 text-sm text-archi-blue w-24 lg:w-40">
+                </div>
+
+                <div class="flex gap-3">
+                    <img src="imagenes/usuario.png" alt="User" class="h-6 w-6 cursor-pointer">
+                    <img src="imagenes/carro-de-la-compra.png" alt="Cart" class="h-6 w-6 cursor-pointer">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN - Contenido principal -->
+    <main class="py-10">
+      <div class="max-w-[1200px] mx-auto px-5">
+        <!-- Título de la sección -->
+        <section class="text-center mb-10 py-8">
+          <h1 class="text-archi-blue text-4xl mb-2.5">Nuestros Productos</h1>
+          <p class="text-gray-600 text-lg">
+            Descubre nuestra colección de ropa exclusiva
+          </p>
+        </section>
+
+        <!-- Grid de productos -->
+        <section class="mb-12">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-5"
+          >
+            <!-- Producto 1 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto1.png"
+                  alt="Camiseta Básica"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Camiseta Básica
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Camiseta 100% algodón, cómoda y versátil
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$45.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto2.png"
+                  alt="Pantalón Casual"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Pantalón Casual
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Pantalón de mezclilla, estilo moderno
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$85.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto3.png"
+                  alt="Sudadera con Capucha"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Sudadera con Capucha
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Perfecta para el clima frío
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$95.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto4.png"
+                  alt="Vestido Elegante"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Vestido Elegante
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Ideal para ocasiones especiales
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$120.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto5.png"
+                  alt="Chaqueta Deportiva"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Chaqueta Deportiva
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Ligera y resistente al agua
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$110.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto6.png"
+                  alt="Falda Plisada"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Falda Plisada
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Estilo clásico y elegante
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$65.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto7.png"
+                  alt="Camisa Formal"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Camisa Formal
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Perfecta para el trabajo
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$75.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto8.png"
+                  alt="Short Deportivo"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Short Deportivo
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Cómodo para hacer ejercicio
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$50.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div
+              class="bg-white border-2 border-gray-300 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-archi-cyan"
+            >
+              <div
+                class="w-full h-[300px] md:h-[250px] overflow-hidden bg-gray-50 flex items-center justify-center"
+              >
+                <img
+                  src="imagenes/Productos_img/producto9.png"
+                  alt="Abrigo de Invierno"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h3 class="text-archi-blue text-xl mb-2.5 font-bold">
+                  Abrigo de Invierno
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                  Cálido y elegante
+                </p>
+                <p class="text-archi-dark text-2xl font-bold mb-4">$180.000</p>
+                <button
+                  class="bg-archi-cyan text-archi-dark py-3 px-5 border-none rounded-lg text-base font-bold cursor-pointer transition-colors duration-300 w-full hover:bg-archi-light-cyan"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 border-t-4 border-archi-blue bg-archi-blue/5 rounded-t-[50px] p-10 lg:p-20 text-archi-blue mx-[10px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1200px] mx-auto">
+
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-archi-blue">¿NECESITAS AYUDA?</h3>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3">              
+                      <svg class="w-5 h-5 text-archi-blue" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                      +57 3197561958
+                    </p>
+                    <p class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-archi-blue" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                      +57 3122358703
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-archi-blue">SOCIAL MEDIA</h3>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="imagenes/gmail.png" alt="Gmail" class="w-6 h-6">
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="imagenes/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="imagenes/facebook.png" alt="Facebook" class="w-6 h-6">
+                    </a>
+                     <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="imagenes/youtube.png" alt="Facebook" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="imagenes/azul1.png" alt="Logo 1"
+                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
+                    <img src="imagenes/azul2.png" alt="Logo 2"
+                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
+                </div>
+
+                <p class="text-archi-blue max-w-sm italic opacity-80">
+                    Just remember, only denim.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+  </body>
+</html>
