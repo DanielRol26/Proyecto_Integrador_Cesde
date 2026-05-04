@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assent/images/logos/favicon.png">
+    <link rel="icon" href="/assets/images/logos/favicon.png">
     <link rel="stylesheet" href="/styles/register.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Registro</title>
@@ -16,8 +16,8 @@
         <div class="flex justify-between items-center gap-2 sm:gap-4">
 
             <div class="flex items-center gap-2 flex-shrink-0">
-                <img src="/assent/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
-                <img src="/assent/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+                <img src="/assets/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+                <img src="/assets/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
             </div>
 
             <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
@@ -40,9 +40,9 @@
                         class="bg-transparent border-none outline-none ml-2 text-sm text-[var(--color-text)] w-16 lg:w-24 xl:w-40">
                 </div>
                 <div class="flex gap-2 sm:gap-3">
-                    <img src="/assent/images/icons/ui/avatar-default-black.png" alt="User"
+                    <img src="/assets/images/icons/ui/avatar-default-black.png" alt="User"
                         class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
-                    <img src="/assent/images/icons/ui/shopping-cart-black.png" alt="Cart"
+                    <img src="/assets/images/icons/ui/shopping-cart-black.png" alt="Cart"
                         class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
                 </div>
                 <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
@@ -74,239 +74,101 @@
     </script>
     <hr>
     <main>
-        <section>
-            <h1
-                class="text-[100px] max-lg:text-[70px] max-md:text-[50px] max-sm:text-[35px] text-center my-[10px] mx-[13%] max-sm:mx-[5%] p-[40px] max-sm:p-[20px] pt-0 text-[var(--color-text)] rounded-[10px] bg-[linear-gradient(to_bottom,var(--color-fondo),#ffffff,var(--color-fondo))] font-black">
-                Registrate</h1>
-            <section
-                class="mb-[100px] w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
-                <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">Ingresa
-                    tus datos
-                </h2>
-                <p
-                    class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
-                    Para completar el registro correctamente, por favor asegurese de que ningun campo
-                    con el (*) quede vacío
-                </p>
-                <form action="/pages/registroexitoso.html" method="get">
-                    <fieldset
-                        class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
-                        id="siguiente1">
-                        <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                Datos
-                                Personales</h3>
-                        </legend>
-
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="nombre">Nombre Completo : *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="tipo-documento">Tipo de documento *</label>
-                        <select
-                            class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
-                            name="tipo-documento" id="tipo-documento" required>
-                            <option value="">Seleccione una opción</option>
-                            <option value="ti">Tarjeta de identidad</option>
-                            <option value="cc">Cédula de Ciudadanía</option>
-                            <option value="ce">Cédula de Extranjería</option>
-                            <option value="ppt">Permiso de Protección Temporal</option>
-                            <option value="nit">NIT</option>
-                        </select>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="ndocumento">Número de documento : *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
+        <section class="register">
+            <div class="register-container">
+                <div class="register-hero">
+                    <div class="hero-text"></div>
+                </div>
+                <div
+                    class="mb-[100px] w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
+                    <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">
+                        Ingresa
+                        tus datos
+                    </h2>
+                    <p
+                        class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
+                        Para completar el registro correctamente, por favor asegurese de que ningun campo
+                        con el (*) quede vacío
+                    </p>
+                    <form action="/pages/registroexitoso.html" method="get">
                         <fieldset
-                            class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
-                            <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *</legend>
-                            <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
-                                <div class="flex items-center gap-[8px] w-[123px]">
-                                    <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M" required>
-                                    <label
-                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                        for="sxm" id="sxm-label">Masculino</label>
-                                </div>
-                                <div class="flex items-center gap-[8px] w-[123px]">
-                                    <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
-                                    <label
-                                        class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                        for="sxf" id="sxf-label">Femenino</label>
-                                </div>
-                                <div class="flex items-center gap-[8px]">
-                                    <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N" required>
-                                    <label
-                                        class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
-                                        for="N" id="n-label">Prefiero no decir</label>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <div>
+                            class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
+                            id="siguiente1">
+                            <legend>
+                                <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
+                                    Datos
+                                    Personales</h3>
+                            </legend>
+
                             <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                                for="nombre">Nombre Completo : *</label>
                             <input
                                 class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
-                        </div>
-                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
-                            <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
-                            <button type="button" onclick="nextsiguiente(1)"
-                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
-                                >
-                            </button>
-                        </div>
-                    </fieldset>
-
-                    <fieldset
-                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
-                        id="siguiente2">
-                        <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                Información
-                                de Residencia</h3>
-                        </legend>
-
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold" for="pais">Pais
-                            de residencia: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="text" id="pais" name="pais" placeholder="Ej: Colombia" required>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="departamento">Departamento / Estado: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="text" id="departamento" name="departamento" placeholder="Ej: Antioquia" required>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="ciudad">Ciudad: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="text" id="ciudad" name="ciudad" placeholder="Ej: Medellín" required>
-                        <div>
+                                type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
                             <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="direccion">Dirección: *</label>
+                                for="tipo-documento">Tipo de documento *</label>
+                            <select
+                                class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
+                                name="tipo-documento" id="tipo-documento" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="ti">Tarjeta de identidad</option>
+                                <option value="cc">Cédula de Ciudadanía</option>
+                                <option value="ce">Cédula de Extranjería</option>
+                                <option value="ppt">Permiso de Protección Temporal</option>
+                                <option value="nit">NIT</option>
+                            </select>
+                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                for="ndocumento">Número de documento : *</label>
                             <input
                                 class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                type="text" id="direccion" name="direccion" placeholder="Ej: Calle 5 # 5 - 5 interior 5"
-                                required>
-                        </div>
-                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
-                            <button
-                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                type="button" onclick="atrassiguiente(2) ">&lt</button>
-                            <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
-                            <button
-                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                type="button" onclick="nextsiguiente(2)">
-                                >
-                            </button>
-                        </div>
-                    </fieldset>
-                    <fieldset id="siguiente3"
-                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]">
-                        <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                Información
-                                de Contacto</h3>
-                        </legend>
-
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="movil">Celular de contacto: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="number" id="movil" name="celular" placeholder="3001234567" required>
-                        <div>
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="email">Correo electrónico: *</label>
-                            <input
-                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px]"
-                                type="email" id="email" name="correo" placeholder="Ej: andres@gmail.com" required>
-                        </div>
-                        <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
-                            <button
-                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                type="button" onclick="atrassiguiente(3) ">&lt</button>
-                            <button type="button"
-                                class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
-                            <button
-                                class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                type="button" onclick="nextsiguiente(3)">
-                                >
-                            </button>
-                        </div>
-                    </fieldset>
-
-                    <fieldset id="siguiente4"
-                        class="hidden text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]">
-                        <legend>
-                            <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                Seguridad de
-                                Cuenta</h3>
-                        </legend>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="password">Contraseña: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                            for="password2">Repetir contraseña: *</label>
-                        <input
-                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                            type="password" id="repetirpassword" name="repetirpassword"
-                            placeholder="Repita la contraseña" required>
-                        <div
-                            class="div-checkbox flex flex-col gap-[12px] w-[70%] mx-auto border-[1px] border-[var(--color-border)] p-[10px] rounded-[10px] border-l-[5px] border-l-[var(--color-border)] bg-[var(--color-fondo2)] max-md:w-[90%] max-sm:w-[100%]">
-                            <h4 class="font-bold text[30px] border-b-[3px] border-b-[var(--color-border)] pb-[10px]">
-                                Condiciones y preferencias:</h4>
-                            <div class="flex items-center gap-[10px] w-auto">
-                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
-                                    id="interes" value="aventura" required>
-                                <label
-                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
-                                    for="interes">Acepto los Términos y Condiciones y la Política de Privacidad
-                                    *</label>
+                                type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
+                            <fieldset
+                                class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
+                                <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *
+                                </legend>
+                                <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
+                                    <div class="flex items-center gap-[8px] w-[123px]">
+                                        <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M"
+                                            required>
+                                        <label
+                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                            for="sxm" id="sxm-label">Masculino</label>
+                                    </div>
+                                    <div class="flex items-center gap-[8px] w-[123px]">
+                                        <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
+                                        <label
+                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                            for="sxf" id="sxf-label">Femenino</label>
+                                    </div>
+                                    <div class="flex items-center gap-[8px]">
+                                        <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N"
+                                            required>
+                                        <label
+                                            class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
+                                            for="N" id="n-label">Prefiero no decir</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div>
+                                <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                                    for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                                <input
+                                    class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                                    type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
                             </div>
-                            <div class="flex items-center gap-[10px] w-auto">
-                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
-                                    id="interes3" value="comedia">
-                                <label
-                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
-                                    for="interes3">Deseo recibir promociones y ofertas por correo
-                                    electrónico</label>
-                            </div>
-                            <div class="flex items-center gap-[10px] w-auto">
-                                <input class="peer accent-[var(--color-yellow)]" type="checkbox" name="interes"
-                                    id="interes5" value="drama">
-                                <label
-                                    class="block w-auto mt-0 mr-[2px] mb-0 ml-[2px] text-left font-normal peer-checked:font-bold"
-                                    for="interes5">Deseo recibir información por WhatsApp</label>
-                            </div>
-                        </div>
-                        <div class="flex justify-center gap-[12px] mt-[20px] flex-wrap">
-                            <div class="flex gap-[12px] w-full sm:w-auto flex-wrap sm:flex-nowrap justify-center">
-                                <button
-                                    class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                    type="button" onclick="atrassiguiente(4)">&lt</button>
+                            <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
                                 <button type="button"
                                     class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
                                     onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                                <button type="button" onclick="nextsiguiente(1)"
+                                    class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
+                                    >
+                                </button>
                             </div>
-                            <div class="w-full sm:w-auto mt-2 sm:mt-0 flex justify-center">
-                                <input
-                                    class="btn registrarse cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-full sm:w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                    type="submit" id="enviar" value="Registrarse">
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
     </main>
     <footer
         class="mt-auto border-t-4 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-t-[50px] p-10 lg:p-20 text-[var(--color-text)] mx-[10px] font-[fuente1]">
@@ -337,28 +199,28 @@
                 <div class="flex gap-4">
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assent/images/icons/social/gmail.png" alt="Gmail" class="w-6 h-6">
+                        <img src="/assets/images/icons/social/gmail.png" alt="Gmail" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assent/images/icons/social/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+                        <img src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assent/images/icons/social/facebook.png" alt="Facebook" class="w-6 h-6">
+                        <img src="/assets/images/icons/social/facebook.png" alt="Facebook" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assent/images/icons/social/youtube.png" alt="Youtube" class="w-6 h-6">
+                        <img src="/assets/images/icons/social/youtube.png" alt="Youtube" class="w-6 h-6">
                     </a>
                 </div>
             </div>
 
             <div class="flex flex-col items-center md:items-start">
                 <div class="flex items-center gap-4 mb-4">
-                    <img src="/assent/images/logos/blue.png" alt="Logo 1"
+                    <img src="/assets/images/logos/blue.png" alt="Logo 1"
                         class="h-12 w-auto object-contain transition-transform hover:scale-110">
-                    <img src="/assent/images/logos/blue-2.png" alt="Logo 2"
+                    <img src="/assets/images/logos/blue-2.png" alt="Logo 2"
                         class="h-12 w-auto object-contain transition-transform hover:scale-110">
                 </div>
 
@@ -369,45 +231,6 @@
 
         </div>
     </footer>
-    <script>
-        let altualsiguiente = 1;
-        function mostrarsiguiente(siguiente) {
-            for (let i = 1; i <= 4; i++) {
-                let f = document.getElementById('siguiente' + i);
-                f.classList.toggle('hidden', i !== siguiente);
-            }
-            altualsiguiente = siguiente;
-        }
-
-        function nextsiguiente(siguiente) {
-            let f = document.getElementById('siguiente' + siguiente);
-            let inputs = f.querySelectorAll('input, select');
-            for (let i = 0; i < inputs.length; i++) {
-                if (!inputs[i].checkValidity()) {
-                    inputs[i].reportValidity();
-                    inputs[i].focus();
-                    return;
-                }
-            }
-            mostrarsiguiente(siguiente + 1);
-        }
-
-        function atrassiguiente(siguiente) {
-            mostrarsiguiente(siguiente - 1);
-        }
-
-        function resetsiguiente(siguiente) {
-            let f = document.getElementById('siguiente' + siguiente);
-            let inputs = f.querySelectorAll('input, select');
-            for (let i = 0; i < inputs.length; i++) {
-                if (inputs[i].type === 'checkbox' || inputs[i].type === 'radio') {
-                    inputs[i].checked = false;
-                } else if (inputs[i].type !== 'submit') {
-                    inputs[i].value = '';
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>

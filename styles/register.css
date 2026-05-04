@@ -18,3 +18,8 @@
     font-weight: normal;
 }
 
+.register-hero{
+    background-image: url(/assets/images/register/hero/register-hero.png);
+    height: 50%;
+    width: 50%;
+}
