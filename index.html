@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logos/logopestaña.png"/>
+    <link rel="icon" href="logos/logopestaña.png" />
     <title>The RICHN'T - Denim Store</title>
-    <link rel="stylesheet" href="estilos.css">
-
+    <link rel="stylesheet" href="/styles/landing-page.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="style.css">
 
     <script>
         tailwind.config = {
@@ -33,19 +30,19 @@
         class="border-2 border-archi-blue rounded-[50px] px-4 sm:px-6 md:px-8 py-3 bg-denim-white/80 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[10px] sm:mx-[15px] md:mx-[20px]">
         <div class="flex justify-between items-center gap-2 sm:gap-4">
             <div class="flex items-center gap-2 flex-shrink-0">
-                <img src="imagenes/azul1.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
-                <img src="imagenes/azul2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+                <img src="/assent/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+                <img src="/assent/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
             </div>
 
             <nav class="hidden lg:flex gap-4 xl:gap-6 text-archi-blue font-semibold flex-shrink-0">
                 <a href="index.html"
                     class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all whitespace-nowrap">Inicio</a>
-                <a href="inicio_sesion.html"
+                <a href="/pages/login.html"
                     class="text-[fuente1] px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all whitespace-nowrap">Iniciar
                     Sesión</a>
-                <a href="contactenos.html"
+                <a href="/pages/contact.html"
                     class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all whitespace-nowrap">Contáctenos</a>
-                <a href="productos.html"
+                <a href="/pages/products.html"
                     class="px-3 py-1 hover:bg-archi-blue hover:text-denim-white rounded transition-all whitespace-nowrap">Productos</a>
             </nav>
 
@@ -58,9 +55,9 @@
                 </div>
 
                 <div class="flex gap-2 sm:gap-3">
-                    <img src="imagenes/usuario.png" alt="User"
+                    <img src="/assent/images/icons/ui/avatar-default-black.png" alt="User"
                         class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
-                    <img src="imagenes/carro-de-la-compra.png" alt="Cart"
+                    <img src="/assent/images/icons/ui/shopping-cart-black.png" alt="Cart"
                         class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
                 </div>
 
@@ -75,11 +72,11 @@
         <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 text-archi-blue font-semibold">
             <a href="index.html"
                 class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Inicio</a>
-            <a href="inicio_sesion.html"
+            <a href="/pages/login.html"
                 class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Iniciar Sesión</a>
-            <a href="contactenos.html"
+            <a href="/pages/contact.html"
                 class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Contáctenos</a>
-            <a href="productos.html"
+            <a href="/pages/products.html"
                 class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Productos</a>
         </nav>
     </header>
@@ -89,12 +86,13 @@
         <div class="card card-large relative rounded-[30px] overflow-hidden bg-black h-[400px]">
             <div class="video-background absolute inset-0">
                 <video autoplay muted loop class="w-full h-full object-cover">
-                    <source src="/videos/video1.mov" type="video/mp4">
+                    <source src="/assent/videos/video1.mov" type="video/mp4">
                 </video>
             </div>
 
             <div class="image-layer absolute inset-0 transition-transform duration-700">
-                <img src="/tarjetas/imagen9.jpg" alt="Denim 1" class="w-full h-full object-cover">
+                <img src="/assent/images/landing/lifestyle/couple-denim.jpg" alt="Denim 1"
+                    class="w-full h-full object-cover">
             </div>
 
             <div class="card-info-fixed">
@@ -107,12 +105,13 @@
         <div class="card card-tall relative rounded-[30px] overflow-hidden bg-black h-[715px]">
             <div class="video-background absolute inset-0 z-0">
                 <video autoplay muted loop class="w-full h-full object-cover">
-                    <source src="/videos/video4.mov" type="video/mp4">
+                    <source src="/assent/videos/video4.mov" type="video/mp4">
                 </video>
             </div>
 
             <div class="image-layer absolute inset-0 transition-transform duration-700">
-                <img src="/tarjetas/Image.png" alt="Denim 2" class="w-full h-full object-cover">
+                <img src="/assent/images/landing/hero/fashion-main.png" alt="Denim 2"
+                    class="w-full h-full object-cover">
             </div>
 
             <div class="card-info-fix2">
@@ -123,12 +122,13 @@
         <div class="card relative rounded-[30px] overflow-hidden bg-black h-[300px]">
             <div class="video-background absolute inset-0 z-0">
                 <video autoplay muted loop class="w-full h-full object-cover">
-                    <source src="/videos/video6.mp4" type="video/mp4">
+                    <source src="/assent/videos/video6.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="image-layer absolute inset-0 transition-transform duration-700">
-                <img src="/tarjetas/imagen7.png" alt="Denim 3" class="w-full h-full object-cover">
+                <img src="/assent/images/landing/gallery/denim-standing-2.png" alt="Denim 3"
+                    class="w-full h-full object-cover">
             </div>
 
             <div class="card-info-fix3">
@@ -139,12 +139,13 @@
         <div class="card relative rounded-[30px] overflow-hidden bg-black h-[300px]">
             <div class="video-background absolute inset-0 z-0">
                 <video autoplay muted loop class="w-full h-full object-cover">
-                    <source src="/videos/video5.mp4" type="video/mp4">
+                    <source src="/assent/videos/video5.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="image-layer absolute inset-0 transition-transform duration-700">
-                <img src="/tarjetas/imagen8.jpg" alt="Denim 4" class="w-full h-full object-cover">
+                <img src="/assent/images/landing/promo/denim-style.jpg" alt="Denim 4"
+                    class="w-full h-full object-cover">
             </div>
 
             <div class="card-info-fix3">
@@ -183,28 +184,28 @@
                 <div class="flex gap-4">
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="banners/gmail.png" alt="Gmail" class="w-6 h-6">
+                        <img src="/assent/images/icons/social/gmail.png" alt="Gmail" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="banners/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+                        <img src="/assent/images/icons/social/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="banners/facebook.png" alt="Facebook" class="w-6 h-6">
+                        <img src="/assent/images/icons/social/facebook.png" alt="Facebook" class="w-6 h-6">
                     </a>
                     <a href="#"
                         class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="banners/youtube.png" alt="YouTube" class="w-6 h-6">
+                        <img src="/assent/images/icons/social/youtube.png" alt="YouTube" class="w-6 h-6">
                     </a>
                 </div>
             </div>
 
             <div class="flex flex-col items-center md:items-start">
                 <div class="flex items-center gap-4 mb-4">
-                    <img src="imagenes/azul1.png" alt="Logo 1"
+                    <img src="/assent/images/logos/blue.png" alt="Logo 1"
                         class="h-12 w-auto object-contain transition-transform hover:scale-110">
-                    <img src="imagenes/azul2.png" alt="Logo 2"
+                    <img src="/assent/images/logos/blue-2.png" alt="Logo 2"
                         class="h-12 w-auto object-contain transition-transform hover:scale-110">
                 </div>
 

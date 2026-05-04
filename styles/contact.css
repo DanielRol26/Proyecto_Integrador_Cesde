@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(220, 238, 157);
+    min-height: 100vh;
+}
+
+.jtitulo-contactenos {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #ffffff;
+    flex: 1;
+    text-align: center;
+}
+
+.jmenu-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.jmenu-navegacion a {
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.jmenu-navegacion a:hover {
+    color: #ccc914;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 clamp(1rem, 5vw, 2rem);
+}
+
+.jseccion-hero {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 3rem;
+}
+
+.jtitulo-principal {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgb(28, 31, 85, 0.3);
+}
+
+.jsubtitulo {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.jtexto-enlace {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+    opacity: 0.9;
+}
+
+.jformulario-contacto {
+    background: white;
+    padding: clamp(1rem, 4vw, 2rem);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.jcampo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.jcampo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.jcampo-formulario input,
+.jcampo-formulario textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.jcampo-formulario input:focus,
+.jcampo-formulario textarea:focus {
+    outline: none;
+    border-color: rgb(25, 55, 100);
+}
+
+.jcampo-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(28, 31, 85);
+}
+
+.jcampo-checkbox input {
+    width: auto;
+}
+
+.jboton-enviar {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(252, 248, 0, 0.774);
+    color: rgb(15, 8, 8);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.jboton-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.jboton-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.jboton-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.jboton-whatsapp img {
+    max-width: 60px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: rgb(28, 31, 85);
+    margin-top: 3rem;
+}
+
+.jlogo-footer {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.jboton-youtube {
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.jboton {
+    background-color: rgb(216, 240, 2);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.jboton:hover {
+    background-color: rgb(25, 55, 70);
+}
+
+.jlinea-amarilla {
+    background-color: yellow;
+}
+
+.jfooter {
+    background-color: rgb(28, 31, 85);
+    color: yellow;
+}
+
+.jpie-pagina {
+    background-color: #122c51;
+    color: white;
+    padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 20px) 20px;
+    margin-top: 50px;
+    border-top: 5px solid #f4d03f;
+}
+
+.jcontenido-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.jcolumna-footer {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.jcolumna-footer h3 {
+    color: #f4d03f;
+    font-size: clamp(18px, 3vw, 20px);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.jcolumna-footer h4 {
+    margin: 15px 0 10px;
+}
+
+.jlista-contacto {
+    list-style: none;
+}
+
+.jlista-contacto li {
+    padding: 8px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.jlista-contacto li::before {
+    content: "📞";
+    position: relative;
+    left: 0.2rem;
+}
+
+.jredes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.jredes-sociales a {
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+.jredes-sociales a:hover {
+    border-color: #f4d03f;
+}
+
+.jcopyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    color: #f4d03f;
+}
+
+.jheader-principal {
+    background-color: #122c51;
+    padding: 20px;
+    border-bottom: 5px solid #f4d03f;
+    margin-bottom: 0;
+}
+
+.jheader-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.jlogo-imagen {
+    max-width: min(350px, 90vw);
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.jnavegacion-principal ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.jnavegacion-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.jnavegacion-principal a:hover {
+    background-color: #5b88b2;
+}
