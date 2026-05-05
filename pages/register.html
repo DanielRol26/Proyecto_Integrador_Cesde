@@ -72,43 +72,86 @@
             menu.classList.toggle('hidden');
         }
     </script>
-    <hr>
     <main>
         <section class="register">
-            <div class="register-container">
-                <div class="register-hero">
-                    <div class="hero-text"></div>
+            <div class="register-hero">
+                <div class="hero-text-container">
+                    <h1 class="hero-title">Regístrate</h1>
+                    <p class="hero-description">Crea tu cuenta y disfruta <br>de una <span
+                            class="hero-highlight">experiencia única</span></p>
+                    <div class="features">
+                        <div class="feature-container">
+                            <div class="feature-icon-box">
+                                <img class="feature-icon" src="/assets/images/icons/features/shield.png" alt="">
+                            </div>
+                            <div class="feature-text-box">
+                                <h3 class="feature-title">Compra segura</h3>
+                                <p>Tus datos están protegidos</p>
+                            </div>
+                        </div>
+                        <div class="feature-container">
+                            <div class="feature-icon-box">
+                                <img class="feature-icon" id="feature-icon-tag"
+                                    src="/assets/images/icons/features/tag.png" alt="">
+                            </div>
+                            <div class="feature-text-box">
+                                <h3 class="feature-title">Ofertas exclusivas</h3>
+                                <p>Accede a descuentos y promociones</p>
+                            </div>
+                        </div>
+                        <div class="feature-container">
+                            <div class="feature-icon-box">
+                                <img class="feature-icon" id="feature-icon-box"
+                                    src="/assets/images/icons/features/box.png" alt="">
+                            </div>
+                            <div class="feature-text-box">
+                                <h3 class="feature-title">Experiencia personalizada</h3>
+                                <p>Recomendaciones y contenido <br>segun tu gustos</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    class="mb-[100px] w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
-                    <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">
-                        Ingresa
-                        tus datos
+            </div>
+            <div class="flex flex-col items-center w-[70%] rounded-[15px] text-[14px] text-[var(--color-text)]">
+                <div class="form-icon-container">
+                    <img class="form-icon" src="/assets/images/icons/ui/avatar-default-blue.png" alt="">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-[32px] p-px text-center  mb-[10px] text-[var(--color-text)] font-black">
+                        Ingresa tus datos
                     </h2>
                     <p
-                        class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
+                        class="p-inicial text-center text-[15px] ml-[20px] mr-[20px] mb-[20px] text-[var(--color-text-4)] pb-[15px] font-medium w-[60%] relative">
                         Para completar el registro correctamente, por favor asegurese de que ningun campo
                         con el (*) quede vacío
                     </p>
-                    <form action="/pages/registroexitoso.html" method="get">
-                        <fieldset
-                            class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
-                            id="siguiente1">
-                            <legend>
-                                <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                    Datos
-                                    Personales</h3>
-                            </legend>
+                </div>
+                <form class="w-[100%] flex flex-col justify-center items-center" action="/pages/registroexitoso.html"
+                    method="get">
 
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="nombre">Nombre Completo : *</label>
-                            <input
-                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="tipo-documento">Tipo de documento *</label>
+                    <div class="flex flex-col justify-center items-center w-[100%]">
+                        <label class="block w-[75%] mt-0 mr-auto mb-[5px] ml-auto text-left font-semibold"
+                            for="nombre">Nombre
+                            Completo : *</label>
+                        <div
+                            class="flex border-[1px] border-[var(--color-border)] rounded-[9px] overflow-hidden w-[75%]">
+                            <div class="flex bg-[var(--color-fondo)]justify-center items-center w-[7%]">
+                                <img class="input-icon" src="/assets/images/icons/ui/avatar-default-blue.png" alt="">
+                            </div>
+                            <div class="w-[93%]">
+                                <input
+                                    class="w-[100%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] border-none text-[16px] focus:outline-none focus:border-[var(--color-text)] "
+                                    type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row w-[75%] gap-[30px]">
+                        <div class="flex flex-col overflow-hidden w-[50%]">
+                            <label class="block w-[100%] text-left font-semibold" for="tipo-documento">Tipo de documento
+                                *</label>
                             <select
-                                class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
+                                class="w-[100%] max-sm:w-[100%] h-[42.5px] border-[1px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)] pl-[10px]"
                                 name="tipo-documento" id="tipo-documento" required>
                                 <option value="">Seleccione una opción</option>
                                 <option value="ti">Tarjeta de identidad</option>
@@ -117,57 +160,73 @@
                                 <option value="ppt">Permiso de Protección Temporal</option>
                                 <option value="nit">NIT</option>
                             </select>
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="ndocumento">Número de documento : *</label>
+                        </div>
+                        <div class="w-[50%]">
+                            <label class="block w-[100%] text-left font-semibold" for="ndocumento">Número de documento :
+                                *</label>
                             <input
-                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                                class="w-[100%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] border-[1px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
                                 type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
-                            <fieldset
-                                class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
-                                <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *
-                                </legend>
-                                <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
-                                    <div class="flex items-center gap-[8px] w-[123px]">
-                                        <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M"
-                                            required>
-                                        <label
-                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                            for="sxm" id="sxm-label">Masculino</label>
-                                    </div>
-                                    <div class="flex items-center gap-[8px] w-[123px]">
-                                        <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
-                                        <label
-                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                            for="sxf" id="sxf-label">Femenino</label>
-                                    </div>
-                                    <div class="flex items-center gap-[8px]">
-                                        <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N"
-                                            required>
-                                        <label
-                                            class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
-                                            for="N" id="n-label">Prefiero no decir</label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <div>
-                                <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                    for="fecha-nacimiento">Fecha de nacimiento: *</label>
-                                <input
-                                    class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                    type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                        </div>
+                    </div>
+
+                    <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                        for="tipo-documento">Tipo de documento *</label>
+                    <select
+                        class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
+                        name="tipo-documento" id="tipo-documento" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="ti">Tarjeta de identidad</option>
+                        <option value="cc">Cédula de Ciudadanía</option>
+                        <option value="ce">Cédula de Extranjería</option>
+                        <option value="ppt">Permiso de Protección Temporal</option>
+                        <option value="nit">NIT</option>
+                    </select>
+                    <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                        for="ndocumento">Número de documento : *</label>
+                    <input
+                        class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                        type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
+                    <fieldset
+                        class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
+                        <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *
+                        </legend>
+                        <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
+                            <div class="flex items-center gap-[8px] w-[123px]">
+                                <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M" required>
+                                <label class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                    for="sxm" id="sxm-label">Masculino</label>
                             </div>
-                            <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
-                                <button type="button"
-                                    class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                    onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
-                                <button type="button" onclick="nextsiguiente(1)"
-                                    class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
-                                    >
-                                </button>
+                            <div class="flex items-center gap-[8px] w-[123px]">
+                                <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
+                                <label class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
+                                    for="sxf" id="sxf-label">Femenino</label>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
+                            <div class="flex items-center gap-[8px]">
+                                <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N" required>
+                                <label
+                                    class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
+                                    for="N" id="n-label">Prefiero no decir</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
+                            for="fecha-nacimiento">Fecha de nacimiento: *</label>
+                        <input
+                            class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
+                            type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                    </div>
+                    <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
+                        <button type="button"
+                            class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
+                            onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
+                        <button type="button" onclick="nextsiguiente(1)"
+                            class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
+                            >
+                        </button>
+                    </div>
+                </form>
             </div>
     </main>
     <footer
