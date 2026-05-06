@@ -11,7 +11,8 @@
 </head>
 
 <body class="bg-[var(--color-fondo)] leading-[1.3] font-[fuente1]">
-    <header class="relative z-20 px-10 py-5 bg-[var(--color-fondo)] border-b border-[var(--color-border)] shadow-[0px_3px_10px_0px_rgba(149,149,149,0.2)] max-lg:px-6 max-lg:py-[18px] max-sm:px-[18px] max-sm:py-4">
+    <header
+        class="relative z-20 px-10 py-5 bg-[var(--color-fondo)] border-b border-[var(--color-border)] shadow-[0px_3px_10px_0px_rgba(149,149,149,0.2)] max-lg:px-6 max-lg:py-[18px] max-sm:px-[18px] max-sm:py-4">
         <div class="w-full flex justify-between items-center">
             <div class="flex items-center gap-2 shrink-0">
                 <img src="/assets/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
@@ -19,17 +20,24 @@
             </div>
 
             <nav class="flex gap-6 font-semibold max-lg:hidden">
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/index.html">Inicio</a>
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/pages/products.html">Productos</a>
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/pages/contact.html">Contáctenos</a>
+                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                    href="/index.html">Inicio</a>
+                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                    href="/pages/products.html">Productos</a>
+                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                    href="/pages/contact.html">Contáctenos</a>
             </nav>
 
             <div class="flex gap-[10px] max-lg:hidden">
-                <button class="border border-[var(--color-border-3)] rounded-md py-[10px] px-5 bg-[var(--bg-color-4)] text-[var(--color-text)] transition-all duration-300 hover:shadow-[0_4px_12px_rgba(10,31,92,0.2)] hover:scale-[1.03]">Iniciar Sesión</button>
-                <button class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]">Regístrate</button>
+                <button
+                    class="border border-[var(--color-border-3)] rounded-md py-[10px] px-5 bg-[var(--bg-color-4)] text-[var(--color-text)] transition-all duration-300 hover:shadow-[0_4px_12px_rgba(10,31,92,0.2)] hover:scale-[1.03]">Iniciar
+                    Sesión</button>
+                <button
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]">Regístrate</button>
             </div>
 
-            <button class="hidden max-lg:flex flex-col gap-1 p-1 bg-transparent border-none cursor-pointer" onclick="toggleMenu()">
+            <button class="hidden max-lg:flex flex-col gap-1 p-1 bg-transparent border-none cursor-pointer"
+                onclick="toggleMenu()">
                 <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
                 <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
                 <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
@@ -37,66 +45,87 @@
         </div>
 
         <nav id="mobileMenu" class="hidden mt-4 flex-col gap-2 font-semibold">
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/index.html">Inicio</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/pages/products.html">Productos</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/pages/contact.html">Contáctenos</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]" href="/pages/login.html">Iniciar Sesión</a>
+            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                href="/index.html">Inicio</a>
+            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                href="/pages/products.html">Productos</a>
+            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                href="/pages/contact.html">Contáctenos</a>
+            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
+                href="/pages/login.html">Iniciar Sesión</a>
         </nav>
     </header>
 
     <main>
-        <section class="flex m-[10px_30px] rounded-[20px] overflow-hidden border border-[#e7edf5] min-h-[82vh] h-[88vh] shadow-[0_2px_15px_rgba(15,23,42,0.05)] max-lg:flex-col max-lg:min-h-0 max-lg:h-auto max-lg:m-5 max-sm:m-3 max-sm:rounded-2xl">
-            <div class="w-[38%] min-h-[82vh] grid items-center pl-[38px] text-[var(--color-text-3)] bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.85)_20%,rgba(7,22,55,0.65)_40%,rgba(7,22,55,0.35)_70%,rgba(248,250,252,0.6)_87%,#f8fafc_100%),url('/assets/images/register/hero/register-hero-2.png')] bg-no-repeat bg-[28%_center] bg-cover max-lg:w-full max-lg:min-h-[560px] max-lg:p-[60px_40px] max-lg:bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.80)_42%,rgba(7,22,55,0.35)_100%),url('/assets/images/register/hero/register-hero-2.png')] max-lg:bg-[center_top] max-sm:min-h-[620px] max-sm:p-[45px_24px] max-sm:bg-[url('/assets/images/register/hero/register-hero-2.png')] max-sm:bg-[center_top] max-sm:relative max-sm:before:content-[''] max-sm:before:absolute max-sm:before:inset-0 max-sm:before:bg-[rgba(7,22,55,0.58)] max-sm:before:z-0">
+        <section
+            class="flex m-[10px_30px] rounded-[20px] overflow-hidden border border-[#e7edf5] min-h-[82vh] h-[88vh] shadow-[0_2px_15px_rgba(15,23,42,0.05)] max-lg:flex-col max-lg:min-h-0 max-lg:h-auto max-lg:m-5 max-sm:m-3 max-sm:rounded-2xl">
+            <div
+                class="w-[38%] min-h-[82vh] grid items-center pl-[38px] text-[var(--color-text-3)] bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.85)_20%,rgba(7,22,55,0.65)_40%,rgba(7,22,55,0.35)_70%,rgba(248,250,252,0.6)_87%,#f8fafc_100%),url('/assets/images/register/hero/register-hero-2.png')] bg-no-repeat bg-[28%_center] bg-cover max-lg:w-full max-lg:min-h-[560px] max-lg:p-[60px_40px] max-lg:bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.80)_42%,rgba(7,22,55,0.35)_100%),url('/assets/images/register/hero/register-hero-2.png')] max-lg:bg-[center_top] max-sm:min-h-[620px] max-sm:p-[45px_24px] max-sm:bg-[url('/assets/images/register/hero/register-hero-2.png')] max-sm:bg-[center_top] max-sm:relative max-sm:before:content-[''] max-sm:before:absolute max-sm:before:inset-0 max-sm:before:bg-[rgba(7,22,55,0.58)] max-sm:before:z-0">
                 <div class="max-sm:relative max-sm:z-[1]">
                     <h1 class="text-[56px] font-bold text-[var(--color-text-2)] pb-5 max-sm:text-[38px]">Regístrate</h1>
 
-                    <p class="text-[17px] relative leading-[1.5] before:content-[''] before:h-[2.5px] before:absolute before:bg-[var(--bg-color-2)] before:left-0 before:top-[-15px] before:w-[42px]">
+                    <p
+                        class="text-[17px] relative leading-[1.5] before:content-[''] before:h-[2.5px] before:absolute before:bg-[var(--bg-color-2)] before:left-0 before:top-[-15px] before:w-[42px]">
                         Crea tu cuenta y disfruta <br>
                         de una <span class="font-bold text-[var(--color-text-2)]">experiencia única</span>
                     </p>
 
                     <div class="mt-[10px]">
                         <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
-                            <div class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
                                 <img class="h-[25px] w-5" src="/assets/images/icons/features/shield.png" alt="">
                             </div>
                             <div>
-                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">Compra segura</h3>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Compra segura</h3>
                                 <p class="text-[15px] leading-[1.4]">Tus datos están protegidos</p>
                             </div>
                         </div>
 
                         <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
-                            <div class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
-                                <img class="h-5 w-[23px]" id="feature-icon-tag" src="/assets/images/icons/features/tag.png" alt="">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                                <img class="h-5 w-[23px]" id="feature-icon-tag"
+                                    src="/assets/images/icons/features/tag.png" alt="">
                             </div>
                             <div>
-                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">Ofertas exclusivas</h3>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Ofertas exclusivas</h3>
                                 <p class="text-[15px] leading-[1.4]">Accede a descuentos y promociones</p>
                             </div>
                         </div>
 
                         <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
-                            <div class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
-                                <img class="h-[22px] w-5" id="feature-icon-box" src="/assets/images/icons/features/box.png" alt="">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                                <img class="h-[22px] w-5" id="feature-icon-box"
+                                    src="/assets/images/icons/features/box.png" alt="">
                             </div>
                             <div>
-                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">Experiencia personalizada</h3>
-                                <p class="text-[15px] leading-[1.4]">Recomendaciones y contenido <br>según tus gustos</p>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Experiencia personalizada</h3>
+                                <p class="text-[15px] leading-[1.4]">Recomendaciones y contenido <br>según tus gustos
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="w-[62%] flex-1 flex flex-col items-center text-[var(--color-text)] py-5 pb-[30px] max-lg:w-full max-lg:py-[30px] max-sm:py-[26px] max-sm:pb-[35px]">
-                <div class="flex rounded-full w-10 h-10 bg-[var(--bg-color-3)] justify-center items-center overflow-hidden mt-[10px]">
+            <div
+                class="w-[62%] flex-1 flex flex-col items-center text-[var(--color-text)] py-5 pb-[30px] max-lg:w-full max-lg:py-[30px] max-sm:py-[26px] max-sm:pb-[35px]">
+                <div
+                    class="flex rounded-full w-10 h-10 bg-[var(--bg-color-3)] justify-center items-center overflow-hidden mt-[10px]">
                     <img class="h-1/2 w-[40%] py-px" src="/assets/images/icons/ui/avatar-default-blue.png" alt="">
                 </div>
 
                 <div class="flex flex-col items-center">
-                    <h2 class="text-[32px] text-center mb-[10px] text-[var(--color-text)] font-black max-sm:text-[28px]">Ingresa tus datos</h2>
-                    <p class="text-center text-[15px] text-[var(--color-text-4)] pb-[15px] font-medium w-[70%] max-sm:w-[88%] max-sm:text-sm">
+                    <h2
+                        class="text-[32px] text-center mb-[10px] text-[var(--color-text)] font-black max-sm:text-[28px]">
+                        Ingresa tus datos</h2>
+                    <p
+                        class="text-center text-[15px] text-[var(--color-text-4)] pb-[15px] font-medium w-[70%] max-sm:w-[88%] max-sm:text-sm">
                         Para completar el registro correctamente, por favor asegúrese de que ningún campo
                         con el (*) quede vacío
                     </p>
@@ -105,25 +134,29 @@
                 <form class="w-full flex flex-col items-center" action="/pages/registroexitoso.html" method="get">
 
                     <div class="w-full flex flex-col items-center mb-5">
-                        <label class="w-[70%] font-semibold mb-[5px] max-lg:w-4/5 max-sm:w-[88%]" for="nombre">Nombre Completo: *</label>
-
-                        <div class="w-[70%] h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2 max-lg:w-4/5 max-sm:w-[88%]">
+                        <label class="w-[70%] font-semibold mb-[5px] max-lg:w-4/5 max-sm:w-[88%]" for="nombre">Nombre
+                            Completo: *</label>
+                        <div
+                            class="w-[70%] h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2 max-lg:w-4/5 max-sm:w-[88%]">
                             <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <circle cx="12" cy="8" r="4" stroke="#26408b" stroke-width="2" />
-                                    <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#26408b"
+                                        stroke-width="2" stroke-linecap="round" />
                                 </svg>
                             </div>
-
-                            <input class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]" type="text" id="nombre" name="nombre" placeholder="Ej: Juan Esteban Correa" required>
+                            <input
+                                class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                type="text" id="name" name="name" placeholder="Ej: Juan Esteban Correa" required>
                         </div>
                     </div>
 
                     <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
                         <div class="w-1/2 flex flex-col max-sm:w-full">
-                            <label class="font-semibold mb-[5px]" for="tipo-documento">Tipo de documento: *</label>
-
-                            <select class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white pl-[10px] outline-none text-base text-[var(--color-text)]" name="tipo-documento" id="tipo-documento" required>
+                            <label class="font-semibold mb-[5px]" for="document-type">Tipo de documento: *</label>
+                            <select
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white pl-[10px] outline-none text-base text-[var(--color-text)]"
+                                name="document-type" id="document-type" required>
                                 <option value="">Seleccione una opción</option>
                                 <option value="ti">Tarjeta de identidad</option>
                                 <option value="cc">Cédula de Ciudadanía</option>
@@ -134,19 +167,21 @@
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
-                            <label class="font-semibold mb-[5px]" for="ndocumento">Número de documento: *</label>
-
-                            <div class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                            <label class="font-semibold mb-[5px]" for="document-number">Número de documento: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
                                 <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#26408b" stroke-width="2" />
+                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
                                         <circle cx="8" cy="11" r="2" stroke="#26408b" stroke-width="2" />
                                         <path d="M13 10H18" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
                                         <path d="M13 14H16" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
                                     </svg>
                                 </div>
-
-                                <input class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]" type="text" id="ndocumento" name="ndocumento" placeholder="Ej: 1234567890" required>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="text" id="document-number" name="document-number" placeholder="Ej: 1234567890" required>
                             </div>
                         </div>
                     </div>
@@ -156,26 +191,32 @@
 
                         <div class="flex w-full gap-[30px] max-sm:flex-col max-sm:gap-3.5">
                             <div class="w-1/2 max-sm:w-full">
-                                <input class="hidden peer" id="sxm" type="radio" name="sexo" value="M" required>
-
-                                <label class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold" for="sxm">
+                                <input class="hidden peer" id="male" type="radio" name="male" value="M" required>
+                                <label
+                                    class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
+                                    for="sxm">
                                     <svg class="mb-[3px]" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <circle cx="9" cy="15" r="5.5" stroke="currentColor" stroke-width="2" />
-                                        <path d="M13 11L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                                        <path d="M13 6H18V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13 11L18 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M13 6H18V11" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     Masculino
                                 </label>
                             </div>
 
                             <div class="w-1/2 max-sm:w-full">
-                                <input class="hidden peer" id="sxf" type="radio" name="sexo" value="F">
-
-                                <label class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold" for="sxf">
+                                <input class="hidden peer" id="female" type="radio" name="sexo" value="F">
+                                <label
+                                    class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
+                                    for="female">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <circle cx="12" cy="9" r="5.5" stroke="currentColor" stroke-width="2" />
-                                        <path d="M12 15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                                        <path d="M8 19H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M12 15V22" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M8 19H16" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
                                     </svg>
                                     Femenino
                                 </label>
@@ -185,34 +226,39 @@
 
                     <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
                         <div class="w-1/2 flex flex-col max-sm:w-full">
-                            <label class="font-semibold mb-[5px]" for="fecha-nacimiento">Fecha de nacimiento: *</label>
-
-                            <div class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                            <label class="font-semibold mb-[5px]" for="birth-date">Fecha de nacimiento: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
                                 <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                     <svg id="calendarIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <rect x="4" y="5" width="16" height="15" rx="2" stroke="#26408b" stroke-width="2" />
+                                        <rect x="4" y="5" width="16" height="15" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
                                         <path d="M8 3V7" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
                                         <path d="M16 3V7" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
                                         <path d="M4 10H20" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
                                     </svg>
                                 </div>
-
-                                <input class="input-date border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)]" type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                                <input
+                                    class="input-date border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)]"
+                                    type="date" id="birth-date" name="birth-date" required>
                             </div>
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
                             <label class="font-semibold mb-[5px]" for="email">Correo electrónico: *</label>
-
-                            <div class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
                                 <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="#26408b" stroke-width="2" />
-                                        <path d="M5 7L12 13L19 7" stroke="#26408b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M5 7L12 13L19 7" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
-
-                                <input class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]" type="email" id="email" placeholder="Ej: correo@ejemplo.com" required>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="email" id="email" placeholder="Ej: correo@ejemplo.com" required>
                             </div>
                         </div>
                     </div>
@@ -220,35 +266,43 @@
                     <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
                         <div class="w-1/2 flex flex-col max-sm:w-full">
                             <label class="font-semibold mb-[5px]" for="pass">Contraseña: *</label>
-
-                            <div class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
                                 <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b" stroke-width="2" />
-                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b"
+                                            stroke-width="2" stroke-linecap="round" />
                                         <circle cx="12" cy="14" r="1.6" fill="#26408b" />
-                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" />
                                     </svg>
                                 </div>
-
-                                <input class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]" type="password" id="pass" placeholder="Crea una contraseña" required>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="password" id="pass" placeholder="Crea una contraseña" required>
                             </div>
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
                             <label class="font-semibold mb-[5px]" for="confirmpass">Confirmar contraseña: *</label>
-
-                            <div class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
                                 <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b" stroke-width="2" />
-                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b"
+                                            stroke-width="2" stroke-linecap="round" />
                                         <circle cx="12" cy="14" r="1.6" fill="#26408b" />
-                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" />
                                     </svg>
                                 </div>
-
-                                <input class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]" type="password" id="confirmpass" placeholder="Repite tu contraseña" required>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="password" id="confirmpass" placeholder="Repite tu contraseña" required>
                             </div>
                         </div>
                     </div>
@@ -272,24 +326,34 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="w-[70%] h-[45px] mt-5 border-none rounded-md bg-[var(--bg-color-5)] text-[var(--color-text-2)] flex justify-center items-center font-semibold text-[17px] cursor-pointer max-lg:w-4/5 max-sm:w-[88%]">
+                    <button type="submit" id="submit-btn"
+                        class="w-[70%] h-[45px] mt-5 border-none rounded-md bg-[var(--bg-color-5)] text-[var(--color-text-2)] flex justify-center items-center font-semibold text-[17px] cursor-pointer max-lg:w-4/5 max-sm:w-[88%]">
                         <svg class="mr-[10px]" width="20" height="20" viewBox="0 0 24 24" fill="none">
                             <circle cx="12" cy="8" r="4" stroke="#ffffff" stroke-width="2" />
-                            <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#ffffff" stroke-width="2"
+                                stroke-linecap="round" />
                         </svg>
                         Crear mi cuenta
                     </button>
 
-                    <div class="flex gap-[5px] pt-[15px] pb-5 text-center max-sm:flex-col max-sm:gap-0.5 max-sm:text-sm">
+                    <div
+                        class="flex gap-[5px] pt-[15px] pb-5 text-center max-sm:flex-col max-sm:gap-0.5 max-sm:text-sm">
                         <p>¿Ya tienes una cuenta?</p>
-                        <a class="text-[var(--color-text-5)] font-semibold no-underline" href="/pages/login.html">Inicia sesión aquí</a>
+                        <a class="text-[var(--color-text-5)] font-semibold no-underline" href="/pages/login.html">Inicia
+                            sesión aquí</a>
                     </div>
                 </form>
             </div>
         </section>
+
+        <section>
+            <h2>Clientes registrados</h2>
+            <ul></ul>
+        </section>
     </main>
 
-    <footer class="mt-[30px] border-t-2 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-[50px_50px_0_0] py-[70px] px-10 text-[var(--color-text)] max-sm:py-[50px] max-sm:px-6 max-sm:rounded-[35px_35px_0_0]">
+    <footer
+        class="mt-[30px] border-t-2 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-[50px_50px_0_0] py-[70px] px-10 text-[var(--color-text)] max-sm:py-[50px] max-sm:px-6 max-sm:rounded-[35px_35px_0_0]">
         <div class="grid grid-cols-3 gap-12 max-w-[1200px] mx-auto max-lg:grid-cols-1 max-lg:text-center">
             <div>
                 <h3 class="text-2xl font-bold mb-6 max-sm:text-[22px]">¿NECESITAS AYUDA?</h3>
@@ -304,10 +368,14 @@
                 <h3 class="text-2xl font-bold mb-6 max-sm:text-[22px]">SOCIAL MEDIA</h3>
 
                 <div class="flex gap-4 max-lg:justify-center max-lg:items-center">
-                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110" href="#"><img class="w-6 h-6" src="/assets/images/icons/social/gmail.png" alt="Gmail"></a>
-                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110" href="#"><img class="w-6 h-6" src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp"></a>
-                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110" href="#"><img class="w-6 h-6" src="/assets/images/icons/social/facebook.png" alt="Facebook"></a>
-                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110" href="#"><img class="w-6 h-6" src="/assets/images/icons/social/youtube.png" alt="Youtube"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/gmail.png" alt="Gmail"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/facebook.png" alt="Facebook"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/youtube.png" alt="Youtube"></a>
                 </div>
             </div>
 
