@@ -36,3 +36,9 @@ body {
     height: 40px;
     cursor: pointer;
 }
+
+.error {
+    font-weight: bold;
+    font-size: 16px;
+    color: #d64545;
+}

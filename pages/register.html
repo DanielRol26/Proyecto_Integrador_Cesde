@@ -31,7 +31,7 @@
             <div class="flex gap-[10px] max-lg:hidden">
                 <button
                     class="border border-[var(--color-border-3)] rounded-md py-[10px] px-5 bg-[var(--bg-color-4)] text-[var(--color-text)] transition-all duration-300 hover:shadow-[0_4px_12px_rgba(10,31,92,0.2)] hover:scale-[1.03]">Iniciar
-                    Sesión</button>
+                    sesión</button>
                 <button
                     class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]">Regístrate</button>
             </div>
@@ -58,7 +58,7 @@
 
     <main>
         <section
-            class="flex m-[10px_30px] rounded-[20px] overflow-hidden border border-[#e7edf5] min-h-[82vh] h-[88vh] shadow-[0_2px_15px_rgba(15,23,42,0.05)] max-lg:flex-col max-lg:min-h-0 max-lg:h-auto max-lg:m-5 max-sm:m-3 max-sm:rounded-2xl">
+            class="flex m-[10px_30px] rounded-[20px] overflow-hidden border border-[#e7edf5] min-h-[82vh] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] max-lg:flex-col max-lg:min-h-0 max-lg:h-auto max-lg:m-5 max-sm:m-3 max-sm:rounded-2xl">
             <div
                 class="w-[38%] min-h-[82vh] grid items-center pl-[38px] text-[var(--color-text-3)] bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.85)_20%,rgba(7,22,55,0.65)_40%,rgba(7,22,55,0.35)_70%,rgba(248,250,252,0.6)_87%,#f8fafc_100%),url('/assets/images/register/hero/register-hero-2.png')] bg-no-repeat bg-[28%_center] bg-cover max-lg:w-full max-lg:min-h-[560px] max-lg:p-[60px_40px] max-lg:bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.80)_42%,rgba(7,22,55,0.35)_100%),url('/assets/images/register/hero/register-hero-2.png')] max-lg:bg-[center_top] max-sm:min-h-[620px] max-sm:p-[45px_24px] max-sm:bg-[url('/assets/images/register/hero/register-hero-2.png')] max-sm:bg-[center_top] max-sm:relative max-sm:before:content-[''] max-sm:before:absolute max-sm:before:inset-0 max-sm:before:bg-[rgba(7,22,55,0.58)] max-sm:before:z-0">
                 <div class="max-sm:relative max-sm:z-[1]">
@@ -131,10 +131,10 @@
                     </p>
                 </div>
 
-                <form class="w-full flex flex-col items-center" action="/pages/registroexitoso.html" method="get">
+                <form id="form" class="w-full flex flex-col items-center" action="" method="get">
 
                     <div class="w-full flex flex-col items-center mb-5">
-                        <label class="w-[70%] font-semibold mb-[5px] max-lg:w-4/5 max-sm:w-[88%]" for="nombre">Nombre
+                        <label class="w-[70%] font-semibold mb-[5px] max-lg:w-4/5 max-sm:w-[88%]" for="fullname">Nombre
                             Completo: *</label>
                         <div
                             class="w-[70%] h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2 max-lg:w-4/5 max-sm:w-[88%]">
@@ -147,8 +147,9 @@
                             </div>
                             <input
                                 class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
-                                type="text" id="name" name="name" placeholder="Ej: Juan Esteban Correa" required>
+                                type="text" id="fullname" name="name" placeholder="Ej: Juan Esteban Correa">
                         </div>
+                        <span id="fullname-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                     </div>
 
                     <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
@@ -156,14 +157,15 @@
                             <label class="font-semibold mb-[5px]" for="document-type">Tipo de documento: *</label>
                             <select
                                 class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white pl-[10px] outline-none text-base text-[var(--color-text)]"
-                                name="document-type" id="document-type" required>
-                                <option value="">Seleccione una opción</option>
-                                <option value="ti">Tarjeta de identidad</option>
-                                <option value="cc">Cédula de Ciudadanía</option>
-                                <option value="ce">Cédula de Extranjería</option>
-                                <option value="ppt">Permiso de Protección Temporal</option>
-                                <option value="nit">NIT</option>
+                                name="document-type" id="document-type">
+                                <option value="">-- Seleccione una opción --</option>
+                                <option value="TI">Tarjeta de identidad</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PPT">Permiso de Protección Temporal</option>
+                                <option value="NIT">NIT</option>
                             </select>
+                            <span id="documenttype-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
@@ -181,8 +183,11 @@
                                 </div>
                                 <input
                                     class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
-                                    type="text" id="document-number" name="document-number" placeholder="Ej: 1234567890" required>
+                                    type="text" id="document-number" name="document-number"
+                                    placeholder="Ej: 1234567890">
                             </div>
+                            <span id="documentnumber-error"
+                                class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
                     </div>
 
@@ -191,10 +196,10 @@
 
                         <div class="flex w-full gap-[30px] max-sm:flex-col max-sm:gap-3.5">
                             <div class="w-1/2 max-sm:w-full">
-                                <input class="hidden peer" id="male" type="radio" name="male" value="M" required>
+                                <input class="hidden peer" id="male" type="radio" name="gender" value="Male">
                                 <label
                                     class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
-                                    for="sxm">
+                                    for="male">
                                     <svg class="mb-[3px]" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <circle cx="9" cy="15" r="5.5" stroke="currentColor" stroke-width="2" />
                                         <path d="M13 11L18 6" stroke="currentColor" stroke-width="2"
@@ -207,7 +212,7 @@
                             </div>
 
                             <div class="w-1/2 max-sm:w-full">
-                                <input class="hidden peer" id="female" type="radio" name="sexo" value="F">
+                                <input class="hidden peer" id="female" type="radio" name="gender" value="Female">
                                 <label
                                     class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
                                     for="female">
@@ -222,7 +227,9 @@
                                 </label>
                             </div>
                         </div>
+                        <span id="gender-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                     </fieldset>
+
 
                     <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
                         <div class="w-1/2 flex flex-col max-sm:w-full">
@@ -240,8 +247,9 @@
                                 </div>
                                 <input
                                     class="input-date border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)]"
-                                    type="date" id="birth-date" name="birth-date" required>
+                                    type="date" id="birth-date" name="birth-date">
                             </div>
+                            <span id="birthdate-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
@@ -258,12 +266,14 @@
                                 </div>
                                 <input
                                     class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
-                                    type="email" id="email" placeholder="Ej: correo@ejemplo.com" required>
+                                    type="email" id="email" placeholder="Ej: correo@ejemplo.com">
                             </div>
+                            <span id="email-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
                     </div>
 
-                    <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
+                    <div
+                        class="w-[70%] flex gap-[30px] mb-[5px] max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
                         <div class="w-1/2 flex flex-col max-sm:w-full">
                             <label class="font-semibold mb-[5px]" for="pass">Contraseña: *</label>
                             <div
@@ -281,8 +291,9 @@
                                 </div>
                                 <input
                                     class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
-                                    type="password" id="pass" placeholder="Crea una contraseña" required>
+                                    type="password" id="pass" placeholder="Crea una contraseña">
                             </div>
+                            <span id="password-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
 
                         <div class="w-1/2 flex flex-col max-sm:w-full">
@@ -302,25 +313,29 @@
                                 </div>
                                 <input
                                     class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
-                                    type="password" id="confirmpass" placeholder="Repite tu contraseña" required>
+                                    type="password" id="confirmpass" placeholder="Repite tu contraseña">
                             </div>
+                            <span id="confirmpassword-error"
+                                class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
                         </div>
                     </div>
 
+
                     <div class="w-[70%] flex flex-col text-[var(--color-text-4)] gap-[3px] max-lg:w-4/5 max-sm:w-[88%]">
                         <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm">
-                            <input class="peer max-sm:mt-[3px]" id="check" type="checkbox" required>
-                            <label class="peer-checked:font-semibold" for="check">
+                            <input class="peer max-sm:mt-[3px]" id="terms-privacy" type="checkbox">
+                            <label class="peer-checked:font-semibold" for="terms-privacy">
                                 Acepto los
                                 <a class="text-[var(--color-text-5)] no-underline" href="#">términos y condiciones</a>
                                 y la
                                 <a class="text-[var(--color-text-5)] no-underline" href="#">política de privacidad</a> *
                             </label>
                         </div>
+                        <span id="termsprivacy-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
 
                         <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm">
-                            <input class="peer max-sm:mt-[3px]" type="checkbox" id="check-2">
-                            <label class="peer-checked:font-semibold" for="check-2">
+                            <input class="peer max-sm:mt-[3px]" type="checkbox" id="email-promotions">
+                            <label class="peer-checked:font-semibold" for="email-promotions">
                                 Quiero recibir promociones y descuentos al correo electrónico
                             </label>
                         </div>
@@ -346,9 +361,31 @@
             </div>
         </section>
 
-        <section>
-            <h2>Clientes registrados</h2>
-            <ul></ul>
+        <section
+            class="flex flex-col justify-center items-center m-[10px_30px] rounded-[20px] border border-[#e7edf5] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] ">
+            <h2 class="text-[32px] text-[var(--color-text)] font-bold my-[20px]">Clientes registrados</h2>
+
+            <div class="filters flex justify-center items-center gap-[10px]">
+
+                <p class="mr-[15px] text-[18px] font-semibold">Filtrar por:</p>
+                <select class="border border-[var(--color-border)] rounded-[4px] p-[10px] " id="filter-type">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="name">Nombre</option>
+                    <option value="document-type">Tipo de documento</option>
+                    <option value="gender">Genero</option>
+                    <option value="email">Dominio de correo</option>
+                </select>
+
+                <select class="border border-[var(--color-border)] rounded-[4px] p-[10px]" id="filter-value">
+                    <option value="">None</option>
+                </select>
+
+                <button
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]" id="btn-filter">Filtrar</button>
+                <button
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]" id="btn-show-all">Ver todos</button>
+            </div>
+            <ul id="users-list"></ul>
         </section>
     </main>
 
