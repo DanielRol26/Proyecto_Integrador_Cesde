@@ -837,3 +837,5 @@ document.addEventListener("keydown", (evento) => {
   cerrarCarrito();
   cerrarModal();
 });
+
+
