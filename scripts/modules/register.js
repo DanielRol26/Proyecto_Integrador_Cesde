@@ -30,7 +30,8 @@ let registeredUsers = [
         email: 'juan@gmail.com',
         password: 'Juan123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'admin'
     },
     {
         fullName: 'Laura Martinez',
@@ -41,7 +42,8 @@ let registeredUsers = [
         email: 'laura@hotmail.com',
         password: 'Laura123*',
         termsPrivacy: true,
-        emailPromotions: false
+        emailPromotions: false,
+        roleUser: 'client'
     },
     {
         fullName: 'Carlos Ruiz',
@@ -52,7 +54,8 @@ let registeredUsers = [
         email: 'carlos@outlook.com',
         password: 'Carlos123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'admin'
     },
     {
         fullName: 'Maria Gomez',
@@ -63,7 +66,8 @@ let registeredUsers = [
         email: 'maria@gmail.com',
         password: 'Maria123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'client'
     },
     {
         fullName: 'Andres Torres',
@@ -74,7 +78,8 @@ let registeredUsers = [
         email: 'andres@hotmail.com',
         password: 'Andres123*',
         termsPrivacy: true,
-        emailPromotions: false
+        emailPromotions: false,
+        roleUser: 'admin'
     },
     {
         fullName: 'Sofia Ramirez',
@@ -85,7 +90,8 @@ let registeredUsers = [
         email: 'sofia@gmail.com',
         password: 'Sofia123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'client'
     },
     {
         fullName: 'David Lopez',
@@ -96,7 +102,8 @@ let registeredUsers = [
         email: 'david@outlook.com',
         password: 'David123*',
         termsPrivacy: true,
-        emailPromotions: false
+        emailPromotions: false,
+        roleUser: 'admin'
     },
     {
         fullName: 'Valentina Castro',
@@ -107,7 +114,8 @@ let registeredUsers = [
         email: 'valentina@gmail.com',
         password: 'Valentina123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'client'
     },
     {
         fullName: 'Mateo Herrera',
@@ -118,7 +126,8 @@ let registeredUsers = [
         email: 'mateo@hotmail.com',
         password: 'Mateo123*',
         termsPrivacy: true,
-        emailPromotions: false
+        emailPromotions: false,
+        roleUser: 'client'
     },
     {
         fullName: 'Camila Vargas',
@@ -129,7 +138,8 @@ let registeredUsers = [
         email: 'camila@outlook.com',
         password: 'Camila123*',
         termsPrivacy: true,
-        emailPromotions: true
+        emailPromotions: true,
+        roleUser: 'admin'
     }
 ];
 
@@ -145,6 +155,7 @@ formulary.addEventListener('submit', (e) => {
     const email = inputEmail.value.trim().toLowerCase();
     const termsPrivacy = checkboxTermsPrivacy.checked;
     const emailPromotions = checkboxEmailPromotions.checked;
+    const roleUser = 'client';
 
     if (inputFullName.value.trim() === '') {
         fullNameError.textContent = 'El nombre no puede estar vacio';
@@ -213,7 +224,7 @@ formulary.addEventListener('submit', (e) => {
         return
     }
 
-    const newRegisteredUser = { fullName, documentType, documentNumber, gender, birthDate, email, password, termsPrivacy, emailPromotions };
+    const newRegisteredUser = { fullName, documentType, documentNumber, gender, birthDate, email, password, termsPrivacy, emailPromotions, roleUser };
 
     registeredUsers = [...registeredUsers, newRegisteredUser];
 
@@ -364,6 +375,9 @@ function showUsers(users) {
         const emailPromotions = document.createElement('p');
         emailPromotions.textContent = `¿Aceptó recibir información de promociones y descuentos?: ${user.emailPromotions}`;
 
+        const roleUser = document.createElement('p');
+        emailPromotions.textContent = `Rol del usuario: ${user.roleUser}`;
+
         card.appendChild(name);
         card.appendChild(documentType);
         card.appendChild(documentNumber);
@@ -373,6 +387,7 @@ function showUsers(users) {
         card.appendChild(password);
         card.appendChild(termsPrivacy);
         card.appendChild(emailPromotions);
+        card.appendChild(roleUser);
         usersList.appendChild(card);
     });
 }
