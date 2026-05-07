@@ -137,11 +137,10 @@ function crearMenuDesplegable() {
   menu.innerHTML = `
     <div class="menu-imagen-js">
       <div class="menu-logo-js">
-        <img src="images/remainders-logo.svg" alt="Remainders">
+        <img src="landingpage/images/remainders_white.svg" alt="Remainders">
       </div>
-      <img src="images/tarjetamujer.png" alt="Colección Remainders">
+      <img src="landingpage/images/tarjetamujer.png" alt="Colección Remainders">
     </div>
-
     <div class="menu-contenido-js">
       <div>
         <div class="menu-superior-js">
@@ -167,7 +166,6 @@ function crearMenuDesplegable() {
             <button class="enlace-menu-js" data-menu-destino="mujer">Ropa femenina</button>
             <button class="enlace-menu-js" data-menu-destino="hombre">Ropa masculina</button>
             <button class="enlace-menu-js" data-menu-destino="accesorios">Accesorios</button>
-            <button class="enlace-menu-js" data-menu-destino="productos">Gafas</button>
           </div>
 
           <div>
