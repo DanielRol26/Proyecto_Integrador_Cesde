@@ -20,7 +20,118 @@ const passwordError = document.getElementById('password-error');
 const confirmPasswordError = document.getElementById('confirmpassword-error');
 const termsPrivacyError = document.getElementById('termsprivacy-error');
 
-let registeredUsers = [];
+let registeredUsers = [
+    {
+        fullName: 'Juan Perez',
+        documentType: 'CC',
+        documentNumber: '1025478963',
+        gender: 'Male',
+        birthDate: '1998-05-12',
+        email: 'juan@gmail.com',
+        password: 'Juan123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    },
+    {
+        fullName: 'Laura Martinez',
+        documentType: 'TI',
+        documentNumber: '1002547896',
+        gender: 'Female',
+        birthDate: '2006-08-21',
+        email: 'laura@hotmail.com',
+        password: 'Laura123*',
+        termsPrivacy: true,
+        emailPromotions: false
+    },
+    {
+        fullName: 'Carlos Ruiz',
+        documentType: 'CE',
+        documentNumber: '895412365',
+        gender: 'Male',
+        birthDate: '1995-11-03',
+        email: 'carlos@outlook.com',
+        password: 'Carlos123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    },
+    {
+        fullName: 'Maria Gomez',
+        documentType: 'CC',
+        documentNumber: '1098745632',
+        gender: 'Female',
+        birthDate: '1999-04-18',
+        email: 'maria@gmail.com',
+        password: 'Maria123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    },
+    {
+        fullName: 'Andres Torres',
+        documentType: 'PPT',
+        documentNumber: '774512369',
+        gender: 'Male',
+        birthDate: '2001-06-09',
+        email: 'andres@hotmail.com',
+        password: 'Andres123*',
+        termsPrivacy: true,
+        emailPromotions: false
+    },
+    {
+        fullName: 'Sofia Ramirez',
+        documentType: 'CC',
+        documentNumber: '1012458796',
+        gender: 'Female',
+        birthDate: '2000-12-14',
+        email: 'sofia@gmail.com',
+        password: 'Sofia123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    },
+    {
+        fullName: 'David Lopez',
+        documentType: 'NIT',
+        documentNumber: '900123456',
+        gender: 'Male',
+        birthDate: '1992-07-22',
+        email: 'david@outlook.com',
+        password: 'David123*',
+        termsPrivacy: true,
+        emailPromotions: false
+    },
+    {
+        fullName: 'Valentina Castro',
+        documentType: 'CC',
+        documentNumber: '1036987452',
+        gender: 'Female',
+        birthDate: '2003-02-27',
+        email: 'valentina@gmail.com',
+        password: 'Valentina123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    },
+    {
+        fullName: 'Mateo Herrera',
+        documentType: 'TI',
+        documentNumber: '1054789632',
+        gender: 'Male',
+        birthDate: '2005-09-11',
+        email: 'mateo@hotmail.com',
+        password: 'Mateo123*',
+        termsPrivacy: true,
+        emailPromotions: false
+    },
+    {
+        fullName: 'Camila Vargas',
+        documentType: 'CE',
+        documentNumber: '854796321',
+        gender: 'Female',
+        birthDate: '1997-01-05',
+        email: 'camila@outlook.com',
+        password: 'Camila123*',
+        termsPrivacy: true,
+        emailPromotions: true
+    }
+];
 
 formulary.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -73,6 +184,13 @@ formulary.addEventListener('submit', (e) => {
     if (inputEmail.value.trim() === '') {
         emailError.textContent = 'El correo no puede estar vacio';
         emailError.classList.add('error');
+        return
+    }
+    const emailExists = registeredUsers.some(user => user.email === email)
+    
+    if (emailExists) {
+        emailError.textContent = 'El correo ya se encuentra registrado'
+        emailError.classList .add('error')
         return
     }
     let password = '';
