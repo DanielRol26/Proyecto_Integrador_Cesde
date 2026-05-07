@@ -16,10 +16,6 @@ const botonMenu =
 
 let avisoCerrado = false;
 
-/* =========================================================
-   BARRA DE AVISO + HEADER + BOTÓN SUBIR
-========================================================= */
-
 function cerrarAviso() {
   if (!barraAviso) return;
 
@@ -65,10 +61,6 @@ botonSubir?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* =========================================================
-   ANIMACIÓN REVELAR
-========================================================= */
-
 const elementosRevelables = document.querySelectorAll(".revelar");
 
 if ("IntersectionObserver" in window) {
@@ -88,10 +80,6 @@ if ("IntersectionObserver" in window) {
 } else {
   elementosRevelables.forEach((el) => el.classList.add("visible"));
 }
-
-/* =========================================================
-   FUNCIONES GENERALES
-========================================================= */
 
 function normalizarTexto(texto) {
   return texto
@@ -138,10 +126,6 @@ function obtenerDestinoMenu(destino) {
 
   return destinos[destino] || document.querySelector(".seccion-productos");
 }
-
-/* =========================================================
-   MENÚ DESPLEGABLE TIPO REFERENCIA
-========================================================= */
 
 function crearMenuDesplegable() {
   if (document.getElementById("menuDesplegable")) return;
@@ -256,10 +240,6 @@ menuDesplegable?.addEventListener("click", (evento) => {
   }, 350);
 });
 
-/* =========================================================
-   BUSCADOR DE PRODUCTOS
-========================================================= */
-
 const inputBusqueda = document.querySelector(".busqueda-encabezado input");
 const grillaProductos = document.querySelector(".grilla-productos");
 const tarjetasProducto = Array.from(
@@ -312,10 +292,6 @@ inputBusqueda?.addEventListener("keydown", (evento) => {
     desplazarAElemento(document.querySelector(".seccion-productos"));
   }
 });
-
-/* =========================================================
-   CARRITO BÁSICO
-========================================================= */
 
 const CLAVE_CARRITO = "carritoRemainders";
 
@@ -580,10 +556,6 @@ botonFinalizarCompra?.addEventListener("click", () => {
 prepararBotonesAgregarCarrito();
 actualizarCarrito();
 
-/* =========================================================
-   MODAL GENERAL: USUARIO, BOLETÍN, SERVICIOS
-========================================================= */
-
 function crearModalGeneral() {
   if (document.getElementById("modalGeneral")) return;
 
@@ -703,10 +675,6 @@ modalGeneral?.addEventListener("submit", (evento) => {
   }
 });
 
-/* =========================================================
-   BOTONES COMPRAR AHORA + ENLACES DE AVISO
-========================================================= */
-
 document
   .querySelectorAll("a.boton-principal, a.boton-contorno-blanco")
   .forEach((enlace) => {
@@ -742,10 +710,6 @@ document.querySelectorAll("#barra-aviso a").forEach((enlace) => {
     desplazarAElemento(destino);
   });
 });
-
-/* =========================================================
-   CONTROLES DE VIDEO HERO
-========================================================= */
 
 const videoHero = document.querySelector(".hero-video");
 const controlesHero = document.querySelector(".hero-controls");
@@ -796,10 +760,6 @@ if (videoHero && controlesHero) {
   actualizarBotonesVideo();
 }
 
-/* =========================================================
-   TOAST / MENSAJES TEMPORALES
-========================================================= */
-
 function crearToast() {
   if (document.querySelector(".toast-js")) return;
 
@@ -826,10 +786,6 @@ function mostrarToast(mensaje) {
   }, 2600);
 }
 
-/* =========================================================
-  TECLA ESC PARA CERRAR CAPAS
-========================================================= */
-
 document.addEventListener("keydown", (evento) => {
   if (evento.key !== "Escape") return;
 
@@ -837,5 +793,3 @@ document.addEventListener("keydown", (evento) => {
   cerrarCarrito();
   cerrarModal();
 });
-
-
