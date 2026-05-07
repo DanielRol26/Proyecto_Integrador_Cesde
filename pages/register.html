@@ -321,7 +321,8 @@
                     </div>
 
 
-                    <div class="w-[70%] flex flex-col text-[var(--color-text-4)] gap-[3px] max-lg:w-4/5 max-sm:w-[88%]">
+                    <div
+                        class="w-[70%] flex flex-col text-[var(--color-text-4)] gap-[3px] max-lg:w-4/5 max-sm:w-[88%] my-[20px]">
                         <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm">
                             <input class="peer max-sm:mt-[3px]" id="terms-privacy" type="checkbox">
                             <label class="peer-checked:font-semibold" for="terms-privacy">
@@ -333,7 +334,7 @@
                         </div>
                         <span id="termsprivacy-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
 
-                        <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm">
+                        <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm \">
                             <input class="peer max-sm:mt-[3px]" type="checkbox" id="email-promotions">
                             <label class="peer-checked:font-semibold" for="email-promotions">
                                 Quiero recibir promociones y descuentos al correo electrónico
@@ -362,30 +363,43 @@
         </section>
 
         <section
-            class="flex flex-col justify-center items-center m-[10px_30px] rounded-[20px] border border-[#e7edf5] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] ">
+            class="flex flex-col justify-center items-center m-[10px_30px] rounded-[20px] border border-[#e7edf5] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] px-[30px] pb-[30px]">
             <h2 class="text-[32px] text-[var(--color-text)] font-bold my-[20px]">Clientes registrados</h2>
 
-            <div class="filters flex justify-center items-center gap-[10px]">
+            <div
+                class="filters w-full flex justify-center items-center gap-[10px] mb-[40px] max-lg:flex-wrap max-sm:flex-col max-sm:w-[88%]">
 
-                <p class="mr-[15px] text-[18px] font-semibold">Filtrar por:</p>
-                <select class="border border-[var(--color-border)] rounded-[4px] p-[10px] " id="filter-type">
+                <label class="font-bold text-[var(--color-text)] max-sm:w-full">
+                    Filtrar por:
+                </label>
+
+                <select id="filter-type"
+                    class="border border-[var(--color-border)] rounded-[4px] p-[10px] w-[180px] max-sm:w-full">
                     <option value="">-- Seleccionar --</option>
                     <option value="name">Nombre</option>
                     <option value="document-type">Tipo de documento</option>
-                    <option value="gender">Genero</option>
+                    <option value="gender">Sexo</option>
                     <option value="email">Dominio de correo</option>
                 </select>
 
-                <select class="border border-[var(--color-border)] rounded-[4px] p-[10px]" id="filter-value">
+                <select id="filter-value"
+                    class="border border-[var(--color-border)] rounded-[4px] p-[10px] w-[160px] max-sm:w-full">
                     <option value="">None</option>
                 </select>
 
-                <button
-                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]" id="btn-filter">Filtrar</button>
-                <button
-                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]" id="btn-show-all">Ver todos</button>
+                <button id="btn-filter"
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] max-sm:w-full">
+                    Filtrar
+                </button>
+
+                <button id="btn-show-all"
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] max-sm:w-full">
+                    Ver todos
+                </button>
             </div>
-            <ul id="users-list"></ul>
+            <ul id="users-list"
+                class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-[24px] px-[30px] pb-[30px] justify-items-center max-sm:px-4">
+            </ul>
         </section>
     </main>
 
@@ -426,27 +440,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        }
-
-        const dateInput = document.getElementById("fecha-nacimiento");
-        const calendarIcon = document.getElementById("calendarIcon");
-
-        if (calendarIcon && dateInput) {
-            calendarIcon.addEventListener("click", () => {
-                if (dateInput.showPicker) {
-                    dateInput.showPicker();
-                } else {
-                    dateInput.focus();
-                }
-            });
-        }
-    </script>
 
     <script src="/scripts/modules/register.js"></script>
 </body>
