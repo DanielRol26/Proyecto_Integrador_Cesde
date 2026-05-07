@@ -107,7 +107,7 @@ const productos = [
     nombre: "Oversized Sneaker Blanco",
     descripcion: "Zapatillas blancas oversize de Alexander McQueen",
     precio: 1200000,
-    imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    imagen: "https://images.stockx.com/360/Alexander-McQueen-Oversized-Ivory-Black/Images/Alexander-McQueen-Oversized-Ivory-Black/Lv2/img13.jpg?w=576&q=60&dpr=1&updated_at=1700839827&h=384 1x",
     categoria: "Calzado",
     marca: "Alexander McQueen",
     genero: "Hombre"
@@ -117,7 +117,7 @@ const productos = [
     nombre: "Oversized Sneaker Negro",
     descripcion: "Zapatillas negras oversize de Alexander McQueen",
     precio: 1200000,
-    imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    imagen: "https://images.stockx.com/360/Alexander-McQueen-Oversized-Black-Shiny-Sole/Images/Alexander-McQueen-Oversized-Black-Shiny-Sole/Lv2/img01.jpg?w=576&q=57&dpr=2&updated_at=1635342558&h=384",
     categoria: "Calzado",
     marca: "Alexander McQueen",
     genero: "Hombre"
@@ -127,7 +127,7 @@ const productos = [
     nombre: "The Multi-Tattoo Suit Jacket",
     descripcion: "Chaqueta de traje con diseño multi-tatuaje",
     precio: 2500000,
-    imagen: "https://images.unsplash.com/photo-1591047990508-42e39c33ee5b?w=400&h=400&fit=crop",
+    imagen: "https://cdn.shopify.com/s/files/1/0550/7537/3249/files/U-OU038-W092-6959_1_adb9d9b6-a904-45cd-9218-9aa7807d6492.jpg?width=3840",
     categoria: "Chaquetas",
     marca: "Jean Paul Gaultier",
     genero: "Hombre"
