@@ -12,11 +12,11 @@
       theme: {
         extend: {
           colors: {
-            "archi-dark": "#0D0221",
+            "archi-dark": "#0A1F5C",
             "archi-blue": "#26408B",
             "archi-cyan": "#A6CFD5",
             "archi-light-cyan": "#C2E7D9",
-            "archi-beige": "#FFF8F0",
+            "archi-beige": "#ffffff",
           },
         },
       },
@@ -24,13 +24,14 @@
   </script>
   <title>Inicio de sesión</title>
 
-<body class="bg-archi-beige text-gray-800 font-[fuente1]">
+</head>
+
+  <body class="bg-archi-beige text-gray-800 font-[fuente1]">
   <header
     class="border-2 border-archi-blue rounded-[50px] px-4 sm:px-6 md:px-8 py-3 bg-denim-white/80 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[10px] sm:mx-[15px] md:mx-[20px]">
     <div class="flex justify-between items-center gap-2 sm:gap-4">
       <div class="flex items-center gap-2 flex-shrink-0">
-        <img src="/assets/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
-        <img src="/assets/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
+        <img src="/assets/images/logos/remainders-logo.svg" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
       </div>
       <nav class="hidden lg:flex gap-4 xl:gap-6 text-archi-blue font-semibold flex-shrink-0">
         <a href="/index.html"
@@ -57,7 +58,8 @@
           <img src="/assets/images/icons/ui/shopping-cart-black.png" alt="Cart"
             class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
         </div>
-        <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
+        <button id="menu-toggle" class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" type="button"
+          aria-label="Abrir o cerrar menu">
           <span class="block w-6 h-0.5 bg-archi-blue"></span>
           <span class="block w-6 h-0.5 bg-archi-blue"></span>
           <span class="block w-6 h-0.5 bg-archi-blue"></span>
@@ -65,7 +67,7 @@
       </div>
     </div>
     <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 text-archi-blue font-semibold">
-      <a href="index.html"
+      <a href="/index.html"
         class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Inicio</a>
       <a href="/pages/login.html"
         class="px-3 py-2 hover:bg-archi-blue hover:text-archi-beige rounded transition-all">Iniciar Sesión</a>
@@ -76,77 +78,107 @@
     </nav>
   </header>
 
-  <main class="py-10">
-    <div class="max-w-[1200px] mx-auto px-5">
-      <section id="formulario" class="max-w-[500px] mx-auto">
-        <div class="bg-white p-10 my-5 mx-auto border-2 border-gray-300 rounded-2xl md:p-10 md:my-5">
-          <div class="text-center mb-8 pb-4 border-b-[3px] border-archi-cyan">
-            <h2 id="login-title" class="text-archi-blue text-3xl mb-2">
-              Accede a tu cuenta
-            </h2>
-            <p class="text-gray-600 text-base">
-              Ingresa tus credenciales para continuar
-            </p>
+  <main class="relative py-6 md:py-10 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-20 -left-16 w-72 h-72 rounded-full bg-archi-cyan/30 blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-archi-blue/10 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-[1320px] mx-auto px-4 md:px-6">
+      <section id="formulario" class="rounded-[26px] border border-archi-blue/10 bg-white/90 backdrop-blur-md shadow-[0_16px_50px_rgba(38,64,139,0.12)] overflow-hidden">
+        <div class="grid lg:grid-cols-[1fr_1.08fr] min-h-[720px]">
+          <aside class="relative hidden lg:block">
+            <img src="/assets/images/register/hero/register-hero.png" alt="Mujer con chaqueta denim" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0F2C78]/92 via-[#0F2C78]/60 to-[#0F2C78]/20"></div>
+
+            <div class="relative z-10 h-full flex flex-col justify-end p-10 xl:p-12 text-archi-beige">
+              <h1 class="text-5xl font-semibold leading-none mb-3">Bienvenido</h1>
+              <p class="text-2xl mb-8 opacity-90">Accede a tu cuenta y continúa comprando</p>
+
+              <div class="space-y-5 text-[17px]">
+                <p class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center">✓</span>
+                  Compras seguras en segundos
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center">★</span>
+                  Accede a ofertas exclusivas
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center">↺</span>
+                  Tu historial siempre disponible
+                </p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="p-6 sm:p-8 lg:p-12 xl:p-14">
+            <div class="max-w-[580px] mx-auto">
+              <div class="text-center mb-8 pb-5 border-b border-archi-blue/15">
+                <h2 id="login-title" class="text-archi-blue text-4xl font-semibold mb-3">
+                  Inicia sesión
+                </h2>
+                <p class="text-gray-500 text-base sm:text-lg">
+                  Ingresa tus credenciales para seguir comprando en Remainders
+                </p>
+              </div>
+
+              <form action="#" method="post" autocomplete="on" class="space-y-5">
+                <div>
+                  <label for="username" class="block text-archi-blue font-semibold mb-2">Correo electrónico:</label>
+                  <input placeholder="ejemplo@correo.com" type="email" id="username" name="username" required aria-required="true"
+                    class="w-full p-3.5 border border-[#bcdbe0] rounded-xl text-base bg-[#fbfefd] focus:border-archi-blue focus:ring-2 focus:ring-archi-cyan/40 focus:outline-none transition" />
+                </div>
+
+                <div>
+                  <label for="password" class="block text-archi-blue font-semibold mb-2">Contraseña:</label>
+                  <input placeholder="Ingresa tu contraseña" type="password" id="password" name="password" required aria-required="true"
+                    class="w-full p-3.5 border border-[#bcdbe0] rounded-xl text-base bg-[#fbfefd] focus:border-archi-blue focus:ring-2 focus:ring-archi-cyan/40 focus:outline-none transition" />
+                </div>
+
+                <div class="text-right">
+                  <a href="/pages/reset-password.html" class="text-[#0F084B] font-medium no-underline hover:underline">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <div id="preferencias" class="bg-[#f4fbfd] p-5 border border-archi-cyan rounded-2xl">
+                  <h3 class="text-archi-blue text-lg font-semibold mb-4 pb-2 border-b border-archi-cyan/60">
+                    Preferencias de usuario
+                  </h3>
+
+                  <div class="flex items-start gap-2.5 mb-3 text-[15px]">
+                    <input type="checkbox" id="recordar" name="recordar" class="w-[18px] h-[18px] mt-0.5" />
+                    <label for="recordar">Recordar mi sesión</label>
+                  </div>
+
+                  <div class="flex items-start gap-2.5 mb-3 text-[15px]">
+                    <input type="checkbox" id="notificaciones" name="notificaciones" class="w-[18px] h-[18px] mt-0.5" />
+                    <label for="notificaciones">Recibir notificaciones</label>
+                  </div>
+
+                  <div class="flex items-start gap-2.5 text-[15px]">
+                    <input type="checkbox" id="terminos" name="terminos" class="w-[18px] h-[18px] mt-0.5" />
+                    <label for="terminos">Mantener sesión activa</label>
+                  </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                  <button type="submit"
+                    class="flex-1 p-3.5 border-none rounded-xl text-base font-bold cursor-pointer bg-archi-blue text-archi-beige hover:bg-[#1e3272] transition-colors shadow-lg shadow-archi-blue/20">
+                    Iniciar sesión
+                  </button>
+                  <button type="reset"
+                    class="flex-1 p-3.5 border border-archi-blue/40 rounded-xl text-base font-bold cursor-pointer bg-white text-archi-blue hover:bg-archi-cyan/20 transition-colors">
+                    Limpiar formulario
+                  </button>
+                </div>
+
+                <div class="text-center pt-2 text-[15px] text-gray-600">
+                  ¿No tienes una cuenta?
+                  <a href="/pages/register.html" class="text-archi-blue font-bold no-underline hover:underline">Regístrate aquí</a>
+                </div>
+              </form>
+            </div>
           </div>
-
-          <form action="#" method="post" autocomplete="on">
-            <div class="mb-5">
-              <label for="username" class="block text-archi-blue font-bold mb-2">Usuario:</label>
-              <input placeholder="ingrese su correo" type="email" id="username" name="username" required
-                aria-required="true"
-                class="w-full p-3 border-2 border-archi-cyan rounded-lg text-base focus:border-archi-light-cyan focus:outline-none" />
-            </div>
-            <div class="mb-5">
-              <label for="password" class="block text-archi-blue font-bold mb-2">Contraseña:</label>
-              <div>
-                <input placeholder="ingrese su contraseña" type="password" id="password" name="password" required
-                  aria-required="true"
-                  class="w-full p-3 border-2 border-archi-cyan rounded-lg text-base focus:border-archi-light-cyan focus:outline-none" />
-              </div>
-            </div>
-            <div class="text-right my-4">
-              <a href="/pages/reset-password.html" class="text-[#0F084B] no-underline hover:underline">¿Olvidaste tu
-                contraseña?</a>
-            </div>
-
-            <div class="text-center my-5">
-              <p>
-                ¿No tienes una cuenta?
-                <a href="/pages/register.html" class="text-archi-blue no-underline font-bold">Regístrate Aquí</a>
-              </p>
-            </div>
-            <div id="preferencias"
-              class="bg-gray-50 p-6 my-6 border-2 border-archi-cyan border-l-[5px] border-l-archi-blue rounded-xl">
-              <h3 class="text-archi-blue text-lg mb-4 pb-2.5 border-b-2 border-gray-300">
-                Preferencias de usuario:
-              </h3>
-
-              <div class="flex items-center gap-2.5 mb-3">
-                <input type="checkbox" id="recordar" name="recordar" class="w-[18px] h-[18px]" />
-                <label for="recordar">Recordar mi sesión</label>
-              </div>
-
-              <div class="flex items-center gap-2.5 mb-3">
-                <input type="checkbox" id="notificaciones" name="notificaciones" class="w-[18px] h-[18px]" />
-                <label for="notificaciones">Recibir notificaciones</label>
-              </div>
-
-              <div class="flex items-center gap-2.5 mb-3">
-                <input type="checkbox" id="terminos" name="terminos" required class="w-[18px] h-[18px]" />
-                <label for="terminos">Quiero ver la guía de tallas antes de comprar</label>
-              </div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-4 mt-6">
-              <button type="submit"
-                class="flex-1 p-3 border-none rounded-lg text-base font-bold cursor-pointer bg-archi-cyan text-archi-dark hover:bg-archi-light-cyan transition-colors">
-                Iniciar sesión
-              </button>
-              <button type="reset"
-                class="flex-1 p-3 border-none rounded-lg text-base font-bold cursor-pointer bg-archi-dark text-archi-cyan hover:bg-archi-light-cyan hover:text-archi-dark transition-colors">
-                Limpiar formulario
-              </button>
-            </div>
-          </form>
         </div>
       </section>
     </div>
@@ -199,9 +231,7 @@
 
       <div class="flex flex-col items-center md:items-start">
         <div class="flex items-center gap-4 mb-4">
-          <img src="/assets/images/logos/blue.png" alt="Logo 1"
-            class="h-12 w-auto object-contain transition-transform hover:scale-110">
-          <img src="/assets/images/logos/blue-2.png" alt="Logo 2"
+          <img src="/assets/images/logos/remainders-logo.svg" alt="Logo 1"
             class="h-12 w-auto object-contain transition-transform hover:scale-110">
         </div>
 
@@ -212,12 +242,7 @@
 
     </div>
   </footer>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
+  <script type="module" src="/scripts/modules/login.js"></script>
 </body>
 
 </html>

@@ -19,13 +19,16 @@
                 <img src="/assets/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
             </div>
 
-            <nav class="flex gap-6 font-semibold max-lg:hidden">
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                    href="/index.html">Inicio</a>
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                    href="/pages/products.html">Productos</a>
-                <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                    href="/pages/contact.html">Contáctenos</a>
+            <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
+                <a href="index.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Inicio</a>
+                <a href="/pages/login.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Iniciar
+                    Sesión</a>
+                <a href="/pages/contact.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Contáctenos</a>
+                <a href="/pages/products.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Productos</a>
             </nav>
 
             <div class="flex gap-[10px] max-lg:hidden">
@@ -43,16 +46,16 @@
                 <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
             </button>
         </div>
-
-        <nav id="mobileMenu" class="hidden mt-4 flex-col gap-2 font-semibold">
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                href="/index.html">Inicio</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                href="/pages/products.html">Productos</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                href="/pages/contact.html">Contáctenos</a>
-            <a class="text-[var(--color-text)] no-underline py-1 px-3 rounded-md transition-all duration-300 whitespace-nowrap hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)]"
-                href="/pages/login.html">Iniciar Sesión</a>
+        <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 font-semibold">
+            <a href="index.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
+            <a href="/pages/login.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Iniciar
+                Sesión</a>
+            <a href="/pages/contact.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Contáctenos</a>
+            <a href="/pages/products.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Productos</a>
         </nav>
     </header>
 
