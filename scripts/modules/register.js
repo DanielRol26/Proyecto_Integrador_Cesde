@@ -187,10 +187,10 @@ formulary.addEventListener('submit', (e) => {
         return
     }
     const emailExists = registeredUsers.some(user => user.email === email)
-    
+
     if (emailExists) {
         emailError.textContent = 'El correo ya se encuentra registrado'
-        emailError.classList .add('error')
+        emailError.classList.add('error')
         return
     }
     let password = '';
@@ -338,7 +338,7 @@ function showUsers(users) {
         );
 
         const name = document.createElement('p');
-        name.textContent = `Nombre Uusario: ${user.fullName}`;
+        name.textContent = `Nombre Usuario: ${user.fullName}`;
 
         const documentType = document.createElement('p');
         documentType.textContent = `Tipo de documento: ${user.documentType}`;
@@ -363,7 +363,6 @@ function showUsers(users) {
 
         const emailPromotions = document.createElement('p');
         emailPromotions.textContent = `¿Aceptó recibir información de promociones y descuentos?: ${user.emailPromotions}`;
-
 
         card.appendChild(name);
         card.appendChild(documentType);
