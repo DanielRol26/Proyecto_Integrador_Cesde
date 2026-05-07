@@ -4,22 +4,41 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 :root {
-    --color-fondo: #fff8f0;
-    --color-border: #a6cfd5;
+    --color-fondo: #f8fafc;
+    --color-border: #cfd8e3;
+    --color-border-2: #5088f7;
+    --color-border-3: #0a1f5c;
     --color-text: #26408b;
     --color-yellow: #a6cfd5;
     --color-fondo2: #a6cfd50e;
+    --color-text-2: #ffffff;
+    --color-text-3: rgba(255, 255, 255, 0.75);
+    --color-text-4: #5f6f9c;
+    --color-text-5: #5088f7;
+    --bg-color: #365695ed;
+    --bg-color-2: #5088f7;
+    --bg-color-3: #e2e8fa;
+    --bg-color-4: #EEF2FF;
+    --bg-color-5: #0a1f5c;
 }
 
-@font-face {
-    font-family: "fuente1";
-    src: url(tipografías/gloucester-mt-extra-condensed.ttf) format("truetype");
-    font-weight: normal;
+.input-date::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 16.3%;
+    height: 40px;
+    cursor: pointer;
 }
 
-.register-hero{
-    background-image: url(/assets/images/register/hero/register-hero.png);
-    height: 50%;
-    width: 50%;
+.error {
+    font-weight: bold;
+    font-size: 16px;
+    color: #d64545;
 }

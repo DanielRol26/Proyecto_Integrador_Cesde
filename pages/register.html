@@ -12,16 +12,15 @@
 
 <body class="bg-[var(--color-fondo)] leading-[1.3] font-[fuente1]">
     <header
-        class="border-2 border-[var(--color-text)] rounded-[50px] px-4 sm:px-6 md:px-8 py-3 backdrop-blur-md mb-5 sticky top-5 z-50 mx-[10px] sm:mx-[15px] md:mx-[20px]">
-        <div class="flex justify-between items-center gap-2 sm:gap-4">
-
-            <div class="flex items-center gap-2 flex-shrink-0">
+        class="relative z-20 px-10 py-5 bg-[var(--color-fondo)] border-b border-[var(--color-border)] shadow-[0px_3px_10px_0px_rgba(149,149,149,0.2)] max-lg:px-6 max-lg:py-[18px] max-sm:px-[18px] max-sm:py-4">
+        <div class="w-full flex justify-between items-center">
+            <div class="flex items-center gap-2 shrink-0">
                 <img src="/assets/images/logos/blue.png" alt="Logo 1" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
                 <img src="/assets/images/logos/blue-2.png" alt="Logo 2" class="h-5 sm:h-6 md:h-7 w-auto object-contain">
             </div>
 
             <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
-                <a href="/index.html"
+                <a href="index.html"
                     class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Inicio</a>
                 <a href="/pages/login.html"
                     class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Iniciar
@@ -32,29 +31,23 @@
                     class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Productos</a>
             </nav>
 
-            <div class="flex items-center gap-2 sm:gap-3 md:gap-5 flex-shrink-0">
-                <div
-                    class="hidden md:flex items-center border border-[var(--color-text)] rounded-full px-3 md:px-4 py-1 bg-denim-white/50 backdrop-blur-md">
-                    <span class="text-xs">🔍</span>
-                    <input type="text" placeholder="Buscar"
-                        class="bg-transparent border-none outline-none ml-2 text-sm text-[var(--color-text)] w-16 lg:w-24 xl:w-40">
-                </div>
-                <div class="flex gap-2 sm:gap-3">
-                    <img src="/assets/images/icons/ui/avatar-default-black.png" alt="User"
-                        class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
-                    <img src="/assets/images/icons/ui/shopping-cart-black.png" alt="Cart"
-                        class="h-5 sm:h-6 w-5 sm:w-6 cursor-pointer flex-shrink-0">
-                </div>
-                <button class="lg:hidden flex flex-col gap-1 p-1 flex-shrink-0" onclick="toggleMenu()">
-                    <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
-                    <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
-                    <span class="block w-6 h-0.5 bg-[var(--color-text)]"></span>
-                </button>
+            <div class="flex gap-[10px] max-lg:hidden">
+                <button
+                    class="border border-[var(--color-border-3)] rounded-md py-[10px] px-5 bg-[var(--bg-color-4)] text-[var(--color-text)] transition-all duration-300 hover:shadow-[0_4px_12px_rgba(10,31,92,0.2)] hover:scale-[1.03]">Iniciar
+                    sesión</button>
+                <button
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]">Regístrate</button>
             </div>
 
+            <button class="hidden max-lg:flex flex-col gap-1 p-1 bg-transparent border-none cursor-pointer"
+                onclick="toggleMenu()">
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+            </button>
         </div>
         <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 font-semibold">
-            <a href="/index.html"
+            <a href="index.html"
                 class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
             <a href="/pages/login.html"
                 class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Iniciar
@@ -66,171 +59,392 @@
         </nav>
     </header>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
-    <hr>
     <main>
-        <section class="register">
-            <div class="register-container">
-                <div class="register-hero">
-                    <div class="hero-text"></div>
-                </div>
-                <div
-                    class="mb-[100px] w-[50%] max-w-[700px] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] bg-white p-[30px] max-sm:p-[20px] m-auto mt-[10px] border-[1px] border-[var(--color-border)] rounded-[15px] text-[14px] text-[var(--color-text)] shadow-[0_5px_5px_rgba(0,0,0,0.3)]">
-                    <h2 class="text-[35px] p-px text-center mt-[20px] mb-[10px] text-[var(--color-text)] font-black">
-                        Ingresa
-                        tus datos
-                    </h2>
+        <section
+            class="flex m-[10px_30px] rounded-[20px] overflow-hidden border border-[#e7edf5] min-h-[82vh] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] max-lg:flex-col max-lg:min-h-0 max-lg:h-auto max-lg:m-5 max-sm:m-3 max-sm:rounded-2xl">
+            <div
+                class="w-[38%] min-h-[82vh] grid items-center pl-[38px] text-[var(--color-text-3)] bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.85)_20%,rgba(7,22,55,0.65)_40%,rgba(7,22,55,0.35)_70%,rgba(248,250,252,0.6)_87%,#f8fafc_100%),url('/assets/images/register/hero/register-hero-2.png')] bg-no-repeat bg-[28%_center] bg-cover max-lg:w-full max-lg:min-h-[560px] max-lg:p-[60px_40px] max-lg:bg-[linear-gradient(90deg,rgba(7,22,55,0.95)_0%,rgba(7,22,55,0.80)_42%,rgba(7,22,55,0.35)_100%),url('/assets/images/register/hero/register-hero-2.png')] max-lg:bg-[center_top] max-sm:min-h-[620px] max-sm:p-[45px_24px] max-sm:bg-[url('/assets/images/register/hero/register-hero-2.png')] max-sm:bg-[center_top] max-sm:relative max-sm:before:content-[''] max-sm:before:absolute max-sm:before:inset-0 max-sm:before:bg-[rgba(7,22,55,0.58)] max-sm:before:z-0">
+                <div class="max-sm:relative max-sm:z-[1]">
+                    <h1 class="text-[56px] font-bold text-[var(--color-text-2)] pb-5 max-sm:text-[38px]">Regístrate</h1>
+
                     <p
-                        class="p-inicial text-center text-[18px] ml-[20px] mr-[20px] mb-[20px] text-grey border-b-[5px] border-[var(--color-yellow)] pb-[15px] font-semibold">
-                        Para completar el registro correctamente, por favor asegurese de que ningun campo
+                        class="text-[17px] relative leading-[1.5] before:content-[''] before:h-[2.5px] before:absolute before:bg-[var(--bg-color-2)] before:left-0 before:top-[-15px] before:w-[42px]">
+                        Crea tu cuenta y disfruta <br>
+                        de una <span class="font-bold text-[var(--color-text-2)]">experiencia única</span>
+                    </p>
+
+                    <div class="mt-[10px]">
+                        <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                                <img class="h-[25px] w-5" src="/assets/images/icons/features/shield.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Compra segura</h3>
+                                <p class="text-[15px] leading-[1.4]">Tus datos están protegidos</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                                <img class="h-5 w-[23px]" id="feature-icon-tag"
+                                    src="/assets/images/icons/features/tag.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Ofertas exclusivas</h3>
+                                <p class="text-[15px] leading-[1.4]">Accede a descuentos y promociones</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start pt-6 max-sm:gap-3.5 max-sm:pt-[26px]">
+                            <div
+                                class="flex rounded-full bg-[var(--bg-color)] h-10 w-10 min-w-10 justify-center items-center">
+                                <img class="h-[22px] w-5" id="feature-icon-box"
+                                    src="/assets/images/icons/features/box.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-[var(--color-text-2)] font-bold text-[15px] leading-none pb-[5px]">
+                                    Experiencia personalizada</h3>
+                                <p class="text-[15px] leading-[1.4]">Recomendaciones y contenido <br>según tus gustos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="w-[62%] flex-1 flex flex-col items-center text-[var(--color-text)] py-5 pb-[30px] max-lg:w-full max-lg:py-[30px] max-sm:py-[26px] max-sm:pb-[35px]">
+                <div
+                    class="flex rounded-full w-10 h-10 bg-[var(--bg-color-3)] justify-center items-center overflow-hidden mt-[10px]">
+                    <img class="h-1/2 w-[40%] py-px" src="/assets/images/icons/ui/avatar-default-blue.png" alt="">
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h2
+                        class="text-[32px] text-center mb-[10px] text-[var(--color-text)] font-black max-sm:text-[28px]">
+                        Ingresa tus datos</h2>
+                    <p
+                        class="text-center text-[15px] text-[var(--color-text-4)] pb-[15px] font-medium w-[70%] max-sm:w-[88%] max-sm:text-sm">
+                        Para completar el registro correctamente, por favor asegúrese de que ningún campo
                         con el (*) quede vacío
                     </p>
-                    <form action="/pages/registroexitoso.html" method="get">
-                        <fieldset
-                            class="text-center border-[3px] border-[var(--color-border)] rounded-[8px] p-[20px] mb-[20px] w-[70%] max-w-[700px] ml-auto mr-auto font-semibold max-md:w-[90%] max-sm:w-[100%]"
-                            id="siguiente1">
-                            <legend>
-                                <h3 class="text-[25px] text-center m-auto p-[10px] text-[var(--color-text)] font-black">
-                                    Datos
-                                    Personales</h3>
-                            </legend>
+                </div>
 
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="nombre">Nombre Completo : *</label>
+                <form id="form" class="w-full flex flex-col items-center" action="" method="get">
+
+                    <div class="w-full flex flex-col items-center mb-5">
+                        <label class="w-[70%] font-semibold mb-[5px] max-lg:w-4/5 max-sm:w-[88%]" for="fullname">Nombre
+                            Completo: *</label>
+                        <div
+                            class="w-[70%] h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2 max-lg:w-4/5 max-sm:w-[88%]">
+                            <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="8" r="4" stroke="#26408b" stroke-width="2" />
+                                    <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#26408b"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
                             <input
-                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                type="text" id="nombre" name="nombre" placeholder="Ej: Andrés" required>
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="tipo-documento">Tipo de documento *</label>
+                                class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                type="text" id="fullname" name="name" placeholder="Ej: Juan Esteban Correa">
+                        </div>
+                        <span id="fullname-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                    </div>
+
+                    <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="document-type">Tipo de documento: *</label>
                             <select
-                                class="mb-[16px] w-[70%] max-sm:w-[100%] h-[35px] border-[3px] border-[var(--color-border)] rounded-[5px] focus:outline-none focus:border-[var(--color-text)]">"
-                                name="tipo-documento" id="tipo-documento" required>
-                                <option value="">Seleccione una opción</option>
-                                <option value="ti">Tarjeta de identidad</option>
-                                <option value="cc">Cédula de Ciudadanía</option>
-                                <option value="ce">Cédula de Extranjería</option>
-                                <option value="ppt">Permiso de Protección Temporal</option>
-                                <option value="nit">NIT</option>
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white pl-[10px] outline-none text-base text-[var(--color-text)]"
+                                name="document-type" id="document-type">
+                                <option value="">-- Seleccione una opción --</option>
+                                <option value="TI">Tarjeta de identidad</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PPT">Permiso de Protección Temporal</option>
+                                <option value="NIT">NIT</option>
                             </select>
-                            <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                for="ndocumento">Número de documento : *</label>
-                            <input
-                                class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                type="text" id="ndocumento" name="ndocumento" placeholder="0" required>
-                            <fieldset
-                                class="border-[3px] border-[var(--color-border)] rounded-[6px] w-[70%] mx-auto mb-[15px] pb-[7px]">
-                                <legend class="px-[8px] font-semibold text-[var(--color-text)] text-left">Sexo *
-                                </legend>
-                                <div class="radio-sexo flex flex-col items-center gap-[12px] w-auto">
-                                    <div class="flex items-center gap-[8px] w-[123px]">
-                                        <input class="cursor-pointer" id="sxm" type="radio" name="sexo" value="M"
-                                            required>
-                                        <label
-                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                            for="sxm" id="sxm-label">Masculino</label>
-                                    </div>
-                                    <div class="flex items-center gap-[8px] w-[123px]">
-                                        <input class="cursor-pointer" id="sxf" type="radio" name="sexo" value="F">
-                                        <label
-                                            class="block w-[70%] mt-0 mr-0 mb-0 ml-0 text-left font-medium cursor-pointer"
-                                            for="sxf" id="sxf-label">Femenino</label>
-                                    </div>
-                                    <div class="flex items-center gap-[8px]">
-                                        <input class="cursor-pointer" id="N" type="radio" name="sexo" value="N"
-                                            required>
-                                        <label
-                                            class="block w-auto mt-0 mr-auto mb-0 ml-auto pb-[] text-left font-medium cursor-pointer"
-                                            for="N" id="n-label">Prefiero no decir</label>
-                                    </div>
+                            <span id="documenttype-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="document-number">Número de documento: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                                <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <circle cx="8" cy="11" r="2" stroke="#26408b" stroke-width="2" />
+                                        <path d="M13 10H18" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M13 14H16" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
                                 </div>
-                            </fieldset>
-                            <div>
-                                <label class="block w-[70%] mt-0 mr-auto mb-0 ml-auto text-left font-semibold"
-                                    for="fecha-nacimiento">Fecha de nacimiento: *</label>
                                 <input
-                                    class="w-[70%] max-sm:w-[100%] bg-white p-[10px] rounded-[4px] mb-[1rem] border-[3px] border-[var(--color-border)] text-[16px] focus:outline-none focus:border-[var(--color-text)]"
-                                    type="date" id="fecha-nacimiento" name="fecha.nacimiento" required>
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="text" id="document-number" name="document-number"
+                                    placeholder="Ej: 1234567890">
                             </div>
-                            <div class="flex justify-center gap-[15px] mt-[20px] flex-row items-center">
-                                <button type="button"
-                                    class="btn limpiar cursor-pointer text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[140px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-y-[-5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-bold"
-                                    onclick="resetsiguiente(altualsiguiente)">Limpiar</button>
-                                <button type="button" onclick="nextsiguiente(1)"
-                                    class="text-[var(--color-text)] bg-[var(--color-yellow)] flex items-center justify-center font-semibold text-[17px] w-[50px] h-[45px] rounded-[6px] transition-colors duration-[300ms] ease-linear transition-transform duracion[800ms] ease-linear hover:bg-[var(--color-text)] hover:text-[var(--color-yellow)] hover:translate-x-[5px] hover:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:font-black">
-                                    >
-                                </button>
+                            <span id="documentnumber-error"
+                                class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+                    </div>
+
+                    <fieldset class="w-[70%] border-none mb-5 max-lg:w-4/5 max-sm:w-[88%]">
+                        <legend class="font-semibold mb-[5px]">Sexo: *</legend>
+
+                        <div class="flex w-full gap-[30px] max-sm:flex-col max-sm:gap-3.5">
+                            <div class="w-1/2 max-sm:w-full">
+                                <input class="hidden peer" id="male" type="radio" name="gender" value="Male">
+                                <label
+                                    class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
+                                    for="male">
+                                    <svg class="mb-[3px]" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="9" cy="15" r="5.5" stroke="currentColor" stroke-width="2" />
+                                        <path d="M13 11L18 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M13 6H18V11" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Masculino
+                                </label>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
+
+                            <div class="w-1/2 max-sm:w-full">
+                                <input class="hidden peer" id="female" type="radio" name="gender" value="Female">
+                                <label
+                                    class="flex justify-center items-center h-10 border border-[var(--color-border)] rounded-[5px] gap-[10px] cursor-pointer bg-white transition-all duration-200 peer-checked:border-2 peer-checked:border-[var(--color-border-2)] peer-checked:bg-[var(--bg-color-4)] peer-checked:text-[var(--color-border-2)] peer-checked:font-bold"
+                                    for="female">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="9" r="5.5" stroke="currentColor" stroke-width="2" />
+                                        <path d="M12 15V22" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M8 19H16" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    Femenino
+                                </label>
+                            </div>
+                        </div>
+                        <span id="gender-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                    </fieldset>
+
+
+                    <div class="w-[70%] flex gap-[30px] mb-4 max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="birth-date">Fecha de nacimiento: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                                <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                    <svg id="calendarIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="4" y="5" width="16" height="15" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M8 3V7" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M16 3V7" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M4 10H20" stroke="#26408b" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <input
+                                    class="input-date border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)]"
+                                    type="date" id="birth-date" name="birth-date">
+                            </div>
+                            <span id="birthdate-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="email">Correo electrónico: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                                <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M5 7L12 13L19 7" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="email" id="email" placeholder="Ej: correo@ejemplo.com">
+                            </div>
+                            <span id="email-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-[70%] flex gap-[30px] mb-[5px] max-lg:w-4/5 max-sm:w-[88%] max-sm:flex-col max-sm:gap-4">
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="pass">Contraseña: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                                <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b"
+                                            stroke-width="2" stroke-linecap="round" />
+                                        <circle cx="12" cy="14" r="1.6" fill="#26408b" />
+                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="password" id="pass" placeholder="Crea una contraseña">
+                            </div>
+                            <span id="password-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+
+                        <div class="w-1/2 flex flex-col max-sm:w-full">
+                            <label class="font-semibold mb-[5px]" for="confirmpass">Confirmar contraseña: *</label>
+                            <div
+                                class="w-full h-[42px] border border-[var(--color-border)] rounded-[5px] bg-white flex items-center overflow-hidden gap-2">
+                                <div class="w-[42px] min-w-[42px] h-full flex justify-center items-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="5" y="10" width="14" height="10" rx="2" stroke="#26408b"
+                                            stroke-width="2" />
+                                        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#26408b"
+                                            stroke-width="2" stroke-linecap="round" />
+                                        <circle cx="12" cy="14" r="1.6" fill="#26408b" />
+                                        <path d="M12 15.2V16.5" stroke="#26408b" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <input
+                                    class="border-none outline-none bg-white w-full h-full text-base text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                                    type="password" id="confirmpass" placeholder="Repite tu contraseña">
+                            </div>
+                            <span id="confirmpassword-error"
+                                class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="w-[70%] flex flex-col text-[var(--color-text-4)] gap-[3px] max-lg:w-4/5 max-sm:w-[88%] my-[20px]">
+                        <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm">
+                            <input class="peer max-sm:mt-[3px]" id="terms-privacy" type="checkbox">
+                            <label class="peer-checked:font-semibold" for="terms-privacy">
+                                Acepto los
+                                <a class="text-[var(--color-text-5)] no-underline" href="#">términos y condiciones</a>
+                                y la
+                                <a class="text-[var(--color-text-5)] no-underline" href="#">política de privacidad</a> *
+                            </label>
+                        </div>
+                        <span id="termsprivacy-error" class="w-[70%] max-lg:w-4/5 max-sm:w-[88%] text-left"></span>
+
+                        <div class="flex items-center gap-[7px] max-sm:items-start max-sm:text-sm \">
+                            <input class="peer max-sm:mt-[3px]" type="checkbox" id="email-promotions">
+                            <label class="peer-checked:font-semibold" for="email-promotions">
+                                Quiero recibir promociones y descuentos al correo electrónico
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-[70%] h-[45px] mt-5 border-none rounded-md bg-[var(--bg-color-5)] text-[var(--color-text-2)] flex justify-center items-center font-semibold text-[17px] cursor-pointer max-lg:w-4/5 max-sm:w-[88%]">
+                        <svg class="mr-[10px]" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" stroke="#ffffff" stroke-width="2" />
+                            <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#ffffff" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        Crear mi cuenta
+                    </button>
+
+                    <div
+                        class="flex gap-[5px] pt-[15px] pb-5 text-center max-sm:flex-col max-sm:gap-0.5 max-sm:text-sm">
+                        <p>¿Ya tienes una cuenta?</p>
+                        <a class="text-[var(--color-text-5)] font-semibold no-underline" href="/pages/login.html">Inicia
+                            sesión aquí</a>
+                    </div>
+                </form>
             </div>
+        </section>
+
+        <section
+            class="flex flex-col justify-center items-center m-[10px_30px] rounded-[20px] border border-[#e7edf5] h-auto shadow-[0_2px_15px_rgba(15,23,42,0.05)] px-[30px] pb-[30px]">
+            <h2 class="text-[32px] text-[var(--color-text)] font-bold my-[20px]">Clientes registrados</h2>
+
+            <div
+                class="filters w-full flex justify-center items-center gap-[10px] mb-[40px] max-lg:flex-wrap max-sm:flex-col max-sm:w-[88%]">
+
+                <label class="font-bold text-[var(--color-text)] max-sm:w-full">
+                    Filtrar por:
+                </label>
+
+                <select id="filter-type"
+                    class="border border-[var(--color-border)] rounded-[4px] p-[10px] w-[180px] max-sm:w-full">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="name">Nombre</option>
+                    <option value="document-type">Tipo de documento</option>
+                    <option value="gender">Sexo</option>
+                    <option value="email">Dominio de correo</option>
+                </select>
+
+                <select id="filter-value"
+                    class="border border-[var(--color-border)] rounded-[4px] p-[10px] w-[160px] max-sm:w-full">
+                    <option value="">None</option>
+                </select>
+
+                <button id="btn-filter"
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] max-sm:w-full">
+                    Filtrar
+                </button>
+
+                <button id="btn-show-all"
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] max-sm:w-full">
+                    Ver todos
+                </button>
+            </div>
+            <ul id="users-list"
+                class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-[24px] px-[30px] pb-[30px] justify-items-center max-sm:px-4">
+            </ul>
+        </section>
     </main>
+
     <footer
-        class="mt-auto border-t-4 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-t-[50px] p-10 lg:p-20 text-[var(--color-text)] mx-[10px] font-[fuente1]">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1200px] mx-auto">
-
+        class="mt-[30px] border-t-2 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-[50px_50px_0_0] py-[70px] px-10 text-[var(--color-text)] max-sm:py-[50px] max-sm:px-6 max-sm:rounded-[35px_35px_0_0]">
+        <div class="grid grid-cols-3 gap-12 max-w-[1200px] mx-auto max-lg:grid-cols-1 max-lg:text-center">
             <div>
-                <h3 class="text-2xl font-bold mb-6 text-[var(--color-text)]">¿NECESITAS AYUDA?</h3>
+                <h3 class="text-2xl font-bold mb-6 max-sm:text-[22px]">¿NECESITAS AYUDA?</h3>
+
                 <div class="space-y-4">
-                    <p class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                        +57 3197561958
-                    </p>
-                    <p class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                        +57 3122358703
-                    </p>
+                    <p>📞 +57 3197561958</p>
+                    <p>📞 +57 3122358703</p>
                 </div>
             </div>
 
             <div>
-                <h3 class="text-2xl font-bold mb-6 text-[var(--color-text)]">SOCIAL MEDIA</h3>
-                <div class="flex gap-4">
-                    <a href="#"
-                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assets/images/icons/social/gmail.png" alt="Gmail" class="w-6 h-6">
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assets/images/icons/social/facebook.png" alt="Facebook" class="w-6 h-6">
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-                        <img src="/assets/images/icons/social/youtube.png" alt="Youtube" class="w-6 h-6">
-                    </a>
+                <h3 class="text-2xl font-bold mb-6 max-sm:text-[22px]">SOCIAL MEDIA</h3>
+
+                <div class="flex gap-4 max-lg:justify-center max-lg:items-center">
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/gmail.png" alt="Gmail"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/facebook.png" alt="Facebook"></a>
+                    <a class="w-12 h-12 bg-[rgba(255,255,255,0.5)] rounded-full flex justify-center items-center shadow-[0px_3px_10px_rgba(149,149,149,0.2)] transition-transform duration-200 hover:scale-110"
+                        href="#"><img class="w-6 h-6" src="/assets/images/icons/social/youtube.png" alt="Youtube"></a>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center md:items-start">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="/assets/images/logos/blue.png" alt="Logo 1"
-                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
-                    <img src="/assets/images/logos/blue-2.png" alt="Logo 2"
-                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
+            <div class="flex flex-col max-lg:justify-center max-lg:items-center">
+                <div class="flex gap-4 mb-4 max-lg:justify-center max-lg:items-center">
+                    <img class="h-12 w-auto object-contain" src="/assets/images/logos/blue.png" alt="Logo 1">
+                    <img class="h-12 w-auto object-contain" src="/assets/images/logos/blue-2.png" alt="Logo 2">
                 </div>
 
-                <p class="text-[var(--color-text)] max-w-sm italic opacity-80">
-                    Just remember, only denim.
-                </p>
+                <p class="italic opacity-80">Just remember, only denim.</p>
             </div>
-
         </div>
     </footer>
+
+    <script src="/scripts/modules/register.js"></script>
 </body>
 
 </html>
