@@ -37,7 +37,7 @@ public class Return {
     public String getSeason() {
         return reason;
     }
-    public void setSeason(String reason) {
+    public void setReason(String reason) {
         this.reason = reason;
     }
     public Integer getQuantity() {

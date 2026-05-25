@@ -23,4 +23,25 @@ public interface IReturnRepository extends JpaRepository<Return, UUID>{
 
     //Buscar por fecha de solicitud mayor que
     List<Return> findByRequestDateGreaterThan(LocalDateTime requestDate);
+
+    //Buscar por fecha de solicitud entre a y b
+    List<Return> findByRequestDateBetween(LocalDateTime minRequestDate, LocalDateTime maxRequestDate);
+    
+    //Buscar por motivo
+    List<Return> findByReason(String reason);
+
+    //Buscar por cantidad de productos devueltos
+    List<Return> findByQuantity(Integer quantity);
+
+    //Buscar por cantidad de productos devueltos menor a
+    List<Return> findByQuantityLessThan(Integer quantity);
+
+    //Buscar por cantidad de productos devueltos mayor a
+    List<Return> findByQuantityGreaterThan(Integer quantity);
+
+    //Buscar por cantidad de productos devueltos entre a y b
+    List<Return> findByQuantityBetween(Integer minQuantity, Integer maxQuantity);
+
+    //Buscar por estado de devolución
+    List<Return> findByStatus(Boolean status);
 }

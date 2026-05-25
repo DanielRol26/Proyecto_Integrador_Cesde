@@ -10,8 +10,6 @@ import java.util.List;
 import java.util.Optional;
 import java.time.LocalDateTime;
 
-
-
 @Repository
 public interface IShipmentRepository extends JpaRepository<Shipment, UUID>{
 

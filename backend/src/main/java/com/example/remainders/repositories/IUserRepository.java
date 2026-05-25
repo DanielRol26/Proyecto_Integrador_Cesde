@@ -11,8 +11,6 @@ import com.example.remainders.models.User;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-
-
 @Repository
 public interface IUserRepository extends JpaRepository<User, UUID>{
 

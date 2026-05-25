@@ -18,8 +18,6 @@ public class Order {
     private UUID id;
     private LocalDateTime orderDate;
     private Double subtotal;
-    private Double shippingCost;
-    private Boolean shippingStatus;
     private Double discount;
     private Double total;
     private Boolean status;
@@ -41,18 +39,6 @@ public class Order {
     }
     public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
-    }
-    public Double getShoppingCost() {
-        return shippingCost;
-    }
-    public void setShoppingCost(Double shippingCost) {
-        this.shippingCost = shippingCost;
-    }
-    public Boolean getShoppingStatus() {
-        return shippingStatus;
-    }
-    public void setShoppingStatus(Boolean shippingStatus) {
-        this.shippingStatus = shippingStatus;
     }
     public Double getDiscount() {
         return discount;
