@@ -30,6 +30,9 @@ public interface IShipmentRepository extends JpaRepository<Shipment, UUID>{
     //Buscar por fecha de envío mayor que
     List<Shipment> findByShipmentDateGreaterThan(LocalDateTime shipmentDate);
 
+    //Buscar por fecha de envío entre a y b
+    List<Shipment> findByShipmentDateBetween(LocalDateTime minShipmentDate, LocalDateTime maxShipmentDate);
+
     //Buscar por fecha de entrega exacta
     List<Shipment> findByDeliveryDate(LocalDateTime deliveryDate);
 
@@ -39,6 +42,9 @@ public interface IShipmentRepository extends JpaRepository<Shipment, UUID>{
     //Buscar por fecha de entrega mayor que
     List<Shipment> findByDeliveryDateGreaterThan(LocalDateTime deliveryDate);
 
+    //Buscar por fecha de envío entre a y b
+    List<Shipment> findByDeliveryDateBetween(LocalDateTime minDeliveryDate, LocalDateTime maxDeliveryDate);
+
     //Buscar por costo del envío exacto
     List<Shipment> findByShippingCost(Double shippingCost);
 
@@ -47,6 +53,9 @@ public interface IShipmentRepository extends JpaRepository<Shipment, UUID>{
 
     //Buscar por costo del envío mayor que
     List<Shipment> findByShippingCostGreaterThan(Double shippingCost);
+
+    //Buscar por fecha de envío entre a y b
+    List<Shipment> findByShippingCostBetween(Double minShippingCost, Double mAXShippingCost);
 
     //Buscar por estado del envío
     List<Shipment> findByShippingStatus(Boolean shippingStatus);

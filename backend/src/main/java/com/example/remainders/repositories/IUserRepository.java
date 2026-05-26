@@ -28,7 +28,7 @@ public interface IUserRepository extends JpaRepository<User, UUID>{
     //Buscar por genero
     List<User> findByGender(String gender);
 
-    //Buscar por fecha de nacimiento
+    //Buscar por fecha de nacimiento exacta
     List<User> findByBirthDate(LocalDate birthDate);
 
     //Buscar por fecha de nacimiento menor que 
@@ -36,6 +36,9 @@ public interface IUserRepository extends JpaRepository<User, UUID>{
 
     //Buscar por fecha de nacimiento mayor que 
     List<User> findByBirthDateGreaterThan(LocalDate birthDate);
+
+    //Buscar por fecha de nacimiento entre a y b
+    List<User> findByBirthDateBetween(LocalDate minBirthDate, LocalDate maxBirthDate);
 
     //Buscar por correo
     Optional<User> findByEmail(String email);
