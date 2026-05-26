@@ -34,7 +34,7 @@ public class Return {
     public void setRequestDate(LocalDateTime requestDate) {
         this.requestDate = requestDate;
     }
-    public String getSeason() {
+    public String getReason() {
         return reason;
     }
     public void setReason(String reason) {

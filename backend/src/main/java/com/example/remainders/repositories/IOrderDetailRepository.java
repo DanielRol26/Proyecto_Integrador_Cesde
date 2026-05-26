@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Repository
-public interface IOrderDetail extends JpaRepository<OrderDetail, UUID>{
+public interface IOrderDetailRepository extends JpaRepository<OrderDetail, UUID>{
 
     //Personalizando busqueda de la tabla ORDERDETAILS
 

@@ -34,6 +34,9 @@ public interface IPaymentRepository extends JpaRepository<Payment, UUID>{
     //Buscar por montos menor que
     List<Payment> findByAmountLessThan(Double amount);
 
+    //Buscar por montos mayor que
+    List<Payment> findByAmountGreaterThan(Double amount);
+
     //Buscar por montos entre a y b
     List<Payment> findByAmountBetween(Double minAmount, Double maxAmount);
 
