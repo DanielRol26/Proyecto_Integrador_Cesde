@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header
+        class="relative z-20 px-10 py-5 bg-[var(--color-fondo)] border-b border-[var(--color-border)] shadow-[0px_3px_10px_0px_rgba(149,149,149,0.2)] max-lg:px-6 max-lg:py-[18px] max-sm:px-[18px] max-sm:py-4">
+        <div class="w-full flex justify-between items-center">
+            <div class="flex items-center gap-2 shrink-0">
+                <img src="/assets/images/logos/remainders-logo.svg" alt="Logo 1"
+                    class="h-5 sm:h-6 md:h-7 w-auto object-contain w-[10px] h-[10px]">
+            </div>
+
+            <nav class="hidden lg:flex gap-4 xl:gap-6 font-semibold flex-shrink-0">
+                <a href="/index.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Inicio</a>
+                <a href="/pages/login.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Iniciar
+                    Sesión</a>
+                <a href="/pages/contact.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Contáctenos</a>
+                <a href="/pages/products.html"
+                    class="text-[var(--color-text)] px-3 py-1 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all whitespace-nowrap">Productos</a>
+            </nav>
+
+            <div class="flex gap-[10px] max-lg:hidden">
+                <button
+                    class="border border-[var(--color-border-3)] rounded-md py-[10px] px-5 bg-[var(--bg-color-4)] text-[var(--color-text)] transition-all duration-300 hover:shadow-[0_4px_12px_rgba(10,31,92,0.2)] hover:scale-[1.03]">Iniciar
+                    sesión</button>
+                <button
+                    class="rounded-md py-[10px] px-[35px] bg-[var(--bg-color-5)] text-[var(--color-text-2)] transition-all duration-300 hover:shadow-[0_6px_16px_rgba(10,31,92,0.25)] hover:scale-[1.04]">Regístrate</button>
+            </div>
+
+            <button class="hidden max-lg:flex flex-col gap-1 p-1 bg-transparent border-none cursor-pointer"
+                onclick="toggleMenu()">
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+                <span class="block w-6 h-[2px] bg-[var(--color-text)]"></span>
+            </button>
+        </div>
+        <nav id="mobileMenu" class="hidden lg:hidden mt-4 flex flex-col gap-2 font-semibold">
+            <a href="index.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Inicio</a>
+            <a href="/pages/login.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Iniciar
+                Sesión</a>
+            <a href="/pages/contact.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Contáctenos</a>
+            <a href="/pages/products.html"
+                class="text-[var(--color-text)] px-3 py-2 hover:bg-[var(--color-text)] hover:text-[var(--color-fondo)] rounded transition-all">Productos</a>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer
+        class="mt-auto border-t-4 border-[var(--color-text)] bg-[var(--color-fondo2)] rounded-t-[50px] p-10 lg:p-20 text-[var(--color-text)] mx-[10px] font-[fuente1]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1200px] mx-auto">
+
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-[var(--color-text)]">¿NECESITAS AYUDA?</h3>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        +57 3197561958
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-[var(--color-text)]" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        +57 3122358703
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-[var(--color-text)]">SOCIAL MEDIA</h3>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="/assets/images/icons/social/gmail.png" alt="Gmail" class="w-6 h-6">
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="/assets/images/icons/social/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="/assets/images/icons/social/facebook.png" alt="Facebook" class="w-6 h-6">
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
+                        <img src="/assets/images/icons/social/youtube.png" alt="Youtube" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="/assets/images/logos/blue-1" alt="Logo 1"
+                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
+                    <img src="../" alt="Logo 2"
+                        class="h-12 w-auto object-contain transition-transform hover:scale-110">
+                </div>
+
+                <p class="text-[var(--color-text)] max-w-sm italic opacity-80">
+                    Just remember, only denim.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
