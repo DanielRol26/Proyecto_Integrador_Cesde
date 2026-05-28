@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/register.css">
     <link rel="stylesheet" href="../landingpage/styles.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -62,17 +61,21 @@
 
     <main>
         <section
-            class="bg-[url('../assets/images/stores/hero/store-hero-banner.png')] bg-cover bg-[position:72%_15%] min-h-[320px] mt-[100px] sm:mt-[120px] lg:mt-[150px] px-[20px] sm:px-[40px] lg:px-[80px] py-[50px] flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start gap-[35px] lg:gap-[130px]">
+            class="bg-[url('../assets/images/stores/hero/store-hero-banner.png')] bg-cover bg-[position:72%_15%] min-h-[320px] mt-[100px] sm:mt-[120px] lg:mt-[150px] px-[20px] sm:px-[40px] lg:px-[80px] py-[50px] flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start gap-[35px] lg:gap-[130px]"
+            id="hero">
 
-            <div>
-                <h1
-                    class="text-[36px] sm:text-[42px] lg:text-[48px] font-['Cormorant_Garamond'] leading-none mb-[18px] font-semibold">
+            <div class="relative">
+                <button id="back-to-brands" class="hidden text-white text-[22px] tracking-[2px] font-['Inter'] flex font-bold absolute bottom-[180px]">
+                    Volver
+                </button>
+                <h1 class="text-[36px] sm:text-[42px] lg:text-[48px] font-['Cormorant_Garamond'] leading-none mb-[18px] font-semibold"
+                    id="hero-title">
                     Tiendas <br> disponibles
                 </h1>
 
                 <div class="w-[45px] h-[2px] bg-[#c8a46b] mb-[20px]"></div>
 
-                <p class="text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.7] font-['Inter']">
+                <p id="hero-description" class="text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.7] font-['Inter']">
                     Descubre todas nuestras tiendas disponibles, <br class="hidden sm:block">
                     visitanos con tu familia y amigos
                 </p>
@@ -81,22 +84,23 @@
             <div>
                 <button id="fetch-btn"
                     class="bg-black text-white py-[14px] sm:py-[16px] lg:py-[18px] px-[35px] sm:px-[60px] lg:px-[90px] text-[14px] sm:text-[15px] lg:text-[16px] tracking-[1px] font-medium hover:bg-[#1a1a1a] duration-300 cursor-pointer">
-                    OBTENER TIENDAS
+                    CARGAR DATOS
                 </button>
             </div>
         </section>
 
         <div class="flex items-center gap-[10px] px-[100px] pt-[30px] pb-[10px]">
-                <img src="https://lh3.googleusercontent.com/d/1xCRwgiSIeUkIn1d_g_CZainhCtKzSq5f" alt="" class="w-[35px] h-[30px]">
-                <h2 class="font-['Cormorant_Garamond'] font-bold text-[18px]">Marcas encontradas</h2>
-                <div class="bg-black py-[2px] px-[15px] rounded">
-                    <p id="brands-counter" class="text-white">0</p>
-                </div>
+            <img src="https://lh3.googleusercontent.com/d/1xCRwgiSIeUkIn1d_g_CZainhCtKzSq5f" alt=""
+                class="w-[35px] h-[30px]">
+            <h2 class="font-['Cormorant_Garamond'] font-bold text-[18px]" id="results-title">Marcas encontradas</h2>
+            <div class="bg-black py-[2px] px-[15px] rounded">
+                <p id="brands-counter" class="text-white">0</p>
             </div>
+        </div>
 
         <section id="brands-container"
             class="p-[20px] sm:p-[15px] lg:px-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-            
+
             <!-- <a href="#americanino"
                 class="w-full bg-white rounded-[6px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.10)] group cursor-pointer">
                 <div class="h-[180px] relative">
@@ -129,6 +133,10 @@
                     </button>
                 </div>
             </a> -->
+        </section>
+
+        <section id="stores-container"
+            class="pt-[10px] px-[20px] sm:px-[40px] lg:px-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
         </section>
 
     </main>
