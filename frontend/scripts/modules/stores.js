@@ -43,8 +43,8 @@ fetchBtn.addEventListener('click', async () => {
         const brands = await response.json();
         const total = brands.length;
 
-        brandsContainer.replaceChildren();
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        brandsContainer.textContent = '';
+        await new Promise(resolve => setTimeout(resolve, 1000));
 
         brands.forEach(data => {
             const cardBrand = document.createElement('a');
@@ -162,8 +162,6 @@ fetchBtn.addEventListener('click', async () => {
                 loadingOverlay.appendChild(loadingContent);
                 storesContainer.appendChild(loadingOverlay);
 
-                await new Promise(resolve => setTimeout(resolve, 1500));
-
                 const response = await fetch(`${URI_API}/brandStores`);
                 const stores = await response.json();
                 const selectedBrandSlug = data.storeName.trim().toLowerCase().replaceAll(' ', '-');
@@ -171,9 +169,25 @@ fetchBtn.addEventListener('click', async () => {
 
                 resultsTitle.textContent = 'Tiendas encontradas';
                 brandsCounter.textContent = filteredStores.length;
+                const loadedImages = [];
+
+                for (const store of filteredStores) {
+
+                    const image = new Image();
+                    image.src = store.images[0];
+                    await new Promise(resolve => {
+                        image.onload = resolve;
+                        image.onerror = resolve;
+                    });
+                    loadedImages.push({
+                        ...store,
+                        loadedImage: image.src
+                    });
+                }
+                await new Promise(resolve => setTimeout(resolve, 1000));
                 storesContainer.replaceChildren();
 
-                filteredStores.forEach(data => {
+                loadedImages.forEach(data => {
 
                     const storeCard = document.createElement('article');
                     storeCard.className = 'bg-white rounded-[8px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.10)]';
@@ -232,12 +246,10 @@ fetchBtn.addEventListener('click', async () => {
     } finally {
 
         fetchBtn.disabled = false;
-
-        fetchBtn.replaceChildren();
+        fetchBtn.textContent = '';
 
         const buttonText = document.createElement('span');
         buttonText.textContent = 'OBTENER TIENDAS';
-
         fetchBtn.appendChild(buttonText);
 
     }
@@ -260,7 +272,7 @@ backToBrands.addEventListener('click', () => {
     brandsCounter.textContent = brandsContainer.children.length;
 
     brandsContainer.classList.remove('hidden');
-    storesContainer.replaceChildren();
+    storesContainer.textContent = '';
     storesContainer.classList.add('hidden');
     backToBrands.classList.add('hidden');
     storesContainer.removeChild(loadingOverlay);

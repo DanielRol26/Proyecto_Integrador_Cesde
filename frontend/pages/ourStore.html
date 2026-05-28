@@ -17,39 +17,33 @@
 </head>
 
 <body class="font-['Inter']">
-    <header id="encabezado">
-        <a class="header-logo" href="#">
-            <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders" class="logo-image">
+    <header
+        class="fixed top-0 left-0 w-full bg-white z-[9999] px-[25px] sm:px-[40px] lg:px-[60px] py-[18px] flex items-center justify-between shadow-[0_2px_15px_rgba(0,0,0,0.04)]">
+        <a href="#" class="flex items-center">
+            <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders"
+                class="w-[140px] sm:w-[160px] object-contain">
         </a>
+        <div></div>
 
-        <div class="centro-encabezado">
-            <div class="busqueda-encabezado">
-                <input type="text" placeholder="Buscar" />
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    style="width:16px;height:16px;color:inherit;opacity:0.7;">
-                    <circle cx="11" cy="11" r="7" />
-                    <line x1="16.5" y1="16.5" x2="22" y2="22" />
-                </svg>
-            </div>
-        </div>
+        <div class="flex items-center gap-[18px] sm:gap-[22px]">
 
-        <div class="derecha-encabezado">
-            <button class="icono-encabezado" onclick="window.location.href='pages/login.html'">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <button onclick="window.location.href='pages/login.html'"
+                class="flex items-center justify-center text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <circle cx="12" cy="8" r="4" />
                     <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
                 </svg>
             </button>
-            <button class="icono-encabezado">
 
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <button class="flex items-center justify-center text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <rect x="4" y="8" width="16" height="14" rx="1" />
                     <path d="M9 8V6a3 3 0 0 1 6 0v2" />
                 </svg>
             </button>
-            <button class="icono-encabezado" style="letter-spacing:0.22em;font-size:10px;font-weight:500;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    style="width:14px;height:14px;">
+            <button
+                class="flex items-center gap-[8px] text-[10px] tracking-[0.22em] font-medium text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <line x1="3" y1="6" x2="21" y2="6" />
                     <line x1="3" y1="12" x2="21" y2="12" />
                     <line x1="3" y1="18" x2="21" y2="18" />
@@ -65,7 +59,8 @@
             id="hero">
 
             <div class="relative">
-                <button id="back-to-brands" class="hidden text-white text-[22px] tracking-[2px] font-['Inter'] flex font-bold absolute bottom-[180px]">
+                <button id="back-to-brands"
+                    class="hidden text-white text-[22px] tracking-[2px] font-['Inter'] flex font-bold absolute bottom-[180px]">
                     Volver
                 </button>
                 <h1 class="text-[36px] sm:text-[42px] lg:text-[48px] font-['Cormorant_Garamond'] leading-none mb-[18px] font-semibold"
@@ -97,6 +92,7 @@
                 <p id="brands-counter" class="text-white">0</p>
             </div>
         </div>
+
 
         <section id="brands-container"
             class="p-[20px] sm:p-[15px] lg:px-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
