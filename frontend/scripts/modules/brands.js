@@ -195,7 +195,13 @@ function inicializarEventosEstructurales() {
     document.getElementById('boletin-disparador').addEventListener('click', (e) => { e.preventDefault(); invocarModal('Boletín', '<form class="formulario-js" onsubmit="event.preventDefault(); window.operarSalida(\'Suscripción guardada\');"><input type="email" placeholder="Tu correo" required><button type="submit">Suscribirme</button></form>'); });
 
     window.addEventListener('scroll', () => {
-        if(header) header.classList.toggle('con-fondo', window.scrollY > 40);
+        if (header) {
+            if (window.scrollY > 36) {
+                header.classList.add('fijo-arriba');
+            } else {
+                header.classList.remove('fijo-arriba');
+            }
+        }
     });
 }
 

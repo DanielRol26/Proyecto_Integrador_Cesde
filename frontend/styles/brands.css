@@ -47,24 +47,26 @@ body {
 }
 
 #encabezado {
-  position: fixed;
+  position: absolute;
   top: var(--alto-aviso);
   left: 0;
   right: 0;
   height: var(--alto-encabezado);
-  z-index: 100;
+  z-index: 900;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  background: transparent;
-  transition: background 0.4s, backdrop-filter 0.4s, box-shadow 0.4s;
+  background: #ffffff;
+  border-bottom: 1px solid var(--gris-claro);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: top 0.3s ease;
 }
 
-#encabezado.con-fondo {
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+#encabezado.fijo-arriba {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .logo-image {
@@ -127,7 +129,10 @@ body {
 .interfaz-editorial {
   max-width: 1400px;
   margin: 0 auto;
-  padding: calc(var(--alto-encabezado) + var(--alto-aviso) + 60px) 40px 60px;
+  padding-top: calc(var(--alto-encabezado) + var(--alto-aviso) + 60px);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
 }
 
 .cabecera-principal {
