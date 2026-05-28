@@ -1,72 +1,51 @@
-// ===== VARIABLES GLOBALES Y ESTADO =====
-// Guarda todas las solicitudes de recuperación enviadas en esta sesión
-const solicitudes = [];
+const solicitudesRecuperacion = [];
 
-// ===== REFERENCIAS AL DOM =====
-const formulario = document.querySelector("form");
-const inputEmail = document.getElementById("email");
-const mainSection = document.querySelector("section");
+const formularioReset = document.getElementById("formulario-reset");
+const campoCorreo = document.getElementById("campo-correo-reset");
+const contenedorDinamico = document.getElementById("contenedor-dinamico-reset");
 
-// ===== CREACIÓN DE ELEMENTOS DINÁMICOS =====
 const areaHistorial = document.createElement("div");
-areaHistorial.id = "area-historial";
-areaHistorial.className = "mt-6";
-mainSection.querySelector(".bg-white").appendChild(areaHistorial);
+areaHistorial.className = "historial-reset";
 
 const contenedorBusqueda = document.createElement("div");
-contenedorBusqueda.id = "contenedor-busqueda";
-contenedorBusqueda.className = "hidden mt-4 pt-4 border-t-2 border-gray-100";
-
-const labelBusqueda = document.createElement("label");
-labelBusqueda.htmlFor = "buscar-email";
-labelBusqueda.className = "block text-archi-blue font-bold mb-2 text-sm";
-labelBusqueda.textContent = "Buscar solicitud por correo:";
+contenedorBusqueda.className = "buscador-reset-caja";
+contenedorBusqueda.style.display = "none";
 
 const inputBusqueda = document.createElement("input");
 inputBusqueda.type = "text";
-inputBusqueda.id = "buscar-email";
-inputBusqueda.placeholder = "Filtrar por correo...";
-inputBusqueda.className =
-  "w-full p-2 border-2 border-archi-cyan rounded-lg text-sm focus:border-archi-light-cyan focus:outline-none";
+inputBusqueda.placeholder = "Filtrar solicitudes por correo...";
 
-const areaFiltrada = document.createElement("ul");
-areaFiltrada.id = "area-filtrada";
-areaFiltrada.className = "mt-3 space-y-2";
+const areaFiltrada = document.createElement("div");
 
-contenedorBusqueda.appendChild(labelBusqueda);
 contenedorBusqueda.appendChild(inputBusqueda);
 contenedorBusqueda.appendChild(areaFiltrada);
-mainSection.querySelector(".bg-white").appendChild(contenedorBusqueda);
 
-// ===== FUNCIONES AUXILIARES =====
-function crearMensaje(texto, tipo) {
-  const div = document.createElement("div");
-  div.className =
-    tipo === "error"
-      ? "p-3 rounded-lg border-2 border-red-300 bg-red-50 text-red-700 text-sm font-medium mensaje-flash"
-      : "p-3 rounded-lg border-2 border-green-300 bg-green-50 text-green-700 text-sm font-medium mensaje-flash";
-  div.textContent = texto;
-  return div;
+contenedorDinamico.appendChild(areaHistorial);
+contenedorDinamico.appendChild(contenedorBusqueda);
+
+function crearAlerta(texto, tipo) {
+  const alerta = document.createElement("div");
+  alerta.className = `alerta-reset alerta-${tipo}-reset mensaje-flash`;
+  alerta.textContent = texto;
+  return alerta;
 }
 
-function crearItemSolicitud(solicitud) {
-  const item = document.createElement("li");
-  item.className =
-    "flex justify-between items-center p-3 rounded-lg bg-gray-50 border border-gray-200 text-xs";
+function crearItemLista(solicitud) {
+  const item = document.createElement("div");
+  item.className = "item-solicitud-reset";
 
-  const emailSpan = document.createElement("span");
-  emailSpan.className = "text-gray-700 font-medium truncate max-w-[180px]";
-  emailSpan.textContent = solicitud.email;
+  const correoSpan = document.createElement("span");
+  correoSpan.className = "item-solicitud-correo";
+  correoSpan.textContent = solicitud.correo;
 
   const horaSpan = document.createElement("span");
-  horaSpan.className = "text-gray-400";
   horaSpan.textContent = solicitud.hora;
 
   const estadoSpan = document.createElement("span");
-  estadoSpan.className = "text-archi-blue font-semibold";
-  estadoSpan.textContent = "✉ Enviado";
+  estadoSpan.className = "item-solicitud-estado";
+  estadoSpan.textContent = "✉ ENVIADO";
 
-  item.appendChild(emailSpan);
+  item.appendChild(correoSpan);
   item.appendChild(horaSpan);
   item.appendChild(estadoSpan);
 
@@ -75,114 +54,93 @@ function crearItemSolicitud(solicitud) {
 
 function renderizarHistorial(lista) {
   areaHistorial.innerHTML = "";
-
   if (lista.length === 0) return;
 
   const titulo = document.createElement("h4");
-  titulo.className = "text-archi-blue font-bold text-sm mb-3 pt-4 border-t-2 border-gray-100";
-  titulo.textContent = `Solicitudes enviadas (${lista.length}):`;
+  titulo.className = "titulo-historial-reset";
+  titulo.textContent = `Solicitudes enviadas (${lista.length})`;
   areaHistorial.appendChild(titulo);
 
-  const ul = document.createElement("ul");
-  ul.className = "space-y-2";
-
   lista.forEach(function (solicitud) {
-    ul.appendChild(crearItemSolicitud(solicitud));
+    areaHistorial.appendChild(crearItemLista(solicitud));
   });
-
-  areaHistorial.appendChild(ul);
 }
 
-// ===== EVENT LISTENERS =====
-formulario.addEventListener("submit", function (evento) {
+formularioReset.addEventListener("submit", function (evento) {
   evento.preventDefault();
 
-  const email = inputEmail.value.trim();
-
-  const mensajesAnteriores = formulario.querySelectorAll(".mensaje-flash");
-  mensajesAnteriores.forEach(function (m) {
+  const mensajes = document.querySelectorAll(".mensaje-flash");
+  mensajes.forEach(function (m) {
     m.remove();
   });
 
-  if (!email || !email.includes("@")) {
-    const error = crearMensaje(
-      "Por favor ingresa un correo electrónico válido.",
-      "error"
-    );
-    formulario.insertBefore(error, formulario.querySelector(".flex"));
+  const correo = campoCorreo.value.trim();
+
+  if (!correo || !correo.includes("@")) {
+    formularioReset.prepend(crearAlerta("Por favor ingresa un correo electrónico válido.", "error"));
     return;
   }
 
-  const yaExiste = solicitudes.filter(function (s) {
-    return s.email === email;
+  const yaExiste = solicitudesRecuperacion.some(function (s) {
+    return s.correo === correo;
   });
 
-  if (yaExiste.length > 0) {
-    const aviso = crearMensaje(
-      `Ya enviamos un enlace a ${email}. Revisa tu bandeja de entrada o carpeta de spam.`,
-      "error"
-    );
-    formulario.insertBefore(aviso, formulario.querySelector(".flex"));
+  if (yaExiste) {
+    formularioReset.prepend(crearAlerta(`Ya enviamos un enlace de recuperación a ${correo}.`, "error"));
     return;
   }
 
-  const nuevaSolicitud = {
-    email: email,
-    hora: new Date().toLocaleTimeString("es-CO"),
-    fecha: new Date().toLocaleDateString("es-CO"),
-  };
+  solicitudesRecuperacion.push({
+    correo: correo,
+    hora: new Date().toLocaleTimeString("es-CO")
+  });
 
-  solicitudes.push(nuevaSolicitud);
+  formularioReset.prepend(crearAlerta(`Enlace de recuperación enviado a ${correo}. Revisa tu bandeja de entrada.`, "exito"));
+  campoCorreo.value = "";
 
-  const exito = crearMensaje(
-    `Enlace de recuperación enviado a ${email}. Revisa tu correo.`,
-    "exito"
-  );
-  formulario.insertBefore(exito, formulario.querySelector(".flex"));
+  renderizarHistorial(solicitudesRecuperacion);
 
-  inputEmail.value = "";
-
-  renderizarHistorial(solicitudes);
-
-  if (solicitudes.length >= 1) {
-    contenedorBusqueda.classList.remove("hidden");
+  if (solicitudesRecuperacion.length > 0) {
+    contenedorBusqueda.style.display = "block";
   }
 });
 
 inputBusqueda.addEventListener("input", function () {
   const termino = inputBusqueda.value.trim().toLowerCase();
-
-  const resultados = solicitudes.filter(function (s) {
-    return s.email.toLowerCase().includes(termino);
-  });
-
   areaFiltrada.innerHTML = "";
 
   if (termino === "") return;
 
+  const resultados = solicitudesRecuperacion.filter(function (s) {
+    return s.correo.toLowerCase().includes(termino);
+  });
+
   if (resultados.length === 0) {
-    const sinResultados = document.createElement("li");
-    sinResultados.className = "text-xs text-gray-400 text-center py-2";
-    sinResultados.textContent = "No se encontraron solicitudes con ese correo.";
-    areaFiltrada.appendChild(sinResultados);
+    const vacio = document.createElement("p");
+    vacio.style.fontSize = "10px";
+    vacio.style.color = "#888";
+    vacio.style.marginTop = "10px";
+    vacio.style.textAlign = "center";
+    vacio.textContent = "NO SE ENCONTRARON SOLICITUDES CON ESE CORREO.";
+    areaFiltrada.appendChild(vacio);
     return;
   }
 
   resultados.forEach(function (solicitud) {
-    areaFiltrada.appendChild(crearItemSolicitud(solicitud));
+    areaFiltrada.appendChild(crearItemLista(solicitud));
   });
 });
 
-inputEmail.addEventListener("input", function () {
-  const feedbackExistente = document.getElementById("feedback-email-reset");
-  if (feedbackExistente) feedbackExistente.remove();
+campoCorreo.addEventListener("input", function () {
+  const alertaExistente = document.getElementById("alerta-en-linea");
+  if (alertaExistente) alertaExistente.remove();
 
-  const valor = inputEmail.value.trim();
+  const valor = campoCorreo.value.trim();
   if (valor.length > 0 && !valor.includes("@")) {
-    const feedback = document.createElement("span");
-    feedback.id = "feedback-email-reset";
-    feedback.className = "text-xs text-amber-500 mt-1 block";
-    feedback.textContent = "Ingresa un correo con formato válido (ejemplo@correo.com).";
-    inputEmail.insertAdjacentElement("afterend", feedback);
+    const span = document.createElement("span");
+    span.id = "alerta-en-linea";
+    span.className = "alerta-en-linea-reset";
+    span.textContent = "Ingresa un correo con formato válido.";
+    campoCorreo.insertAdjacentElement("afterend", span);
   }
 });

@@ -2,6 +2,7 @@ const barraAviso = document.getElementById("barra-aviso");
 const botonCerrarAviso = document.querySelector("#barra-aviso .boton-cerrar");
 const encabezado = document.getElementById("encabezado");
 const botonSubir = document.getElementById("botonSubir");
+const rutaBaseProyecto = window.location.pathname.includes("/pages/") ? "../" : "";
 
 const botonesEncabezado = Array.from(
   document.querySelectorAll(".derecha-encabezado .icono-encabezado"),

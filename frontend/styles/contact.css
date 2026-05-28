@@ -1,319 +1,272 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body.pagina-contacto {
+  background: #ffffff;
+  color: #0a0a0a;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(220, 238, 157);
-    min-height: 100vh;
+body.pagina-contacto #encabezado {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.jtitulo-contactenos {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    color: #ffffff;
-    flex: 1;
-    text-align: center;
+body.pagina-contacto #encabezado .icono-encabezado,
+body.pagina-contacto #encabezado .busqueda-encabezado input,
+body.pagina-contacto #encabezado .busqueda-encabezado svg {
+  color: #000000 !important;
 }
 
-.jmenu-navegacion {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 2rem;
-    justify-content: center;
+body.pagina-contacto #encabezado .busqueda-encabezado input::placeholder {
+  color: #555555 !important;
 }
 
-.jmenu-navegacion a {
-    text-decoration: none;
-    color: #fafafa;
-    font-weight: 500;
-    transition: color 0.3s;
+body.pagina-contacto #encabezado .busqueda-encabezado input {
+  border-bottom-color: rgba(0, 0, 0, 0.35) !important;
 }
 
-.jmenu-navegacion a:hover {
-    color: #ccc914;
-    text-decoration: underline;
+.pagina-contacto-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 104px;
+  background: #f7f7f6;
 }
 
-main {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 clamp(1rem, 5vw, 2rem);
+.contacto-visual {
+  background: #181818;
+  color: #ffffff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.jseccion-hero {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-bottom: 3rem;
+.contacto-visual::before {
+  content: "ASSISTANCE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 8vw, 130px);
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.055);
+  white-space: nowrap;
 }
 
-.jtitulo-principal {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgb(28, 31, 85, 0.3);
+.contacto-texto-visual {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.jsubtitulo {
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
-    margin-bottom: 0.5rem;
-    font-weight: 300;
+.contacto-texto-visual p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 16px;
 }
 
-.jtexto-enlace {
-    font-size: clamp(0.85rem, 2vw, 0.9rem);
-    opacity: 0.9;
+.contacto-texto-visual h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 0.95;
+  margin-bottom: 45px;
 }
 
-.jformulario-contacto {
-    background: white;
-    padding: clamp(1rem, 4vw, 2rem);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
+.contacto-info-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 35px;
 }
 
-.jcampo-formulario {
-    margin-bottom: 1.5rem;
+.contacto-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.jcampo-formulario label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #333;
+.contacto-item-titulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
 }
 
-.jcampo-formulario input,
-.jcampo-formulario textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+.contacto-item-valor {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
 }
 
-.jcampo-formulario input:focus,
-.jcampo-formulario textarea:focus {
-    outline: none;
-    border-color: rgb(25, 55, 100);
+.enlace-hover {
+  transition: color 0.3s;
 }
 
-.jcampo-checkbox {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    color: rgb(28, 31, 85);
+.enlace-hover:hover {
+  color: #a6cfd5;
 }
 
-.jcampo-checkbox input {
-    width: auto;
+.contacto-contenido {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.jboton-enviar {
-    width: 100%;
-    padding: 1rem;
-    background-color: rgba(252, 248, 0, 0.774);
-    color: rgb(15, 8, 8);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s;
+.contacto-caja {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  padding: 42px;
+  border: 1px solid #e6e3df;
 }
 
-.jboton-enviar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+.contacto-caja h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #000;
 }
 
-.jboton-whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: transform 0.3s;
-    z-index: 1000;
+.contacto-caja > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.jboton-whatsapp:hover {
-    transform: scale(1.1);
+.formulario-contacto-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.jboton-whatsapp img {
-    max-width: 60px;
-    height: auto;
+.campo-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: rgb(28, 31, 85);
-    margin-top: 3rem;
+.campo-contacto label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000;
 }
 
-.jlogo-footer {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-    border-radius: 50%;
+.campo-contacto input,
+.campo-contacto select,
+.campo-contacto textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cfcac3;
+  background: transparent;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #000;
+  outline: none;
+  transition: border-color 0.25s ease;
+  border-radius: 0;
 }
 
-footer p {
-    font-size: 0.9rem;
-    opacity: 0.9;
+.campo-contacto textarea {
+  resize: vertical;
+  min-height: 80px;
+  border: 1px solid #cfcac3;
+  padding: 10px;
 }
 
-.jboton-youtube {
-    padding: 1rem;
-    border-radius: 1rem;
-    text-decoration: none;
+.campo-contacto select {
+  cursor: pointer;
+  appearance: none;
 }
 
-.jboton {
-    background-color: rgb(216, 240, 2);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s;
+.campo-contacto input:focus,
+.campo-contacto select:focus,
+.campo-contacto textarea:focus {
+  border-color: #000;
 }
 
-.jboton:hover {
-    background-color: rgb(25, 55, 70);
+.boton-contacto-accion {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-.jlinea-amarilla {
-    background-color: yellow;
+.boton-contacto-accion:hover {
+  background: transparent;
+  color: #000;
 }
 
-.jfooter {
-    background-color: rgb(28, 31, 85);
-    color: yellow;
+.alerta-contacto {
+  padding: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-.jpie-pagina {
-    background-color: #122c51;
-    color: white;
-    padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 20px) 20px;
-    margin-top: 50px;
-    border-top: 5px solid #f4d03f;
+.alerta-error-contacto {
+  background: #fffafa;
+  border: 1px solid #ffdddd;
+  color: #b30000;
 }
 
-.jcontenido-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 40px;
-    margin-bottom: 30px;
+.alerta-exito-contacto {
+  background: #faffff;
+  border: 1px solid #ddffee;
+  color: #007a33;
 }
 
-.jcolumna-footer {
-    flex: 1 1 200px;
-    min-width: 200px;
+.alerta-en-linea-contacto {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  color: #b30000;
+  margin-top: 5px;
+  display: block;
 }
 
-.jcolumna-footer h3 {
-    color: #f4d03f;
-    font-size: clamp(18px, 3vw, 20px);
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.jcolumna-footer h4 {
-    margin: 15px 0 10px;
-}
-
-.jlista-contacto {
-    list-style: none;
-}
-
-.jlista-contacto li {
-    padding: 8px 0;
-    padding-left: 10px;
-    position: relative;
-}
-
-.jlista-contacto li::before {
-    content: "📞";
-    position: relative;
-    left: 0.2rem;
-}
-
-.jredes-sociales {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-    justify-content: center;
-}
-
-.jredes-sociales a {
-    padding: 5px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: border-color 0.3s;
-}
-
-.jredes-sociales a:hover {
-    border-color: #f4d03f;
-}
-
-.jcopyright {
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-    color: #f4d03f;
-}
-
-.jheader-principal {
-    background-color: #122c51;
-    padding: 20px;
-    border-bottom: 5px solid #f4d03f;
-    margin-bottom: 0;
-}
-
-.jheader-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.jlogo-imagen {
-    max-width: min(350px, 90vw);
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    border-radius: 8px;
-}
-
-.jnavegacion-principal ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.jnavegacion-principal a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-}
-
-.jnavegacion-principal a:hover {
-    background-color: #5b88b2;
+@media screen and (max-width: 900px) {
+  .pagina-contacto-layout {
+    grid-template-columns: 1fr;
+  }
+  .contacto-visual {
+    min-height: 250px;
+    padding: 40px;
+  }
+  .contacto-texto-visual {
+    max-width: 100%;
+  }
+  .contacto-contenido {
+    padding: 40px 20px;
+  }
 }
