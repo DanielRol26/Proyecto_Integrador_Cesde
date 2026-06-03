@@ -10,6 +10,8 @@ const controlMusica = document.getElementById('controlMusica');
 
 const COLORES_ESTADISTICAS = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#c77dff', '#ff9a3c'];
 
+const TIEMPO_MENSAJE = 1200;
+
 
 // Traducción de los tipos de Pokémon
 const TRADUCCIONES_TIPO = {
@@ -169,6 +171,8 @@ async function cargarPokemons() {
   contenedorTarjetas.innerHTML = '';
   mostrarEstado('Cargando Pokémon...', 'cargando');
 
+  await new Promise(resolve => setTimeout(resolve, TIEMPO_MENSAJE));
+
   try {
     const respuestaLista = await fetch(`${URL_BASE}?limit=${CANTIDAD}&offset=251`);
     if (!respuestaLista.ok) throw new Error(`Error de red: ${respuestaLista.status}`);
@@ -187,6 +191,7 @@ async function cargarPokemons() {
 
   } catch (error) {
     mostrarEstado('No se pudieron cargar los datos. Intenta más tarde.', 'error');
+    await new Promise(resolve => setTimeout(resolve, TIEMPO_MENSAJE));
     console.error('Error al cargar Pokémon:', error);
   } finally {
     btnCargar.disabled = false;
