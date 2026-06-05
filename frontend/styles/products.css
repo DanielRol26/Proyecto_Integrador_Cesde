@@ -1,0 +1,264 @@
+.envoltura-bolsa {
+  padding: 160px 5% 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+.cabecera-bolsa {
+  margin-bottom: 50px;
+}
+
+.titulo-bolsa {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.subtitulo-bolsa {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cuadricula-bolsa {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 70px;
+  align-items: start;
+}
+
+.item-bolsa {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item-bolsa-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #f5f4f2;
+  aspect-ratio: 3/4;
+}
+
+.item-bolsa-info {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-bolsa-nombre {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.item-bolsa-variante {
+  font-size: 9px;
+  color: #555;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.item-bolsa-cantidad {
+  font-size: 9px;
+  color: #000;
+  letter-spacing: 0.08em;
+  margin-bottom: auto;
+  font-weight: 500;
+}
+
+.item-bolsa-acciones {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.boton-accion-item {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  color: #555;
+  padding: 0;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.boton-accion-item:hover {
+  color: #000;
+}
+
+.item-bolsa-precio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.caja-resumen {
+  background: #f5f4f2;
+  padding: 40px 35px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.titulo-resumen {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.fila-resumen {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #444;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.total-resumen {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin: 40px 0 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  align-items: center;
+}
+
+.boton-pagar {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+.boton-pagar:hover {
+  background: #333;
+}
+
+.pago-seguro {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.iconos-pago {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  opacity: 0.6;
+}
+
+.seccion-completar {
+  margin-top: 100px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 80px;
+}
+
+.titulo-completar {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.grilla-completar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.item-completar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.item-completar-imagen {
+  background: #f0eeeb;
+  aspect-ratio: 3/4;
+  margin-bottom: 20px;
+}
+
+.item-completar-nombre {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.item-completar-precio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  color: #555;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 900px) {
+  .cuadricula-bolsa {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .grilla-completar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item-bolsa {
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+  }
+  .item-bolsa-precio {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .item-bolsa-acciones {
+    margin-top: 15px;
+  }
+  .envoltura-bolsa {
+    padding-top: 130px;
+  }
+}

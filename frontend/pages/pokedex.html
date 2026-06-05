@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/pokedex.css" />
+  <link rel="icon" href="../assets/images/icons/poke/pikachu.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="encabezado__logo">
+      <span class="encabezado__pokeball-icon">◉</span>
+      <h1 class="encabezado__titulo">Pokédex</h1>
+    </div>
+    <p class="encabezado__subtitulo">Explora el mundo Pokémon</p>
+  </header>
+
+  <main class="principal">
+
+    <div class="zona-boton">
+      <button id="btnCargar" class="boton-pokeball" aria-label="Cargar Pokémon">
+        <div class="boton-pokeball__mitad-superior">
+          <div style="top:0" class="boton-pokeball__banda"></div>
+        </div>
+        <div class="boton-pokeball__centro">
+          <div class="boton-pokeball__circulo-interior"></div>
+        </div>
+        <div class="boton-pokeball__mitad-inferior"></div>
+        <span class="boton-pokeball__texto">¡Atrapar!</span>
+      </button>
+    </div>
+
+    <div id="controlMusica" class="control-musica oculto">
+      <button id="btnPausa" class="btn-pausa">⏸ Pausa</button>
+    </div>
+
+    <div id="zonaEstado" class="zona-estado oculto"></div>
+
+    <div id="contenedorTarjetas" class="contenedor-tarjetas"></div>
+
+  </main>
+
+  <footer class="pie">
+    <p>Datos provistos por <a href="https://pokeapi.co" target="_blank">PokéAPI</a></p>
+  </footer>
+  <audio id="musicaFondo" loop>
+    <source src="../assets/images/icons/poke/driftveil.mp3" type="audio/mpeg">
+  </audio>
+
+  <script type="module" src="../scripts/modules/pokedex.js"></script>
+
+</body>
+
+</html>

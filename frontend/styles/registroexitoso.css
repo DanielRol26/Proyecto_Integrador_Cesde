@@ -1,0 +1,173 @@
+body.pagina-exito {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+body.pagina-exito #encabezado {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eaeaea;
+}
+
+body.pagina-exito #encabezado .icono-encabezado,
+body.pagina-exito #encabezado .busqueda-encabezado input,
+body.pagina-exito #encabezado .busqueda-encabezado svg {
+  color: #000000 !important;
+}
+
+body.pagina-exito #encabezado .busqueda-encabezado input::placeholder {
+  color: #555555 !important;
+}
+
+body.pagina-exito #encabezado .busqueda-encabezado input {
+  border-bottom-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.pagina-auth-exito {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 104px;
+  background: #f7f7f6;
+}
+
+.auth-visual-exito {
+  background: #181818;
+  color: #ffffff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-visual-exito::before {
+  content: "WELCOME";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 8vw, 130px);
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.055);
+  white-space: nowrap;
+}
+
+.auth-texto-visual-exito {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-texto-visual-exito p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 16px;
+}
+
+.auth-texto-visual-exito h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 0.95;
+}
+
+.auth-contenido-exito {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-caja-exito {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  padding: 50px 42px;
+  border: 1px solid #e6e3df;
+  text-align: center;
+}
+
+.icono-exito {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 25px;
+  color: #007a33;
+}
+
+.icono-exito svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-caja-exito h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.auth-caja-exito > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.redireccion-exito {
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+
+.redireccion-exito p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #333;
+}
+
+.redireccion-exito strong {
+  font-size: 13px;
+  color: #000;
+}
+
+.boton-auth-exito {
+  width: 100%;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.boton-auth-exito:hover {
+  background: transparent;
+  color: #000;
+}
+
+@media screen and (max-width: 900px) {
+  .pagina-auth-exito {
+    grid-template-columns: 1fr;
+  }
+  .auth-visual-exito {
+    min-height: 250px;
+    padding: 40px;
+  }
+  .auth-contenido-exito {
+    padding: 40px 20px;
+  }
+}

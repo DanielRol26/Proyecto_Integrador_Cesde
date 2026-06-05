@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remainders COL | Colección Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/frontend/styles/brands.css" />
+</head>
+
+<body>
+
+    <div id="barra-aviso">
+        <span>Nueva temporada.&nbsp;<a href="../pages/team.html">Volver al sitio oficial.</a></span>
+    </div>
+
+    <header id="encabezado">
+        <a class="header-logo" href="index.html">
+            <img src="/frontend/assets/img/remainders-logo.svg" alt="Logo Remainders" class="logo-image">
+        </a>
+
+        <div class="centro-encabezado">
+            <div class="busqueda-encabezado">
+                <input type="text" placeholder="Buscar" id="filtro-busqueda-local" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    style="width:16px;height:16px;opacity:0.7;">
+                    <circle cx="11" cy="11" r="7" />
+                    <line x1="16.5" y1="16.5" x2="22" y2="22" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="derecha-encabezado">
+            <button class="icono-encabezado" id="abrir-usuario-modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
+            </button>
+
+            <button class="icono-encabezado" id="desplegar-carrito-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="4" y="8" width="16" height="14" rx="1" />
+                    <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                </svg>
+                <span class="contador-carrito-js" id="contador-global">0</span>
+            </button>
+
+            <button class="icono-encabezado" id="disparar-menu-lateral">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    style="width:14px;height:14px;">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                MENÚ
+            </button>
+        </div>
+    </header>
+
+    <div class="interfaz-editorial">
+        <header class="cabecera-principal">
+            <h1>READY TO WEAR | MEN & WOMEN</h1>
+            <div class="linea-manifiesto">
+                <p>Conoce la última temporada del archivo de marcas de lujo más grande de latinoamérica.</p>
+                <div class="controles-filtro">
+                    <span>Filter</span>
+                    <span>Sort</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="zona-catalogo">
+            <div class="control-central">
+                <button id="desencadenar-consulta" class="boton-load-more">LOAD MORE</button>
+            </div>
+            <div id="contenedor-servidor" class="cuadrícula-productos"></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="grilla-pie">
+            <div>
+                <p class="titulo-columna-pie">Servicio al cliente</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Cuidado del producto</a></li>
+                    <li><a href="#">Rastrear mi pedido</a></li>
+                    <li><a href="#">Registrar devolución</a></li>
+                    <li><a href="#">Localizador de tiendas</a></li>
+                    <li><a href="#">Solicitar una cita</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="titulo-columna-pie">La empresa</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Área legal</a></li>
+                    <li><a href="#">Política de privacidad y cookies</a></li>
+                    <li><a href="#">Empleos</a></li>
+                    <li><a href="#">Alexander McQueen</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="titulo-columna-pie">Síguenos</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="boletin-pie">
+                <p class="titulo-columna-pie">Suscríbete al boletín</p>
+                <a href="#" class="enlace-boletin-pie" id="boletin-disparador">Suscribirse &nbsp;→</a>
+                <p class="etiqueta-envio">Envíos a:</p>
+                <p class="valor-envio"><a href="#">Colombia • ES</a></p>
+            </div>
+        </div>
+        <div class="inferior-pie">
+            <div class="imagen-pie">
+                <img src="/frontend/assets/img/remainders_red.svg" alt="logo-pie" class="imagen-pie">
+            </div>
+            <p class="derechos-pie">© 2026 Remainders Trading Limited / Autumnpaper Limited</p>
+        </div>
+    </footer>
+
+    <aside id="menuDesplegable" aria-hidden="true">
+        <div class="menu-imagen-js">
+            <img src="/frontend/assets/img/imgg2.jpg" alt="Editorial Remainders">
+        </div>
+        <div class="menu-contenido-js">
+            <div class="menu-superior-js">
+                <p>Envíos a: <strong>Colombia • ES</strong></p>
+                <button class="boton-cerrar-menu-js" id="botonCerrarMenu">✕</button>
+            </div>
+            <div class="menu-columnas-js">
+                <button class="enlace-menu-js">COMPRAR MUJER</button>
+                <button class="enlace-menu-js">COMPRAR HOMBRE</button>
+                <button class="enlace-menu-js">ARCHIVE</button>
+                <button class="enlace-menu-js">WORLDWIDE</button>
+            </div>
+            <div></div>
+        </div>
+    </aside>
+
+    <div class="fondo-carrito-js" id="fondoCarrito"></div>
+    <aside id="panelCarrito">
+        <div class="carrito-superior-js">
+            <h2>Carrito</h2>
+            <button class="boton-cerrar-carrito-js" id="botonCerrarCarrito">×</button>
+        </div>
+        <div class="lista-carrito-js" id="listaCarrito"></div>
+        <div class="carrito-inferior-js">
+            <div class="total-carrito-js">
+                <span>Total</span>
+                <strong id="totalCarrito">$0</strong>
+            </div>
+            <button class="boton-finalizar-js" id="botonFinalizarCompra">Finalizar compra</button>
+            <button class="boton-vaciar-js" id="botonVaciarCarrito">Vaciar carrito</button>
+        </div>
+    </aside>
+
+    <div id="modalGeneral">
+        <div class="modal-caja-js">
+            <button class="boton-cerrar-modal-js" id="botonCerrarModal">×</button>
+            <h2 class="titulo-modal-js" id="tituloModal"></h2>
+            <div id="contenidoModal"></div>
+        </div>
+    </div>
+
+    <div class="toast-js" id="toast-global"></div>
+
+    <script src="/frontend/scripts/modules/brands.js"></script>
+</body>
+
+</html>
