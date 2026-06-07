@@ -2,473 +2,267 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iniciar sesión | Remainders</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
-  
-  <link rel="stylesheet" href="../landingpage/styles.css" />
-
-  <style>
-    .amq-login-wrapper {
-      padding: 160px 5% 100px;
-      background: #ffffff;
-      color: #000000;
-      min-height: 100vh;
-    }
-
-    .amq-container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .amq-page-header {
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 25px;
-      margin-bottom: 45px;
-    }
-
-    .amq-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      font-weight: 400;
-      color: #000;
-    }
-
-    .amq-subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      letter-spacing: 0.15em;
-      color: #555;
-      text-transform: uppercase;
-    }
-
-    .amq-layout {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .amq-form-item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px;
-    }
-
-    .amq-form-item label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      margin-bottom: 12px;
-      color: #000;
-    }
-
-    .amq-form-item input {
-      border: none;
-      border-bottom: 1px solid #dcdcdc;
-      padding: 10px 0;
-      outline: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      background: transparent;
-      transition: border-color 0.3s ease;
-      color: #000;
-    }
-
-    .amq-form-item input:focus {
-      border-bottom-color: #000;
-    }
-
-    .amq-actions-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 45px;
-    }
-
-    .amq-checkbox {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      color: #555;
-    }
-
-    .amq-checkbox input {
-      accent-color: #000;
-    }
-
-    .amq-link {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      color: #555;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
-    }
-
-    .amq-link:hover {
-      border-bottom-color: #555;
-    }
-
-    .amq-btn-black {
-      background: #000;
-      color: #fff;
-      width: 100%;
-      padding: 18px;
-      border: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      cursor: pointer;
-      transition: background 0.3s ease, color 0.3s ease, opacity 0.3s;
-      text-transform: uppercase;
-    }
-
-    .amq-btn-black:hover {
-      background: #333;
-    }
-
-    .amq-summary-box {
-      background: #f5f4f2;
-      padding: 40px 35px;
-    }
-
-    .amq-summary-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      margin-bottom: 35px;
-      color: #000;
-    }
-
-    .amq-summary-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 9px;
-      font-family: 'Montserrat', sans-serif;
-      color: #444;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .amq-summary-total {
-      display: flex;
-      justify-content: space-between;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      margin: 35px 0;
-      padding-top: 30px;
-      border-top: 1px solid #dcdcdc;
-      align-items: center;
-    }
-
-    .amq-brand-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-      color: #000;
-    }
-
-    .amq-secure {
-      margin-top: 35px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      color: #777;
-    }
-
-    .amq-secure-icons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 12px;
-      opacity: 0.6;
-    }
-
-    .alerta-login {
-      padding: 16px;
-      margin-bottom: 25px;
-      font-size: 10px;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .alerta-login-error {
-      background: #fffafa;
-      border: 1px solid #ffdddd;
-      color: #b30000;
-    }
-
-    .alerta-login-exito {
-      background: #faffff;
-      border: 1px solid #ddffee;
-      color: #007a33;
-    }
-
-    .historial-caja-diseno {
-      margin-top: 50px;
-      border-top: 1px solid #eaeaea;
-      padding-top: 35px;
-    }
-
-    .historial-titulo-diseno {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      letter-spacing: 0.15em;
-      color: #666;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-    }
-
-    .historial-renglon {
-      display: flex;
-      justify-content: space-between;
-      padding: 14px 0;
-      border-bottom: 1px solid #f2f2f2;
-      font-size: 11px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .historial-col-izq strong {
-      margin-right: 12px;
-      color: #000;
-    }
-
-    .historial-col-der {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-    }
-
-    .texto-exito {
-      color: #007a33;
-    }
-
-    .texto-fallo {
-      color: #b30000;
-    }
-
-    @media screen and (max-width: 900px) {
-      .amq-layout {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-      .amq-right-col {
-        max-width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .amq-login-wrapper {
-        padding-top: 130px;
-      }
-      .amq-title {
-        font-size: 22px;
-      }
-      .amq-summary-box {
-        padding: 30px 20px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/images/logos/favicon.png">
+  <link rel="stylesheet" href="../styles/register.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Registro</title>
 </head>
 
-<body class="pagina-login">
+<body
+  class="min-h-screen bg-[url('../assets/images/login/hero/login-hero.png')] bg-cover bg-center bg-no-repeat font-[fuente1] leading-[1.3]">
+  <header
+    class="fixed z-50 top-0 left-0 w-full bg-transparent px-[15px] sm:px-[25px] md:px-[30px] py-[6px] flex items-center justify-between"
+    id="header">
 
-  <div id="barra-aviso">
-    <span>Nueva temporada.&nbsp;
-      <a href="products.html">Comprar mujer.</a>&nbsp;
-      <a href="products.html">Comprar hombre.</a>
-    </span>
-    <button class="boton-cerrar" aria-label="Cerrar">✕</button>
-  </div>
-
-  <header id="encabezado" class="con-fondo">
-    <a class="header-logo" href="../index.html">
-      <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders" class="logo-image">
+    <a href="../index.html" class="flex items-center">
+      <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders"
+        class="w-[100px] sm:w-[130px] md:w-[150px] lg:w-[200px] object-contain">
     </a>
 
-    <div class="centro-encabezado">
-      <div class="busqueda-encabezado">
-        <input type="text" placeholder="Buscar" />
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px;color:inherit;opacity:0.7;">
-          <circle cx="11" cy="11" r="7" />
-          <line x1="16.5" y1="16.5" x2="22" y2="22" />
-        </svg>
-      </div>
+    <div class="flex lg:hidden items-center gap-[5px] text-[13px] sm:text-[14px]">
+      <p class="text-black font-medium">¿No tienes cuenta?</p>
+      <a class="text-[var(--color-text-5)] font-semibold no-underline" href="../pages/login.html">Crear cuenta aquí</a>
     </div>
 
-    <div class="derecha-encabezado">
-      <button class="icono-encabezado" onclick="window.location.href='login.html'">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="8" r="4" />
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-        </svg>
-      </button>
-      <button class="icono-encabezado">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="4" y="8" width="16" height="14" rx="1" />
-          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-        </svg>
-      </button>
-      <button class="icono-encabezado" style="letter-spacing:0.22em;font-size:10px;font-weight:500;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px;">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-        MENÚ
-      </button>
-    </div>
   </header>
 
-  <main class="amq-login-wrapper">
-    <div class="amq-container">
-      <div class="amq-page-header">
-        <h1 class="amq-title">INICIAR SESIÓN</h1>
-        <span class="amq-subtitle">ACCESO DE MIEMBROS</span>
+  <main class="pt-[50px] sm:pt-[70px] lg:pt-[90px] pb-[40px] px-[15px] sm:px-[20px] md:px-[25px] lg:pr-[120px]">
+    <section class="flex flex-col lg:flex-row justify-center items-start gap-[25px] lg:gap-0 pt-[15px]">
+
+      <!-- Formulario -->
+      <div
+        class="w-full max-w-[580px] md:max-w-[500px] flex flex-col text-[var(--color-text)] py-5 bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.10)] mx-auto lg:mx-0 order-2 lg:order-1">
+        <div class="flex flex-col px-[20px] sm:px-[30px] lg:px-[12.5%] text-center lg:text-left">
+          <span
+            class="text-[11px] sm:text-[13px] lg:text-[14px] tracking-[3px] scale-y-[0.7] text-[var(--color-text-4)]">
+            INICIAR SESIÓN
+          </span>
+          <h2
+            class="text-[24px] sm:text-[30px] lg:text-[32px] mb-[10px] text-[var(--color-text)] font-black leading-[1.1]">
+            Accede a tu cuenta
+          </h2>
+        </div>
+        <form id="form" class="w-full flex flex-col items-center pt-[20px] sm:pt-[25px] lg:pt-[30px] pb-[10px]"
+          action="" method="get">
+          <div class="w-[92%] sm:w-[88%] lg:w-[75%] flex mb-4">
+            <div class="w-full flex flex-col">
+              <label class="font-semibold mb-[5px] text-[14px] sm:text-[15px]" for="email">
+                Correo electrónico: *
+              </label>
+              <div
+                class="w-full h-[45px] border border-[var(--color-border)] rounded-[6px] bg-white flex items-center overflow-hidden gap-2">
+                <div class="w-[45px] min-w-[45px] h-full flex justify-center items-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="black" stroke-width="2" />
+                    <path d="M5 7L12 13L19 7" stroke="black" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <input
+                  class="border-none outline-none bg-white w-full h-full text-[14px] sm:text-[16px] text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                  type="email" id="email" placeholder="Ej: correo@ejemplo.com">
+              </div>
+              <span id="email-error" class="w-full text-left"></span>
+            </div>
+          </div>
+
+          <div class="w-[92%] sm:w-[88%] lg:w-[75%] flex flex-col mb-[5px]">
+            <label class="font-semibold mb-[5px] text-[14px] sm:text-[15px]" for="pass">
+              Contraseña: *
+            </label>
+            <div
+              class="w-full h-[45px] border border-[var(--color-border)] rounded-[6px] bg-white flex items-center overflow-hidden gap-2">
+              <div class="w-[45px] min-w-[45px] h-full flex justify-center items-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="10" width="14" height="10" rx="2" stroke="black" stroke-width="2" />
+                  <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="black" stroke-width="2"
+                    stroke-linecap="round" />
+                  <circle cx="12" cy="14" r="1.6" fill="black" />
+                  <path d="M12 15.2V16.5" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <input
+                class="border-none outline-none bg-white w-full h-full text-[14px] sm:text-[16px] text-[var(--color-text)] placeholder:text-[#9aa7bd]"
+                type="password" id="pass" placeholder="Crea una contraseña">
+              <button type="button" id="toggle-pass"
+                class="w-[45px] min-w-[45px] h-full flex justify-center items-center text-[#9aa7bd] hover:text-black transition-colors"
+                onclick="togglePassword()">
+                <svg id="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <svg id="eye-off-icon" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20C5 20 1 12 1 12a18.45 18.45 0 0 1 5.06-5.94"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 1l22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <span id="password-error" class="w-full text-left"></span>
+          </div>
+
+          <div class="w-[92%] sm:w-[88%] lg:w-[75%] flex text-black gap-[5px] my-[20px] justify-between">
+            <div class="flex items-center gap-[8px] text-[13px] sm:text-[15px]">
+              <input class="peer" id="terms-privacy" type="checkbox">
+              <label class="peer-checked:font-semibold leading-[1.4]" for="terms-privacy">
+                Recordar contraseña
+              </label>
+            </div>
+            <a class="text-[14.5px] font-bold" href="./reset-password.html">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit" id="submit-btn"
+            class="w-[92%] sm:w-[88%] lg:w-[75%] h-[48px] border-none bg-black text-[var(--color-text-2)] flex justify-center items-center font-semibold text-[15px] sm:text-[17px] rounded-[6px] cursor-pointer py-3">
+            <svg class="mr-[10px]" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="8" r="4" stroke="#ffffff" stroke-width="2" />
+              <path d="M5 20C5 16.5 8 14 12 14C16 14 19 16.5 19 20" stroke="#ffffff" stroke-width="2"
+                stroke-linecap="round" />
+            </svg> Iniciar sesión
+          </button>
+          <div
+            class="w-[92%] sm:w-[88%] lg:w-[75%] relative text-center text-[#8d99b3] text-[13px] uppercase my-[22px] before:content-[''] before:absolute before:h-[1px] before:bg-[#d9dfe8] before:w-[42%] before:left-0 before:top-1/2 before:-translate-y-1/2 after:content-[''] after:absolute after:h-[1px] after:bg-[#d9dfe8] after:w-[42%] after:right-0 after:top-1/2 after:-translate-y-1/2">
+            <p class="font-bold text-black">o</p>
+          </div>
+          <button type="button"
+            class="w-[92%] sm:w-[88%] lg:w-[75%] h-[48px] bg-white text-black flex justify-center items-center font-semibold text-[15px] sm:text-[17px] rounded-[6px] cursor-pointer border border-[var(--color-border)] gap-4 py-3">
+            <svg width="20" height="20" viewBox="0 0 48 48">
+              <path fill="#EA4335"
+                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+              </path>
+              <path fill="#4285F4"
+                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+              </path>
+              <path fill="#FBBC05"
+                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+              </path>
+              <path fill="#34A853"
+                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+              </path>
+              <path fill="none" d="M0 0h48v48H0z"></path>
+            </svg> Continuar con Google
+          </button>
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-[2px] sm:gap-[5px] pt-[18px] text-center text-[13px] sm:text-[15px]">
+            <p>¿No tienes cuenta?</p>
+            <a class="text-[var(--color-text-5)] font-semibold no-underline" href="../pages/login.html">Crear cuenta
+              aquí</a>
+          </div>
+        </form>
       </div>
 
-      <div class="amq-layout">
-        <div class="amq-left-col">
-          <form id="form-login-pasos">
-            <div class="amq-form-item">
-              <label for="campo-email">CORREO ELECTRÓNICO</label>
-              <input type="email" id="campo-email" required>
-            </div>
-            <div class="amq-form-item">
-              <label for="campo-contrasena">CONTRASEÑA</label>
-              <input type="password" id="campo-contrasena" required>
-            </div>
-            
-            <div class="amq-actions-row">
-              <label class="amq-checkbox">
-                <input type="checkbox" id="casilla-recordar">
-                <span>RECORDARME</span>
-              </label>
-              <a href="#" class="amq-link">OLVIDÉ MI CONTRASEÑA</a>
-            </div>
+      <!-- Columna derecha: hero text + features box -->
+      <div
+        class="w-full max-w-[580px] md:max-w-[500px] lg:max-w-none lg:w-[52%] mx-auto lg:mx-0 flex flex-col text-[var(--color-text-3)] lg:pt-[40px] lg:pl-[38px] gap-[20px] order-1 lg:order-2">
 
-            <button type="submit" id="boton-enviar-formulario" class="amq-btn-black">INGRESAR</button>
-          </form>
-
-          <div id="bloque-historial-login"></div>
+        <!-- Hero text: centrado en móvil, izquierda en desktop -->
+        <div class="text-center lg:text-left">
+          <h1 class="text-[28px] sm:text-[36px] lg:text-[50px] font-bold text-black pb-3 lg:pb-5">
+            Bienvenido de nuevo <br>a Remainders
+          </h1>
+          <p
+            class="text-[14px] sm:text-[15px] lg:text-[17px] text-black leading-[1.5] relative before:content-[''] before:h-[2.5px] before:absolute before:bg-black before:w-[42px] before:top-[-12px] lg:before:top-[-15px] before:left-1/2 before:-translate-x-1/2 lg:before:left-0 lg:before:translate-x-0">
+            Inicia sesión y encuentra esa prenda perfecta para tí <br> o para tu persona especial. <span
+              class="font-bold text-black">Tu estílo espera</span>
+          </p>
         </div>
 
-        <div class="amq-right-col">
-          <div class="amq-summary-box">
-            <h3 class="amq-summary-title">NUEVO CLIENTE</h3>
-            
-            <div class="amq-summary-row">
-              <span>BENEFICIOS</span>
-              <span>EXCLUSIVOS</span>
+        <!-- Features box: ancho completo en móvil, max-w en desktop -->
+        <div class="bg-black/80 w-full lg:max-w-[320px] rounded pb-4 px-5 pt-4 lg:mt-auto">
+          <div class="flex gap-4 items-start">
+            <div class="flex rounded-full border h-10 w-10 min-w-10 justify-center items-center">
+              <img class="h-8 w-6" src="../assets/images/icons/features/order.svg" alt="">
             </div>
-            <div class="amq-summary-row">
-              <span>ENVÍO</span>
-              <span>GRATUITO</span>
+            <div>
+              <h3 class="text-[var(--color-text-2)] font-bold text-[14px] lg:text-[15px] leading-none pb-[5px]">
+                Historial de pedidos
+              </h3>
+              <p class="text-[var(--color-text-2)] text-[14px] lg:text-[15px] leading-[1.4]">
+                Revisa y gestiona tus compras de manera fácil.
+              </p>
             </div>
-            <div class="amq-summary-row">
-              <span>DEVOLUCIONES</span>
-              <span>SIN COSTO</span>
-            </div>
-            
-            <div class="amq-summary-total">
-              <span>ÚNETE A</span>
-              <span class="amq-brand-name">REMAINDERS</span>
-            </div>
+          </div>
 
-            <button type="button" class="amq-btn-black" onclick="window.location.href='register.html'">CREAR CUENTA</button>
+          <div class="flex gap-4 items-start pt-5 lg:pt-6">
+            <div class="flex rounded-full border h-10 w-10 min-w-10 justify-center items-center">
+              <img class="h-6 w-6" src="../assets/images/icons/features/truck.svg" alt="">
+            </div>
+            <div>
+              <h3 class="text-[var(--color-text-2)] font-bold text-[14px] lg:text-[15px] leading-none pb-[5px]">
+                Seguimiento de compras
+              </h3>
+              <p class="text-[var(--color-text-2)] text-[14px] lg:text-[15px] leading-[1.4]">
+                Mantente al tanto del estado de tus pedidos.
+              </p>
+            </div>
+          </div>
 
-            <div class="amq-secure">
-              <span>ACCESO SEGURO</span>
-              <div class="amq-secure-icons">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
+          <div class="flex gap-4 items-start pt-5 lg:pt-6">
+            <div class="flex rounded-full border h-10 w-10 min-w-10 justify-center items-center">
+              <img class="h-6 w-6" src="../assets/images/icons/features/star.svg" alt="">
+            </div>
+            <div>
+              <h3 class="text-[var(--color-text-2)] font-bold text-[14px] lg:text-[15px] leading-none pb-[5px]">
+                Recomendaciones personalizadas
+              </h3>
+              <p class="text-[var(--color-text-2)] text-[14px] lg:text-[15px] leading-[1.4]">
+                Descubre productos selecionados especialmente para ti.
+              </p>
             </div>
           </div>
         </div>
+
       </div>
-    </div>
+
+    </section>
   </main>
 
-  <footer>
-    <div class="grilla-pie">
-      <div>
-        <p class="titulo-columna-pie">Servicio al cliente</p>
-        <ul class="enlaces-pie">
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Cuidado del producto</a></li>
-          <li><a href="#">Rastrear mi pedido</a></li>
-          <li><a href="#">Registrar devolución</a></li>
-          <li><a href="#">Localizador de tiendas</a></li>
-          <li><a href="#">Solicitar una cita</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="titulo-columna-pie">La empresa</p>
-        <ul class="enlaces-pie">
-          <li><a href="#">Área legal</a></li>
-          <li><a href="#">Política de privacidad y cookies</a></li>
-          <li><a href="#">Política de cookies</a></li>
-          <li><a href="#">Configuración de cookies y no vender ni compartir</a></li>
-          <li><a href="#">Empleos</a></li>
-          <li><a href="#">Alexander McQueen</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="titulo-columna-pie">Síguenos</p>
-        <ul class="enlaces-pie">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">TikTok</a></li>
-        </ul>
-      </div>
-      <div class="boletin-pie">
-        <p class="titulo-columna-pie">Suscríbete al boletín</p>
-        <a href="#" class="enlace-boletin-pie">Suscribirse &nbsp;→</a>
-        <p class="etiqueta-envio">Envíos a:</p>
-        <p class="valor-envio"><a href="#">Estados Unidos • ES</a></p>
-      </div>
+  <footer
+    class="flex flex-col lg:flex-row bg-black justify-between items-center text-white px-[15px] sm:px-[25px] lg:px-[70px] py-[25px] sm:py-[30px] gap-[15px] sm:gap-[20px] text-center lg:text-left">
+
+    <a href="../index.html" class="flex justify-center items-center gap-[12px] sm:gap-[15px]">
+      <img class="w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] lg:w-[60px] lg:h-[60px]"
+        src="../landingpage/images/remainders_white.svg" alt="logo-pie">
+      <span class="text-[18px] sm:text-[22px] lg:text-[25px] font-medium">
+        REMAINDERS
+      </span>
+    </a>
+
+    <p class="text-[12px] sm:text-[14px] lg:text-[15px]">
+      © 2026 Remainders. Todos los derechos reservados.
+    </p>
+
+    <div class="flex flex-wrap justify-center items-center gap-[10px] sm:gap-[15px] text-[13px] sm:text-[14px]">
+      <a href="">Términos</a>
+      <span class="hidden sm:inline">|</span>
+      <a href="">Privacidad</a>
+      <span class="hidden sm:inline">|</span>
+      <a href="">Contacto</a>
     </div>
 
-    <div class="inferior-pie">
-      <div class="imagen-pie">
-        <img src="../landingpage/images/remainders_white.svg" alt="logo-pie" class="imagen-pie">
-      </div>
-      <p class="derechos-pie">© 2026 Remainders Trading Limited / Autumnpaper Limited</p>
-    </div>
   </footer>
 
-  <button class="boton-subir" id="botonSubir" aria-label="Volver arriba">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  </button>
-
   <script type="module" src="../scripts/main.js"></script>
+  <script>
+    function togglePassword() {
+      const input = document.getElementById('pass');
+      const eyeIcon = document.getElementById('eye-icon');
+      const eyeOffIcon = document.getElementById('eye-off-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        eyeIcon.classList.add('hidden');
+        eyeOffIcon.classList.remove('hidden');
+      } else {
+        input.type = 'password';
+        eyeIcon.classList.remove('hidden');
+        eyeOffIcon.classList.add('hidden');
+      }
+    }
+  </script>
 </body>
 
 </html>
