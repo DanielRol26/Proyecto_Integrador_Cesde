@@ -138,4 +138,22 @@ if (formularioLogin) {
       );
     }
   });
+
+  const botonVerContrasena = document.getElementById("boton-ver-contraseña");
+  const iconoMostrarContrasena = document.getElementById("icono-mostrar-contraseña");
+  const iconoOcultarContrasena = document.getElementById("icono-ocultar-contraseña");
+
+  botonVerContrasena.addEventListener("click", function () {
+    if (campoContrasena.type === "password") {
+      campoContrasena.type = "text";
+
+      iconoMostrarContrasena.classList.add("hidden");
+      iconoOcultarContrasena.classList.remove("hidden");
+    } else {
+      campoContrasena.type = "password";
+
+      iconoMostrarContrasena.classList.remove("hidden");
+      iconoOcultarContrasena.classList.add("hidden");
+    }
+  });
 }
