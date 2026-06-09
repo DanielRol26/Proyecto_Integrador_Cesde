@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remainders COL | Sitio oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/frontend/landingpage/styles.css" />
+</head>
+
+<body>
+
+  <div id="barra-aviso">
+    <span>Nueva temporada.&nbsp;
+      <a href="pages/products.html">Comprar mujer.</a>&nbsp;
+      <a href="pages/products.html">Comprar hombre.</a>
+
+    </span>
+    <button class="boton-cerrar" aria-label="Cerrar">✕</button>
+  </div>
+  
+  
+
+  <header id="encabezado">
+    <a class="header-logo" href="#">
+      <img src="landingpage/images/remainders-logo.svg" alt="Logo Remainders" class="logo-image">
+    </a>
+
+    <div class="centro-encabezado">
+      <div class="busqueda-encabezado">
+        <input type="text" placeholder="Buscar" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          style="width:16px;height:16px;color:inherit;opacity:0.7;">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="22" y2="22" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="derecha-encabezado">
+      <button class="icono-encabezado" onclick="window.location.href='pages/login.html'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+      </button>
+      <button class="icono-encabezado">
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="8" width="16" height="14" rx="1" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+      </button>
+      <button class="icono-encabezado" style="letter-spacing:0.22em;font-size:10px;font-weight:500;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px;">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        MENÚ
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg">
+
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="landingpage/media/video-portada8.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+      </video>
+
+      <svg class="hero-figure-svg" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      </svg>
+    </div>
+
+    <div class="hero-controls">
+
+    </div>
+    <div class="hero-content">
+      <p class="hero-title">Nueva temporada &nbsp;|&nbsp; Archivos</p>
+      <a href="pages/products.html" class="boton-principal">Compra ahora</a>
+      <a href="pages/team.html" class="boton-principal">equipo.</a>
+    </div>
+  </section>
+
+  <section class="seccion-productos">
+    <div class="grilla-productos revelar">
+
+      <div class="tarjeta-producto">
+        <div class="contenedor-imagen">
+          <img src="landingpage/images/productos/vwgafa.jpg" alt="Gafas de sol" class="imagen-gafas" />
+
+          <img src="landingpage/images/productos/vwgafa2.jpg" alt="Modelo usando gafas" class="imagen-modelo-hover" />
+        </div>
+
+        <div class="info-producto">
+          <p class="nombre-producto">Gabrio Sunglasses</p>
+          <p class="precio-producto">$1.200.000</p>
+          <p class="marca-producto">Vivienne Westwood</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-producto">
+        <div class="contenedor-imagen">
+          <img src="landingpage/images/productos/prada.avif" alt="Gafas de sol" class="imagen-gafas" />
+
+          <img src="landingpage/images/productos/prada02.avif" alt="Modelo usando gafas" class="imagen-modelo-hover" />
+        </div>
+
+        <div class="info-producto">
+          <p class="nombre-producto">Paradigme EDP 100ml</p>
+          <p class="precio-producto">$800.000</p>
+          <p class="marca-producto">prada</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-producto">
+        <div class="contenedor-imagen">
+          <img src="landingpage/images/productos/jeanpaul.webp" alt="Gafas de sol" class="imagen-gafas" />
+
+          <img src="landingpage/images/productos/jeanpaul2.webp" alt="Modelo usando gafas"
+            class="imagen-modelo-hover" />
+        </div>
+
+        <div class="info-producto">
+          <p class="nombre-producto">Samurari hat</p>
+          <p class="precio-producto">$750.000</p>
+          <p class="marca-producto">Jean Paul Gaultier</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-ancho-completo">
+    <div class="fondo-seccion fondo-ropa">
+
+
+      <img src="landingpage/images/tarjetamujer.png" alt="hombre" class="imagen-tarjeta" />
+      <svg class="figura-ropa" viewBox="0 0 300 600" fill="none">
+
+        <ellipse cx="200" cy="130" rx="45" ry="55" fill="rgba(160,130,90,0.5)" filter="url(#b2)" />
+        <rect x="185" y="175" width="28" height="55" rx="14" fill="rgba(150,120,80,0.4)" filter="url(#b2)" />
+
+        <path
+          d="M130 220 Q110 260 105 340 Q100 400 120 520 L260 520 Q270 400 265 340 Q260 260 240 220 Q210 205 185 205 Q160 205 130 220Z"
+          fill="rgba(90,100,55,0.55)" filter="url(#b2)" />
+
+        <path d="M130 400 Q110 430 108 480 Q106 520 120 540 L170 540 Q175 520 172 480 Q170 440 165 410Z"
+          fill="rgba(80,50,25,0.6)" filter="url(#b2)" />
+        <path d="M115 500 Q112 530 118 540 L172 540 Q170 525 168 510" fill="rgba(70,40,18,0.5)" filter="url(#b2)" />
+        <defs>
+          <filter id="b2" x="-40%" y="-20%" width="180%" height="140%">
+            <feGaussianBlur stdDeviation="12" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="contenido-seccion revelar">
+      <p class="titulo-seccion">Ropa femenina lista para usar</p>
+      <a href="pages/products.html" class="boton-principal">Comprar ahora</a>
+    </div>
+  </section>
+
+  <section class="seccion-ancho-completo">
+    <div class="fondo-seccion fondo-ropa">
+      <!-- Aquí se inserta la imagen de la tarjeta del hombre -->
+      <img src="landingpage/images/tarjetahombre2.png" alt="hombre" class="imagen-tarjeta" />
+
+      <svg class="figura-ropa" viewBox="0 0 300 600" fill="none">
+        <ellipse cx="200" cy="130" rx="45" ry="55" fill="rgba(160,130,90,0.5)" filter="url(#b2-men)" />
+        <rect x="185" y="175" width="28" height="55" rx="14" fill="rgba(150,120,80,0.4)" filter="url(#b2-men)" />
+        <path
+          d="M130 220 Q110 260 105 340 Q100 400 120 520 L260 520 Q270 400 265 340 Q260 260 240 220 Q210 205 185 205 Q160 205 130 220Z"
+          fill="rgba(90,100,55,0.55)" filter="url(#b2-men)" />
+        <path d="M130 400 Q110 430 108 480 Q106 520 120 540 L170 540 Q175 520 172 480 Q170 440 165 410Z"
+          fill="rgba(80,50,25,0.6)" filter="url(#b2-men)" />
+        <path d="M115 500 Q112 530 118 540 L172 540 Q170 525 168 510" fill="rgba(70,40,18,0.5)" filter="url(#b2-men)" />
+        <defs>
+          <filter id="b2-men" x="-40%" y="-20%" width="180%" height="140%">
+            <feGaussianBlur stdDeviation="12" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="contenido-seccion revelar">
+      <p class="titulo-seccion">Ropa masculina lista para usar</p>
+      <a href="pages/products.html" class="boton-principal">Comprar ahora</a>
+    </div>
+  </section>
+
+  <section class="seccion-ancho-completo">
+    <div class="fondo-seccion fondo-ropa">
+
+
+      <img src="landingpage/images/tarjetagafa.png" alt="hombre" class="imagen-tarjeta" />
+      <svg class="figura-ropa" viewBox="0 0 300 600" fill="none">
+
+        <ellipse cx="200" cy="130" rx="45" ry="55" fill="rgba(160,130,90,0.5)" filter="url(#b2)" />
+        <rect x="185" y="175" width="28" height="55" rx="14" fill="rgba(150,120,80,0.4)" filter="url(#b2)" />
+
+        <path
+          d="M130 220 Q110 260 105 340 Q100 400 120 520 L260 520 Q270 400 265 340 Q260 260 240 220 Q210 205 185 205 Q160 205 130 220Z"
+          fill="rgba(90,100,55,0.55)" filter="url(#b2)" />
+
+        <path d="M130 400 Q110 430 108 480 Q106 520 120 540 L170 540 Q175 520 172 480 Q170 440 165 410Z"
+          fill="rgba(80,50,25,0.6)" filter="url(#b2)" />
+        <path d="M115 500 Q112 530 118 540 L172 540 Q170 525 168 510" fill="rgba(70,40,18,0.5)" filter="url(#b2)" />
+        <defs>
+          <filter id="b2" x="-40%" y="-20%" width="180%" height="140%">
+            <feGaussianBlur stdDeviation="12" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="contenido-seccion revelar">
+      <p class="titulo-seccion">Accesorios</p>
+      <div class="grupo-botones">
+        <a href="pages/products.html" class="boton-principal">Comprar mujer</a>
+        <a href="pages/products.html" class="boton-contorno-blanco">Comprar hombre</a>
+      </div></a>
+    </div>
+  </section>
+
+  <section class="seccion-servicios">
+    <p class="etiqueta-servicios revelar">Servicios exclusivos</p>
+    <div class="grilla-servicios">
+
+      <!-- Tarjeta Servicio Artesanal -->
+      <div class="tarjeta-servicio revelar retraso-revelar-1">
+        <div class="imagen-servicio">
+          <div class="imagen-servicio-interior servicio-artesanal">
+            <div class="decoracion-servicio">
+              <img src="landingpage/images/tarjetaservicio3.png" alt="Servicio artesanal"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <a href="#" class="enlace-servicio">Asistencia en línea →</a>
+      </div>
+
+      <!-- Tarjeta Servicio Tienda -->
+      <div class="tarjeta-servicio revelar retraso-revelar-2">
+        <div class="imagen-servicio">
+          <div class="imagen-servicio-interior servicio-tienda">
+            <div class="decoracion-servicio">
+              <svg viewBox="0 0 400 300" fill="none" style="width:100%;height:100%;">
+                <rect x="0" y="0" width="400" height="300" fill="#0d0c08" />
+                <rect x="0" y="200" width="400" height="100" fill="rgba(40,35,20,0.8)" />
+                <text x="200" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="white"
+                  letter-spacing="8" filter="url(#resplandor)">MQUEEN</text>
+                <text x="200" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="white"
+                  letter-spacing="8" opacity="0.6">MQUEEN</text>
+                <rect x="30" y="100" width="340" height="200" rx="2" fill="rgba(50,40,20,0.3)" />
+                <ellipse cx="200" cy="210" rx="50" ry="25" fill="rgba(180,180,180,0.15)" filter="url(#resplandor2)" />
+                <path d="M175 210 Q200 160 225 210" stroke="rgba(200,200,200,0.3)" stroke-width="3" fill="none"
+                  filter="url(#resplandor2)" />
+                <line x1="80" y1="100" x2="80" y2="200" stroke="rgba(200,180,150,0.2)" stroke-width="15" />
+                <line x1="110" y1="100" x2="110" y2="200" stroke="rgba(180,160,130,0.2)" stroke-width="12" />
+                <line x1="300" y1="100" x2="300" y2="200" stroke="rgba(200,180,150,0.2)" stroke-width="15" />
+                <defs>
+                  <filter id="resplandor" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="resplandor2">
+                    <feGaussianBlur stdDeviation="8" />
+                  </filter>
+                </defs>
+              </svg>
+
+              <img src="landingpage/images/tarjetaservicio2.png" alt="Servicios en tienda"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <a href="#" class="enlace-servicio">Servicios en tienda →</a>
+      </div>
+
+      <!-- Tarjeta Servicio Campaña -->
+      <div class="tarjeta-servicio revelar retraso-revelar-3">
+        <div class="imagen-servicio">
+          <div class="imagen-servicio-interior servicio-campana">
+            <div class="decoracion-servicio">
+              <!-- Imagen añadida a la tarjeta -->
+              <img src="landingpage/images/tarjetaservicio1.png" alt="Envíos express y devoluciones"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <a href="#" class="enlace-servicio">Envíos express y devoluciones sin costo →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="grilla-pie">
+      <div>
+        <p class="titulo-columna-pie">Servicio al cliente</p>
+        <ul class="enlaces-pie">
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Cuidado del producto</a></li>
+          <li><a href="#">Rastrear mi pedido</a></li>
+          <li><a href="#">Registrar devolución</a></li>
+          <li><a href="#">Localizador de tiendas</a></li>
+          <li><a href="#">Solicitar una cita</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="titulo-columna-pie">La empresa</p>
+        <ul class="enlaces-pie">
+          <li><a href="#">Área legal</a></li>
+          <li><a href="#">Política de privacidad y cookies</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Configuración de cookies y no vender ni compartir</a></li>
+          <li><a href="#">Empleos</a></li>
+          <li><a href="#">Alexander McQueen</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="titulo-columna-pie">Síguenos</p>
+        <ul class="enlaces-pie">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="boletin-pie">
+        <p class="titulo-columna-pie">Suscríbete al boletín</p>
+        <a href="#" class="enlace-boletin-pie">Suscribirse &nbsp;→</a>
+        <p class="etiqueta-envio">Envíos a:</p>
+        <p class="valor-envio"><a href="#">Estados Unidos • ES</a></p>
+      </div>
+    </div>
+
+    <div class="inferior-pie">
+      <div class="imagen-pie">
+        <img src="landingpage/images/remainders_white.svg" alt="logo-pie" class="imagen-pie">
+      </div>
+      <p class="derechos-pie">© 2026 Remainders Trading Limited / Autumnpaper Limited</p>
+    </div>
+  </footer>
+
+  <button class="boton-subir" id="botonSubir" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+  <script src="landingpage/script.js"></script>
+</body>
+
+</html>

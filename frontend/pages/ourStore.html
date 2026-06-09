@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../landingpage/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="font-['Inter']">
+    <header
+        class="fixed top-0 left-0 w-full bg-white z-[9999] px-[25px] sm:px-[40px] lg:px-[60px] py-[18px] flex items-center justify-between shadow-[0_2px_15px_rgba(0,0,0,0.04)]">
+        <a href="../index.html" class="flex items-center">
+            <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders"
+                class="w-[140px] sm:w-[160px] object-contain">
+        </a>
+        <div></div>
+
+        <div class="flex items-center gap-[18px] sm:gap-[22px]">
+
+            <button onclick="window.location.href='pages/login.html'"
+                class="flex items-center justify-center text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
+            </button>
+
+            <button class="flex items-center justify-center text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="4" y="8" width="16" height="14" rx="1" />
+                    <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                </svg>
+            </button>
+            <button
+                class="flex items-center gap-[8px] text-[10px] tracking-[0.22em] font-medium text-black hover:opacity-70 transition-all duration-300">
+                <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                MENÚ
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section
+            class="bg-[url('../assets/images/stores/hero/store-hero-banner.png')] bg-cover bg-[position:72%_15%] min-h-[320px] mt-[100px] sm:mt-[120px] lg:mt-[150px] px-[20px] sm:px-[40px] lg:px-[80px] py-[50px] flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start gap-[35px] lg:gap-[130px]"
+            id="hero">
+
+            <div class="relative">
+                <button id="back-to-brands"
+                    class="hidden text-white text-[22px] tracking-[2px] font-['Inter'] flex font-bold absolute bottom-[180px]">
+                    Volver
+                </button>
+                <h1 class="text-[36px] sm:text-[42px] lg:text-[48px] font-['Cormorant_Garamond'] leading-none mb-[18px] font-semibold"
+                    id="hero-title">
+                    Tiendas <br> disponibles
+                </h1>
+
+                <div class="w-[45px] h-[2px] bg-[#c8a46b] mb-[20px]"></div>
+
+                <p id="hero-description" class="text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.7] font-['Inter']">
+                    Descubre todas nuestras tiendas disponibles, <br class="hidden sm:block">
+                    visitanos con tu familia y amigos
+                </p>
+            </div>
+
+            <div>
+                <button id="fetch-btn"
+                    class="bg-black text-white py-[14px] sm:py-[16px] lg:py-[18px] px-[35px] sm:px-[60px] lg:px-[90px] text-[14px] sm:text-[15px] lg:text-[16px] tracking-[1px] font-medium hover:bg-[#1a1a1a] duration-300 cursor-pointer">
+                    CARGAR DATOS
+                </button>
+            </div>
+        </section>
+
+        <div class="flex items-center gap-[10px] px-[100px] pt-[30px] pb-[10px]">
+            <img src="https://lh3.googleusercontent.com/d/1xCRwgiSIeUkIn1d_g_CZainhCtKzSq5f" alt=""
+                class="w-[35px] h-[30px]">
+            <h2 class="font-['Cormorant_Garamond'] font-bold text-[18px]" id="results-title">Marcas encontradas</h2>
+            <div class="bg-black py-[2px] px-[15px] rounded">
+                <p id="brands-counter" class="text-white">0</p>
+            </div>
+        </div>
+
+
+        <section id="brands-container"
+            class="p-[20px] sm:p-[15px] lg:px-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+
+            <!-- <a href="#americanino"
+                class="w-full bg-white rounded-[6px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.10)] group cursor-pointer">
+                <div class="h-[180px] relative">
+                    <img src="https://lh3.googleusercontent.com/d/17u1JzNY-mdhk-DoGUH8kCxYSmjCAJ6YA" alt=""
+                        class="w-full h-full object-cover object-[center_0%]">
+                    <div class="w-[100px] h-[100px] rounded-full overflow-hidden flex items-center justify-center bg-white absolute top-[62%] left-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.10)]">
+                        <img src="../assets/images/stores/logos/americanino-logo.png" alt="" class="w-[75%] h-[75%] object-contain">
+                    </div>
+                </div>
+                <div class="p-[25px] pt-[30px] leading-[25px] relative">
+                    <h2 class="text-[26px] font-['Cormorant_Garamond'] font-bold ">
+                        Americanino
+                    </h2>
+                    <p class="text-[13px] text-gray-500">
+                        Ropa casual
+                    </p>
+                    <div class="flex items-center gap-[8px] mt-[10px]">
+                        <img src="../assets/images/stores/icons/location-pin.svg" alt="logo"
+                            class="w-[18px] h-[18px] opacity-[0.75]">
+                        <span class="text-[#6b6b6b] text-[12px] tracking-[0.5px] font-semibold font-['Inter']">
+                            Nacional
+                        </span>
+                    </div>
+                    <button
+                        class="absolute right-[30px] top-[90px] group-hover:translate-x-[10px] duration-300 transition-all">
+                        <svg width="25" height="25" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="black" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </a> -->
+        </section>
+
+        <section id="stores-container"
+            class="pt-[10px] px-[20px] sm:px-[40px] lg:px-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="grilla-pie">
+            <div>
+                <p class="titulo-columna-pie">Servicio al cliente</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Cuidado del producto</a></li>
+                    <li><a href="#">Rastrear mi pedido</a></li>
+                    <li><a href="#">Registrar devolución</a></li>
+                    <li><a href="#">Localizador de tiendas</a></li>
+                    <li><a href="#">Solicitar una cita</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="titulo-columna-pie">La empresa</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Área legal</a></li>
+                    <li><a href="#">Política de privacidad y cookies</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Configuración de cookies y no vender ni compartir</a></li>
+                    <li><a href="#">Empleos</a></li>
+                    <li><a href="#">Alexander McQueen</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="titulo-columna-pie">Síguenos</p>
+                <ul class="enlaces-pie">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="boletin-pie">
+                <p class="titulo-columna-pie">Suscríbete al boletín</p>
+                <a href="#" class="enlace-boletin-pie">Suscribirse &nbsp;→</a>
+                <p class="etiqueta-envio">Envíos a:</p>
+                <p class="valor-envio"><a href="#">Estados Unidos • ES</a></p>
+            </div>
+        </div>
+
+        <div class="inferior-pie">
+            <div class="imagen-pie">
+                <img src="../landingpage/images/remainders_white.svg" alt="logo-pie" class="imagen-pie">
+            </div>
+            <p class="derechos-pie">© 2026 Remainders Trading Limited / Autumnpaper Limited</p>
+        </div>
+    </footer>
+    <script type="module" src="../scripts/modules/stores.js"></script>
+</body>
+
+</html>

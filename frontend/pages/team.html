@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro equipo | Remainders</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../landingpage/styles.css" />
+  <link rel="stylesheet" href="../styles/equipo.css" />
+</head>
+
+<body class="pagina-equipo">
+  <div id="barra-aviso">
+    <span>Nuevo espacio editorial.&nbsp;
+      <a href="products.html">Explorar colección.</a>&nbsp;
+      <a href="../index.html">Volver al inicio.</a>
+    </span>
+    <button class="boton-cerrar" aria-label="Cerrar">✕</button>
+  </div>
+
+  <header id="encabezado" class="con-fondo">
+    <a class="header-logo" href="../index.html">
+      <img src="../landingpage/images/remainders-logo.svg" alt="Logo Remainders" class="logo-image">
+    </a>
+
+    <div class="centro-encabezado">
+      <div class="busqueda-encabezado">
+        <input type="text" placeholder="Buscar" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px;color:inherit;opacity:0.7;">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="22" y2="22" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="derecha-encabezado">
+      <button class="icono-encabezado" onclick="window.location.href='login.html'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+      </button>
+      <button class="icono-encabezado">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="8" width="16" height="14" rx="1" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+      </button>
+      <button class="icono-encabezado" style="letter-spacing:0.22em;font-size:10px;font-weight:500;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px;">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        MENÚ
+      </button>
+    </div>
+  </header>
+
+  <main class="contenedor-equipo">
+    <section class="hero-equipo">
+      <p class="etiqueta-equipo">Selección de perfiles</p>
+      <h1 class="titulo-equipo">Eliga un usuario</h1>
+      <p class="texto-equipo">
+        Cada tarjeta abre una página independiente.
+      </p>
+    </section>
+
+    <section class="grilla-equipo" aria-label="Tarjetas de personas">
+      <a class="tarjeta-persona" href="brands.html" target="_blank" aria-label="Abrir perfil de Ana Ruiz">
+        <div class="tarjeta-persona-media">
+          <img src="../porfilePhotos/Profile_Alejo.jpeg" alt="Ana Ruiz" />
+        </div>
+        <div class="tarjeta-persona-info">
+          <span class="tarjeta-persona-rol">Integrante del equipo 1</span>
+          <h2>Alejandro Aristizabal</h2>
+          <span class="tarjeta-persona-accion">Ir a la API →</span>
+        </div>
+      </a>
+
+      <a class="tarjeta-persona" href="../pages/ourStore.html" target="_blank" aria-label="Abrir perfil de Valeria Torres">
+        <div class="tarjeta-persona-media">
+          <img src="../porfilePhotos/Profile_Andres.jpeg" alt="Valeria Torres" />
+        </div>
+        <div class="tarjeta-persona-info">
+          <span class="tarjeta-persona-rol">Integrante del equipo 2</span>
+          <h2>Andres Acosta</h2>
+          <span class="tarjeta-persona-accion">Ir a la API →</span>
+        </div>
+      </a>
+
+      <a class="tarjeta-persona" href="../pages/pokedex.html" target="_blank" aria-label="Abrir perfil de Camila Rojas">
+        <div class="tarjeta-persona-media">
+          <img src="../porfilePhotos/Profile_Daniel.jpeg" alt="Camila Rojas" />
+        </div>
+        <div class="tarjeta-persona-info">
+          <span class="tarjeta-persona-rol">Integrante del equipo 3</span>
+          <h2>Daniel Ahumada</h2>
+          <span class="tarjeta-persona-accion">Ir a la API →</span>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <script src="../landingpage/script.js"></script>
+</body>
+
+</html>
